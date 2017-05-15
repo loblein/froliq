@@ -1,24 +1,36 @@
-# README
+[Heroku link][heroku]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[heroku]: http://www.google.com
 
-Things you may want to cover:
+## Minimum Viable Product
 
-* Ruby version
+Froliq is a web application built using Ruby on Rails and React/Redux. Froliq enables users to find work while traveling, so they can meet locals and explore new places without breaking the bank.
 
-* System dependencies
+## Design Docs
+* [View Wireframes][wireframes]
+* [React Components][components]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+* [Sample State][sample-state]
 
-* Configuration
+[wireframes]: docs/wireframes
+[components]: docs/component-hierarchy.md
+[sample-state]: docs/sample-state.md
+[api-endpoints]: docs/api-endpoints.md
+[schema]: docs/schema.md
 
-* Database creation
+## Primary Features
+1. Users can search opportunities by location
+2. Users can accept opportunities and view their pending and accepted jobs
+3. Users can update their profile and change preferred roles to filter opportunities
+4. Users can rate their experience of past jobs
 
-* Database initialization
+## Secondary Features
+1. Businesses can submit upcoming work opportunities
+2. Businesses can update their profile and post photos
+3. Businesses can rate past workers
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Extra Features
+1. Users can filter search results by distance
+2. Users can view search results with Google Maps
+3. Users can access airbnb from within the app for accommodations in vicinity of workplace 
