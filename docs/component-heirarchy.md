@@ -37,3 +37,15 @@
 **JobPostFormContainer**
  - JobPostForm
   - RoleSelector
+
+## Routes
+
+|Path   | Component   |
+|-------|-------------|
+| "/sign-up" | "AuthFormContainer" |
+| "/sign-in" | "AuthFormContainer" |
+| "/" | "HomeContainer" |
+| "/users/:id" | "UserProfileContainer" |
+| "/users/:id/settings" | "UserSettingsContainer" |
+| "/businesses/:id" | "BusinessProfileContainer" |
+| "/businesses/:id/settings" | "BusinessSettingsContainer" |
