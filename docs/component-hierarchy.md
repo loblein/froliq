@@ -17,9 +17,9 @@
 
 **UserSettingsContainer**
  - UserSettingsForm
-  - AvatarSelector
-  - RoleSelector
-  - Errors
+   + AvatarSelector
+   + RoleSelector
+   + Errors
 
 **JobListContainer**
  - JobListIndex
@@ -31,12 +31,12 @@
 
 **BusinessSettingsContainer**
  - BusinessSettingsForm
-  - AvatarSelector
-  - Errors
+   + AvatarSelector
+   + Errors
 
 **JobPostFormContainer**
  - JobPostForm
-  - RoleSelector
+   + RoleSelector
 
 ## Routes
 
