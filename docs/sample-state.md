@@ -1,3 +1,4 @@
+```js
 {
   currentUser: {
     id: 1,
@@ -19,8 +20,7 @@
       imgUrl: 'http://www.example.com/img/1',
       startDate: '06/07/17',
       endDate: '06/14/17',
-      description: "We're looking for a dishwasher to fill
-        in for 1 week at our Italian restaurant in the Old Port, Portland, ME.",
+      description: "We're looking for a dishwasher to fill in for 1 week at our Italian restaurant in the Old Port, Portland, ME.",
       rate: 10.00,
       roles: ['dishwasher']
       location: '17 Portland Rd, Portland, ME',
@@ -32,8 +32,7 @@
   reviews: {
     1: {
       title: 'Great worker',
-      body: 'Arrived on schedule. Worked great alongside
-        our staff. Quick learner.'
+      body: 'Arrived on schedule. Worked great alongside our staff. Quick learner.'
       rating: 5
     }
   }
