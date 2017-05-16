@@ -6,7 +6,7 @@
 
 - `GET /` - loads React web app
 
-## JSON API
+### JSON API
 
 ### Users
 
