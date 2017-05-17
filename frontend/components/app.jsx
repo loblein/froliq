@@ -1,9 +1,10 @@
 import React from 'react';
+import HeaderContainer from './header/header_container'
 
-const App = ({ children }) => (
+const App = (props) => (
   <div>
-    <h1>Froliq</h1>
-    { children }
+    <HeaderContainer />
+    <h3>Froliq</h3>
   </div>
 );
 

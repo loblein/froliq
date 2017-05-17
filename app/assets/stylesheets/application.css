@@ -27,6 +27,32 @@
      Cantarell, Helvetica Neue,
      sans-serif;
 
+   background-color: white;
+   color: white;
+ }
+
+ .root-header {
    background-color: #81ef90;
+   padding: 4px 0 4px 10px;
+ }
+
+ .header-menu {
+   float: right;
+   padding: 10px;
+   margin: 14px 5px 0 0;
+ }
+
+ .logo {
+   float: left;
+ }
+
+ .clearfix:after {
+   display: block;
+   content: '';
+   clear: both;
+ }
+
+ a {
+   text-decoration: none;
    color: white;
  }
