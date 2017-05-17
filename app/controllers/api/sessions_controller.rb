@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
 
   def create
     @user = User.find_by_credentials(
@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     )
     if @user
       login(@user)
+      render 'api/users/show'
     else
       render(
         json: ['Invalid username or password'],
