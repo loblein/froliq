@@ -1,11 +1,29 @@
 class SessionsController < ApplicationController
 
   def create
-
+    @user = User.find_by_credentials(
+      params[:user][:email],
+      params[:user][:password]
+    )
+    if @user
+      login(@user)
+    else
+      render(
+        json: ['Invalid username or password'],
+        status: 401
+      )
+    end
   end
 
-  def delete
-
+  def destroy
+    if current_user
+      logout()
+    else
+      render(
+        json: ['Nobody signed in'],
+        status: 404
+      )
+    end
   end
 
 end
