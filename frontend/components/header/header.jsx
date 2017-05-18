@@ -7,12 +7,14 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div className='root-header clearfix'>
-        <div className='logo' >
-          <h2>froliq</h2>
-        </div>
-        <div className='header-menu'>
-          <Link to='/login'>Login</Link>
+      <div className='container'>
+        <div className='root-header clearfix'>
+          <div className='logo' >
+            <h2>froliq</h2>
+          </div>
+          <div className='header-menu'>
+            <Link to='/login'>Login</Link>
+          </div>
         </div>
       </div>
     )

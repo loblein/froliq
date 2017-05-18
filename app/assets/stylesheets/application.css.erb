@@ -35,10 +35,50 @@
    padding: 4px 0 4px 10px;
  }
 
+ .root-header h2{
+   color: white;
+ }
+
+ .root-header a {
+   color: white;
+   text-decoration: none;
+ }
+
+ .root-header a:hover {
+   text-decoration: none;
+   color: #e5e5e5;
+ }
+
+ .sleak-input {
+   display: block;
+   width: 400px;
+   border-radius: 5px;
+   padding: 5px;
+   border: 5px solid white;
+   transition: border 0.3s;
+   color: gray;
+   background-color: rgba(255, 255, 255, .8);
+ }
+
+ .sleak-input:focus {
+   border: 5px solid #8dc66f;
+   outline-color: transparent;
+   outline-style: none;
+ }
+
  .header-menu {
    float: right;
    padding: 10px;
    margin: 14px 5px 0 0;
+ }
+
+ .searchbar-label {
+   font-family: sans-serif;
+   font-weight: 400;
+   letter-spacing: 1.5px;
+   font-size: 16px;
+   display: block;
+   text-align: left;
  }
 
  .logo {
@@ -50,16 +90,13 @@
    width: 100%;
    display: block;
    position: absolute;
+   min-height: 500px;
    top: 0;
    background-image: url(<%= asset_path 'frog.png' %>);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
    z-index: -10;
- }
-
- .hero-image {
-
  }
 
  .hero-text {
@@ -69,6 +106,26 @@
    left: 50%;
    transform: translate(-50%, -50%);
    color: white;
+ }
+
+ .hero-lower-third {
+   text-align: center;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   position: absolute;
+   top: 77%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 140px;
+   width: 600px;
+   border: 1px solid white;
+ }
+
+ .hero-lower-third-item {
+   border: 1px solid white;
+   width: 100px;
+   height: 100px;
  }
 
  .clearfix:after {
