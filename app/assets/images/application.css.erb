@@ -57,11 +57,11 @@
    border: 5px solid white;
    transition: border 0.3s;
    color: gray;
-   background-color: rgba(255, 255, 255, .8);
+   background-color: rgba(255, 255, 255, .6);
  }
 
  .sleak-input:focus {
-   border: 5px solid #8dc66f;
+   background-color: white;
    outline-color: transparent;
    outline-style: none;
  }
@@ -87,13 +87,13 @@
 
  .hero {
    width: 100%;
-   height: 600px;
+   height: 680px;
    position: relative;
-   background-image: url(<%= asset_path 'frog.png' %>);
-   background-position: center;
+   background-image: url(<%= asset_path 'background.jpg' %>);
+   background-position: center bottom;
    background-repeat: no-repeat;
    background-size: cover;
-   z-index: -10;
+   box-shadow: inset -20px -60px 250px -10px #000;
  }
 
  .hero-text {
@@ -111,26 +111,33 @@
    justify-content: space-around;
    align-items: center;
    position: absolute;
-   top: 77%;
+   top: 80%;
    left: 50%;
    transform: translate(-50%, -50%);
-   height: 140px;
+   height: 220px;
    width: 700px;
  }
 
- .hero-lower-third-item {
+ .hero-lower-third img {
    width: 220px;
    height: 140px;
-   border-radius: 35px;
-   background-color: rgba(255, 255, 255, .8);
+   border-radius: 29px;
+   background-color: rgba(255, 255, 255, 1);
    border: 1px solid white;
-   padding: 5px;
-   transition: border 0.3s;
+   padding: 2px;
+ }
+
+ .hero-lower-third h4 {
+   font-weight: 500;
+   width: 226px;
+   color: white;
+   line-height: 6px;
+   padding: 10px;
  }
 
  .pitch {
-   border: 1px solid red;
    height: 600px;
+   background-color: #f7f7f7;
  }
 
  .clearfix:after {
