@@ -35,7 +35,7 @@
    padding: 4px 0 4px 10px;
  }
 
- .root-header h2{
+ .root-header h2 {
    color: white;
  }
 
@@ -86,12 +86,9 @@
  }
 
  .hero {
-   height: 80%;
    width: 100%;
-   display: block;
-   position: absolute;
-   min-height: 500px;
-   top: 0;
+   height: 600px;
+   position: relative;
    background-image: url(<%= asset_path 'frog.png' %>);
    background-position: center;
    background-repeat: no-repeat;
@@ -118,14 +115,22 @@
    left: 50%;
    transform: translate(-50%, -50%);
    height: 140px;
-   width: 600px;
-   border: 1px solid white;
+   width: 700px;
  }
 
  .hero-lower-third-item {
+   width: 220px;
+   height: 140px;
+   border-radius: 35px;
+   background-color: rgba(255, 255, 255, .8);
    border: 1px solid white;
-   width: 100px;
-   height: 100px;
+   padding: 5px;
+   transition: border 0.3s;
+ }
+
+ .pitch {
+   border: 1px solid red;
+   height: 600px;
  }
 
  .clearfix:after {

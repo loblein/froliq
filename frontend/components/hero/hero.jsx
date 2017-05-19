@@ -1,5 +1,6 @@
 import React from 'react';
 
+import HeaderContainer from '../header/header_container';
 class Hero extends React.Component {
   constructor(props) {
     super(props)
@@ -10,6 +11,7 @@ class Hero extends React.Component {
     return(
       <div className='hero'>
         <div className='hero-image'>
+          <HeaderContainer />
           <div className='hero-text'>
             <label className='searchbar-label'>Destination:
               <input type='text' className='sleak-input' text='Boston, MA'></input>
@@ -17,12 +19,9 @@ class Hero extends React.Component {
           </div>
           <div className='container'>
             <div className='hero-lower-third'>
-              <div className='hero-lower-third-item'>
-              </div>
-              <div className='hero-lower-third-item'>
-              </div>
-              <div className='hero-lower-third-item'>
-              </div>
+                <img src={window.travelImg} className='hero-lower-third-item'></img>
+                <img src={window.workImg} className='hero-lower-third-item'></img>
+                <img src={window.playImg} className='hero-lower-third-item'></img>
             </div>
           </div>
         </div>
