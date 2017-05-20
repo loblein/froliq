@@ -1,0 +1,101 @@
+.root-header {
+  background-color: white;
+}
+
+.root-header h2 {
+  color: gray;
+  margin: 0;
+  padding: 4px;
+}
+
+.frog-logo {
+  position: absolute;
+  width: 140px;
+  left: 120px;
+  top: 0;
+}
+
+#header {
+  text-decoration: none;
+  height: 52px;
+  margin: 0;
+  padding: 0;
+}
+
+#header .root-header a {
+  position: absolute;
+  color: #434741;
+  right: 60px;
+  top: 12px;
+  padding: 4px;
+  text-decoration: none;
+}
+
+#header .root-header a:hover {
+  color: #434741;
+  text-decoration: none;
+}
+
+#header .root-header a:visited {
+  color: #434741;
+  text-decoration: none;
+}
+
+#header .root-header a:active {
+  color: #434741;
+  text-decoration: none;
+}
+
+.sleak-input {
+  display: block;
+  width: 400px;
+  border-radius: 5px;
+  padding: 5px;
+  border: 5px solid white;
+  transition: border 0.3s;
+  color: #434741;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.sleak-input:focus {
+  background-color: white;
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.header-menu {
+  float: right;
+  padding: 10px;
+  margin: 14px 5px 0 0;
+}
+
+.searchbar-label {
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  display: block;
+  text-align: left;
+}
+
+#header .logo a {
+  font-size: 30px;
+  margin: 4px;
+  text-align: center;
+  width: 78px;
+  padding: 2px;
+  font-family: 'Satisfy', cursive;
+  position: absolute;
+  left: 60px;
+  top: 2px;
+}
+
+#header .logo a:hover {
+  width: 78px;
+  padding: 2px;
+  font-family: 'Satisfy', cursive;
+  border-radius: 8px;
+  position: absolute;
+  left: 60px;
+  top: 2px;
+}

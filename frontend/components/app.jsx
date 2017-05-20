@@ -6,6 +6,7 @@ import Footer from './footer/footer';
 
 const App = (props) => (
   <div>
+    <HeaderContainer />
     <HeroContainer />
     <Pitch />
     <Footer />

@@ -7,15 +7,20 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div className='container' id='override-bootstrap'>
-        <div className='root-header clearfix'>
-          <div className='logo' >
-            <h2>Froliq</h2>
-          </div>
-          <div className='header-menu'>
-            <Link to='/login'>Login</Link>
+      <div className='container-fluid'>
+
+        <div id='header'>
+          <div className='root-header clearfix'>
+            <div className='logo' >
+              <Link to='/'>Froliq</Link>
+            </div>
+            <img className='frog-logo' src={window.frogLogo}></img>
+            <div className='header-menu'>
+              <Link to='/login'>Login</Link>
+            </div>
           </div>
         </div>
+
       </div>
     )
   }

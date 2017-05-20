@@ -11,7 +11,7 @@ class Hero extends React.Component {
     return(
       <div className='hero'>
         <div className='hero-image'>
-          <HeaderContainer />
+          
           <div className='hero-text'>
             <label className='searchbar-label'>Where to?
               <input type='text' className='sleak-input' text='Boston, MA'></input>
