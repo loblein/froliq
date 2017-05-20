@@ -7,7 +7,7 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div className='container'>
+      <div className='container' id='override-bootstrap'>
         <div className='root-header clearfix'>
           <div className='logo' >
             <h2>Froliq</h2>
