@@ -10,7 +10,7 @@ class Header extends React.Component {
       <div className='container'>
         <div className='root-header clearfix'>
           <div className='logo' >
-            <h2>froliq</h2>
+            <h2>Froliq</h2>
           </div>
           <div className='header-menu'>
             <Link to='/login'>Login</Link>

@@ -1,6 +1,6 @@
 [Heroku link][heroku]
 
-[heroku]: http://www.google.com
+[heroku]: http://froliq.herokuapp.com
 
 ## Minimum Viable Product
 
@@ -33,4 +33,4 @@ Froliq is a web application built using Ruby on Rails and React/Redux. Froliq en
 ## Extra Features
 1. Users can filter search results by distance
 2. Users can view search results with Google Maps
-3. Users can access airbnb from within the app for accommodations in vicinity of workplace 
+3. Users can access airbnb from within the app for accommodations in vicinity of workplace
