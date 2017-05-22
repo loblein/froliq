@@ -1,3 +1,45 @@
 // Place all the styles related to the session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.background-reset {
+  background-color: #efefef;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.session-logo {
+  margin: 30px 0 0 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #d3d3d3;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.session-box {
+  margin: 10px 0;
+  border-radius: 36px;
+  height: 400px;
+  width: 400px;
+  border: 1px solid #d3d3d3;
+  padding: 20px;
+  background-color: white;
+}
+
+.session-box label {
+  display: block;
+  padding: 4px;
+  color: gray;
+  font-size: 20px;
+}
+
+.session-box input {
+  display: block;
+  width: 100%;
+  height: 34px;
+}

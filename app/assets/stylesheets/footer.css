@@ -1,0 +1,14 @@
+
+.footer {
+  height: 200px;
+  position: relative;
+  background-color: #211d1a;
+  color: white;
+}
+
+.footer img {
+    opacity: 0.5;
+    position: absolute;
+    top: 30px;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
