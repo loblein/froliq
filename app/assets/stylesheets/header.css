@@ -22,12 +22,29 @@
   padding: 0;
 }
 
-#header .root-header a {
-  position: absolute;
+.header-menu {
+  border: 1px solid red;
+  float: right;
+  display: flex;
+  justify-content: space-around;
+  height: 52px;
+  width: 190px;
+  padding: 14px;
+  margin: 0;
+}
+
+#header .header-menu a {
   color: #434741;
-  right: 60px;
-  top: 12px;
-  padding: 4px;
+  padding: 0 18px;
+  border-right: 1px solid gray;
+  text-decoration: none;
+}
+
+#header .header-menu a:last-child {
+  border: none;
+}
+
+#header .root-header a {
   text-decoration: none;
 }
 
@@ -44,29 +61,6 @@
 #header .root-header a:active {
   color: #434741;
   text-decoration: none;
-}
-
-.sleak-input {
-  display: block;
-  width: 400px;
-  border-radius: 5px;
-  padding: 5px;
-  border: 5px solid white;
-  transition: border 0.3s;
-  color: #434741;
-  background-color: rgba(255, 255, 255, .6);
-}
-
-.sleak-input:focus {
-  background-color: white;
-  outline-color: transparent;
-  outline-style: none;
-}
-
-.header-menu {
-  float: right;
-  padding: 10px;
-  margin: 14px 5px 0 0;
 }
 
 .searchbar-label {

@@ -16,6 +16,7 @@ class Header extends React.Component {
             </div>
             <img className='frog-logo' src={window.frogLogo}></img>
             <div className='header-menu'>
+              <Link to='/signup'>Sign Up</Link>
               <Link to='/login'>Login</Link>
             </div>
           </div>
