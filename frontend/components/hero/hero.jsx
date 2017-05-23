@@ -1,6 +1,7 @@
 import React from 'react';
-
+import FontAwesome from 'react-fontawesome';
 import HeaderContainer from '../header/header_container';
+
 class Hero extends React.Component {
   constructor(props) {
     super(props)
@@ -14,7 +15,12 @@ class Hero extends React.Component {
 
           <div className='hero-text'>
             <label className='searchbar-label'>Where to?
-              <input type='text' className='sleak-input' defaultValue='Boston, MA'></input>
+
+              <div className='search'>
+                <input type='text' placeholder='Boston, MA' />
+                  <FontAwesome className="fa fa-search lookingGlass"></FontAwesome>
+              </div>
+
             </label>
           </div>
           <div className='container'>

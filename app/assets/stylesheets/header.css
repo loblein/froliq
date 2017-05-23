@@ -23,7 +23,6 @@
 }
 
 .header-menu {
-  border: 1px solid red;
   float: right;
   display: flex;
   justify-content: space-around;
@@ -35,6 +34,8 @@
 
 #header .header-menu a {
   color: #434741;
+  opacity: .8;
+  transition: opacity 0.2s;
   padding: 0 18px;
   border-right: 1px solid gray;
   text-decoration: none;
@@ -50,6 +51,7 @@
 
 #header .root-header a:hover {
   color: #434741;
+  opacity: 1;
   text-decoration: none;
 }
 
