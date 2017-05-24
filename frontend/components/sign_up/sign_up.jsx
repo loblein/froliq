@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../header/header';
-import FontAwesome from 'react-fontAwesome';
+import FontAwesome from 'react-fontawesome';
 
 class SignUp extends React.Component {
   constructor(props) {
