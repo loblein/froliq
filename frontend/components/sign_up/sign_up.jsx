@@ -45,7 +45,7 @@ class SignUp extends React.Component {
         <div className='row'>
           <div className='sign-up'>
 
-            <div className='phase-one' style={{display: this.state.buttons}}>
+            <div style={{display: this.state.buttons}}>
               <div className='bi-fold-container'>
                 <div className='bi-fold-item'>
                   <h3>I am a</h3>
@@ -91,7 +91,9 @@ class SignUp extends React.Component {
                     <input></input>
                   </label>
 
-                  <input type='submit' text='submit' />
+                  <div className='center-button'>
+                    <input type='submit' className='submit-button' text='submit' />
+                  </div>
 
                 </form>
 
@@ -120,8 +122,9 @@ class SignUp extends React.Component {
                     Password
                     <input></input>
                   </label>
-
-                  <input type='submit' text='submit' />
+                  <div className='center-button'>
+                    <input type='submit' className='submit-button' text='submit' />
+                  </div>
 
                 </form>
 
