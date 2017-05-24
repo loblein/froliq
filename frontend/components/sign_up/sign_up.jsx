@@ -20,14 +20,14 @@ class SignUp extends React.Component {
             <div className='bi-fold-container'>
               <div className='bi-fold-item'>
                 <h3>I am a</h3>
-                <FontAwesome className="fa fa-arrow-up fa-5x"></FontAwesome>
-                <h3>traveler</h3>
+                <FontAwesome id='up-arrow' className="fa fa-arrow-up fa-5x"></FontAwesome>
+                <h2>traveler</h2>
               </div>
 
               <div className='bi-fold-item'>
                 <h3>I am an</h3>
                   <FontAwesome className="fa fa-arrow-down fa-5x"></FontAwesome>
-                <h3>employer</h3>
+                <h2>employer</h2>
               </div>
             </div>
           </div>
