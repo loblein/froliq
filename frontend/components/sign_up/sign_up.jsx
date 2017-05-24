@@ -30,6 +30,12 @@ class SignUp extends React.Component {
                 <h2>employer</h2>
               </div>
             </div>
+            <div className='flex-container'>
+              <img src={window.arrowPaths} />
+            </div>
+            <div className='flex-container choose-path'>
+              <h3 className='text-white'>Choose</h3>
+            </div>
           </div>
         </div>
       </div>
