@@ -50,13 +50,13 @@ class SignUp extends React.Component {
                 <div className='bi-fold-item'>
                   <h3>I am a</h3>
                   <FontAwesome id='traveler-button' className="fa fa-arrow-up fa-5x" onClick={this.handleTravelerClick}></FontAwesome>
-                  <h2>traveler</h2>
+                  <h3>traveler</h3>
                 </div>
 
                 <div className='bi-fold-item'>
                   <h3>I am an</h3>
                     <FontAwesome id='employer-button' className="fa fa-arrow-down fa-5x" onClick={this.handleEmployerClick}></FontAwesome>
-                  <h2>employer</h2>
+                  <h3>employer</h3>
                 </div>
               </div>
               <div className='flex-container'>
