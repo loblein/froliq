@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../header/header';
+import { withRouter } from 'react-router';
+import HeaderContainer from '../header/header_container';
 import FontAwesome from 'react-fontawesome';
-
-
+import { merge } from 'lodash';
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -11,16 +11,25 @@ class SignUp extends React.Component {
     this.state = {
       travelerForm: 'none',
       employerForm: 'none',
-      buttons: 'block'
+      buttons: 'block',
+      user: {
+        first_name: '',
+        last_name: '',
+        email: '',
+        password: ''
+      }
     }
 
     this.handleTravelerClick = this.handleTravelerClick.bind(this);
     this.handleEmployerClick = this.handleEmployerClick.bind(this);
+    this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidUpdate() {
-    console.log('state changed');
-    console.log(this.state);
+    if (this.props.loggedIn) {
+      this.props.router.push('/users/:userId');
+    }
   }
 
   handleTravelerClick(event) {
@@ -33,12 +42,24 @@ class SignUp extends React.Component {
     this.setState({employerForm: 'flex'});
   }
 
+  handleSubmit(event) {
+    event.preventDefault;
+    const user = this.state.user;
+    this.props.processForm({user});
+  }
+
+  update(field) {
+    return event => this.setState({
+      user: merge({}, this.state.user, {[field]: event.currentTarget.value})
+    });
+  }
+
   render() {
 
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <Header />
+          <HeaderContainer />
 
         </div>
 
@@ -69,26 +90,38 @@ class SignUp extends React.Component {
 
             <div className='traveler-form-container' style={{display: this.state.travelerForm}}>
 
-                <form className='traveler-form'>
+                <form className='traveler-form' onSubmit={this.handleSubmit}>
                   <h3>New Traveler</h3>
                   <label>
                     First Name
-                    <input></input>
+                    <input
+                      type='text'
+                      value={this.state.user.first_name}
+                      onChange={this.update('first_name')} />
                   </label>
 
                   <label>
                     Last Name
-                    <input></input>
+                    <input
+                      type='text'
+                      value={this.state.user.last_name}
+                      onChange={this.update('last_name')} />
                   </label>
 
                   <label>
                     Email
-                    <input></input>
+                    <input
+                      type='text'
+                      value={this.state.user.email}
+                      onChange={this.update('email')} />
                   </label>
 
                   <label>
                     Password
-                    <input></input>
+                    <input
+                      type='password'
+                      value={this.state.user.password}
+                      onChange={this.update('password')} />
                   </label>
 
                   <div className='center-button'>
@@ -137,4 +170,4 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+export default withRouter(SignUp);

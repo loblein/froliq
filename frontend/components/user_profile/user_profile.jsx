@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router';
+import HeaderContainer from '../header/header_container';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -6,14 +8,22 @@ class UserProfile extends React.Component {
 
   }
 
+  componentDidUpdate() {
+    if (this.props.currentUser === null) {
+      this.props.router.push('/');
+    }
+  }
+
   render() {
-    const email = this.props.currentUser.email;
+
     return (
-      <h2>
-        hi, {email}
-      </h2>
+      <div className='container-fluid'>
+        <div className='row'>
+          <HeaderContainer />
+        </div>
+      </div>
     )
   }
 }
 
-export default UserProfile;
+export default withRouter(UserProfile);
