@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import HeaderContainer from '../header/header_container';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -36,40 +37,54 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className='background-reset col-lg-12 col-md-12 col-sm-12'>
-        <div className='flex-container'>
-          <div className='session-logo'>
-            <img src={window.frogLily} />
+      <div className='container-fluid'>
+
+        <div className='row'>
+          <HeaderContainer />
+        </div>
+
+        <div className='row'>
+          <div className='sign-up-log-in'>
+
+            <div className='standard-form-container'>
+
+                <form className='standard-form session-form'
+                  onSubmit={this.handleSubmit}>
+                  <h3>Login</h3>
+
+                  <label>
+                    Email:
+                    <input
+                      type='text'
+                      name='email'
+                      value={this.state.email}
+                      onChange={this.handleChange} />
+                  </label>
+
+                  <label>
+                    Password:
+                    <input
+                      type='password'
+                      name='password'
+                      value={this.state.password}
+                      onChange={this.handleChange} />
+                  </label>
+
+                  <div className='center-button'>
+                    <input
+                      className='submit-button'
+                      type='submit'
+                      text='submit'/>
+                  </div>
+
+                </form>
+
+
+            </div>
+
           </div>
         </div>
-        <div className='flex-container'>
-          <h3>Login</h3>
-        </div>
-        <div className='flex-container'>
-          <div className='session-box'>
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                Email:
-                <input type='text' name='email' value={this.state.email} onChange={this.handleChange} />
-              </label>
 
-              <label>
-                Password:
-                <input type='password' name='password' value={this.state.password} onChange={this.handleChange} />
-              </label>
-              <br />
-              <input className='submit-button' type='submit' />
-            </form>
-          </div>
-        </div>
-        <div className='flex-container'>
-          <p>
-            Don't have an account?
-          </p>
-        </div>
-        <div className='flex-container'>
-
-        </div>
       </div>
     )
   }
