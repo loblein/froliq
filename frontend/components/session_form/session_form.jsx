@@ -79,9 +79,10 @@ class SessionForm extends React.Component {
 
                 </form>
 
-
             </div>
-
+            <div className='sub-form-content'>
+              Don't have an account? <Link to='signup'>Sign Up</Link>
+            </div>
           </div>
         </div>
 
