@@ -39,7 +39,7 @@ class Hero extends React.Component {
                 </h4>
               </div>
               <div className='hero-lower-third-item'>
-                <Link to='login'><img src={window.playImg}></img></Link>
+                <Link to='login'><img src={window.beachParty}></img></Link>
                 <h4>
                   Play
                 </h4>
