@@ -1,0 +1,198 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ $light-green: #AEFF59;
+ $green: #73b52d;
+ $dark-green: #3D6810;
+
+ $light-blue: #729ACE;
+ $blue: #3B5A82;
+
+ $light-gray: rgb(200, 200, 200);
+
+ $satisfy: 'Satisfy', cursive;
+ $josefin: 'Josefin Sans', sans-serif;
+ $open-sans: 'Open Sans', sans-serif;
+
+ html, body {
+   border: 0;
+   margin: 0;
+   padding: 0;
+
+   color: white;
+   font-family: inherit;
+   background-color: #efefef;
+ }
+
+ .flex-container {
+   display: flex;
+   justify-content: center;
+ }
+
+ .hero {
+   width: 100%;
+   height: 600px;
+   position: relative;
+   background-image: url(<%= asset_path 'background2.jpg' %>);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   box-shadow: inset -20px -60px 250px -10px #000;
+ }
+
+ .hero-text {
+   text-align: center;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
+ }
+
+ .hero-lower-third {
+   text-align: center;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   position: absolute;
+   top: 80%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 220px;
+   width: 710px;
+ }
+
+ .hero-lower-third img {
+   width: 220px;
+   height: 140px;
+   border-radius: 29px;
+   background-color: rgba(255, 255, 255, .8);
+   border: 1px solid rgba(255, 255, 255, .8);
+   padding: 2px;
+ }
+
+ .hero-lower-third h4 {
+   font-weight: 200;
+   font-family: $open-sans;
+   width: 226px;
+   font-size: 18px;
+   color: rgba(255, 255, 255, .8);
+   line-height: 6px;
+   padding: 10px;
+ }
+
+ .search input {
+   outline: none;
+   text-indent: 32px;
+   width: 400px;
+   border-radius: 10px;
+   padding: 10px;
+   border: 1px solid white;
+   transition: background 0.3s;
+   color: #434741;
+   background-color: rgba(255, 255, 255, 0.8);
+ }
+
+ .search input:focus {
+   background-color: white;
+   outline: none;
+ }
+
+ .search {
+   margin-top: 8px;
+ }
+
+ .search .lookingGlass {
+   position: absolute;
+   width: 30px;
+   color: gray;
+   height: 30px;
+   text-align: center;
+   line-height: 26px;
+   bottom: 12px;
+   left: 10px;
+ }
+
+
+ .search input:focus .lookingGlass {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   text-align: center;
+   line-height: 26px;
+   top: 28px;
+   left: 10px;
+ }
+
+.searchbar-label {
+  font-weight: 400;
+  color: rgba(255, 255, 255, .8);
+ }
+
+ .pitch {
+   background-color: #efefef;
+   padding: 10px 10px 50px 10px;
+ }
+
+ .pitch section {
+   border-radius: 36px;
+   min-width: 540px;
+   border: 1px solid #d3d3d3;
+   padding: 10px;
+   background-color: white;
+   margin: 10px;
+ }
+
+ .pitch section img {
+   float: left;
+   padding-right: 10px;
+ }
+
+ .pitch section h3 {
+   text-align: center;
+   min-width: 200px;
+   margin-right: 200px;
+   margin-left: 230px;
+   font-family: 'Satisfy', cursive;
+ }
+
+ .pitch section p {
+   padding: 4px;
+ }
+
+ .pitch-sub-heading {
+   font-family: 'Satisfy', cursive;
+   text-align: center;
+   font-size: 3em;
+ }
+
+ .text-center {
+   margin: 10px;
+   padding: 10px;
+   width: 100%;
+   text-align: center;
+ }
+
+ .pitch-heading {
+   font-family: 'Satisfy', cursive;
+   font-size: 4em;
+ }
+
+ .clearfix:after {
+   display: block;
+   content: '';
+   clear: both;
+ }

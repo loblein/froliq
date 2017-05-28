@@ -1,6 +1,7 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import HeaderContainer from '../header/header_container';
+import { Link } from 'react-router';
 
 class Hero extends React.Component {
   constructor(props) {
@@ -26,19 +27,19 @@ class Hero extends React.Component {
           <div className='container'>
             <div className='hero-lower-third'>
               <div className='hero-lower-third-item'>
-                <img src={window.travelImg}></img>
+                <Link to='login'><img src={window.travelImg} /></Link>
                 <h4>
                   Travel
                 </h4>
               </div>
               <div className='hero-lower-third-item'>
-                <img src={window.workImg}></img>
+                <Link to='login'><img src={window.fishingBoat}></img></Link>
                 <h4>
                   Work
                 </h4>
               </div>
               <div className='hero-lower-third-item'>
-                <img src={window.playImg}></img>
+                <Link to='login'><img src={window.playImg}></img></Link>
                 <h4>
                   Play
                 </h4>
