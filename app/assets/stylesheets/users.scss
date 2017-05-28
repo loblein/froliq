@@ -1,3 +1,22 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$light-green: #AEFF59;
+$green: #73b52d;
+$dark-green: #3D6810;
+
+$light-blue: #729ACE;
+$blue: #3B5A82;
+
+$light-gray: rgb(200, 200, 200);
+
+$satisfy: 'Satisfy', cursive;
+$josefin: 'Josefin Sans', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+.user-header-container {
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  height: 120px;
+  width: 100%;
+}
