@@ -6,9 +6,11 @@ $light-green: #AEFF59;
 $green: #73b52d;
 $dark-green: #3D6810;
 
+$highlight-blue: #a1bce0;
 $light-blue: #729ACE;
 $blue: #3B5A82;
 
+$cloud-white: rgba(255, 255, 255, .9);
 $light-gray: rgb(200, 200, 200);
 
 $satisfy: 'Satisfy', cursive;
@@ -34,7 +36,7 @@ $open-sans: 'Open Sans', sans-serif;
 
 .standard-form {
   border: 1px solid white;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: $cloud-white;
   border-radius: 25px;
   padding: 10px;
 }
@@ -48,12 +50,29 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .sub-form-content a {
-  color: $light-blue;
+  color: $highlight-blue;
 }
 
 .sub-form-content a:hover {
   text-decoration: none;
-  color: $light-blue;
+  color: $highlight-blue;
+}
+
+.back-button {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 60px;
+}
+
+.back-button a {
+  color: $highlight-blue;
+}
+
+.back-button a:hover {
+  color: $highlight-blue;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .traveler-form {
@@ -66,15 +85,15 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .standard-form input {
-    outline: none;
-    text-indent: 2px;
-    width: 100%;
-    border-radius: 6px;
-    padding: 10px;
-    margin: 0 auto;
-    border: 1px solid #c3c3c3;
-    color: #434741;
-    background-color: rgba(255, 255, 255, 0.8);
+  outline: none;
+  text-indent: 2px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid $light-gray;
+  color: #434741;
+  background-color: white;
 }
 
 .standard-form label {
@@ -84,11 +103,11 @@ $open-sans: 'Open Sans', sans-serif;
 .standard-form h3 {
   display: block;
   text-align: center;
-  width: 200px;
+  width: 100%;
   padding: 10px;
   margin: 0 auto;
   font-size: 26px;
-  color: #3b5982;
+  color: $blue;
   font-family: 'Satisfy', cursive;
 }
 

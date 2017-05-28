@@ -12,6 +12,7 @@ class SignUp extends React.Component {
       travelerForm: 'none',
       employerForm: 'none',
       buttons: 'block',
+      backButton: 'none',
       user: {
         first_name: '',
         last_name: '',
@@ -24,6 +25,7 @@ class SignUp extends React.Component {
     this.handleEmployerClick = this.handleEmployerClick.bind(this);
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleBackClick = this.handleBackClick.bind(this);
   }
 
   componentDidUpdate() {
@@ -35,11 +37,20 @@ class SignUp extends React.Component {
   handleTravelerClick(event) {
     this.setState({buttons: 'none'});
     this.setState({travelerForm: 'flex'});
+    this.setState({backButton: 'block'});
   }
 
   handleEmployerClick(event) {
     this.setState({buttons: 'none'});
     this.setState({employerForm: 'flex'});
+    this.setState({backButton: 'block'});
+  }
+
+  handleBackClick() {
+    this.setState({buttons: 'block'});
+    this.setState({employerForm: 'none'});
+    this.setState({travelerForm: 'none'});
+    this.setState({backButton: 'none'})
   }
 
   handleSubmit(event) {
@@ -91,7 +102,7 @@ class SignUp extends React.Component {
             <div className='standard-form-container' style={{display: this.state.travelerForm}}>
 
                 <form className='standard-form traveler-form' onSubmit={this.handleSubmit}>
-                  <h3>New Traveler</h3>
+                  <h3>Hi There, Traveler!</h3>
                   <label>
                     First Name
                     <input
@@ -132,7 +143,10 @@ class SignUp extends React.Component {
                   </div>
 
                 </form>
+            </div>
 
+            <div className='back-button' style={{display: this.state.backButton}}>
+              <a onClick={this.handleBackClick}>Go Back</a>
             </div>
 
             <div className='employer-form-container' style={{display: this.state.employerForm}}>
