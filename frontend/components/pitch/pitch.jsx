@@ -17,7 +17,7 @@ const Pitch = () => {
       <div className='row'>
         <div className='col-md-2'></div>
         <section className='col-md-8 clearfix'>
-          <img src={window.travelImg}></img>
+          <img src={window.girlIphone}></img>
           <h3>Explore</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
         </section>
