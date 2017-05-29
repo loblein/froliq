@@ -20,3 +20,31 @@ $open-sans: 'Open Sans', sans-serif;
   height: 120px;
   width: 100%;
 }
+
+.upper-spacer {
+  height: 20px;
+  background-color: white;
+  width: 100%;
+}
+
+.user-header {
+  width: 800px;
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.user-avatar-container {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  border: 1px solid $light-gray;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.user-avatar {
+  
+}

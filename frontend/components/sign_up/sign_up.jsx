@@ -17,15 +17,16 @@ class SignUp extends React.Component {
         first_name: '',
         last_name: '',
         email: '',
-        password: ''
+        password: '',
+        employer: false
       }
     }
 
     this.handleTravelerClick = this.handleTravelerClick.bind(this);
     this.handleEmployerClick = this.handleEmployerClick.bind(this);
-    this.update = this.update.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleBackClick = this.handleBackClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   }
 
   componentDidUpdate() {
@@ -35,22 +36,30 @@ class SignUp extends React.Component {
   }
 
   handleTravelerClick(event) {
-    this.setState({buttons: 'none'});
-    this.setState({travelerForm: 'flex'});
-    this.setState({backButton: 'block'});
+    this.setState((previousState) => _.merge({}, previousState, {
+      buttons: 'none',
+      travelerForm: 'flex',
+      backButton: 'block',
+      user: {employer: false}
+    }));
   }
 
   handleEmployerClick(event) {
-    this.setState({buttons: 'none'});
-    this.setState({employerForm: 'flex'});
-    this.setState({backButton: 'block'});
+    this.setState((previousState) => _.merge({}, previousState, {
+      buttons: 'none',
+      employerForm: 'flex',
+      backButton: 'block',
+      user: {employer: true}
+    }));
   }
 
   handleBackClick() {
-    this.setState({buttons: 'block'});
-    this.setState({employerForm: 'none'});
-    this.setState({travelerForm: 'none'});
-    this.setState({backButton: 'none'})
+    this.setState((previousState) => _.merge({}, previousState, {
+      buttons: 'block',
+      employerForm: 'none',
+      travelerForm: 'none',
+      backButton: 'none'
+    }));
   }
 
   handleSubmit(event) {

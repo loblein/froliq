@@ -11,10 +11,11 @@ class Header extends React.Component {
 
   handleLogoutClick() {
     this.props.logout();
+    this.props.router.push('/');
   }
 
   handleProfileClick() {
-    this.props.router.push('/users/:userId')
+    this.props.router.push('/users/:userId');
   }
 
   render() {
