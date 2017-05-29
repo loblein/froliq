@@ -9,21 +9,12 @@ class User < ApplicationRecord
   validates_inclusion_of :employer, in: [true, false]
   validates :email, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
-  after_initialize :ensure_session_token, :assign_user_settings
+  after_initialize :ensure_session_token
 
   attr_reader :password
 
-  has_one :employer_settings
-  has_one :traveler_settings
-
-  def assign_user_settings
-    if self.employer == true
-      debugger
-
-    else
-      
-    end
-  end
+  has_one :employer_setting
+  has_one :traveler_setting
 
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)

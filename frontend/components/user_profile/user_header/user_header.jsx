@@ -16,6 +16,11 @@ class UserHeader extends React.Component {
               <div className='user-avatar-container'>
                 <img className='user-avatar' />
               </div>
+              <div className='user-details-container'>
+                <div className='user-details'>
+                  <h3>{this.props.firstName} {this.props.lastName}</h3>
+                </div>
+              </div>
             </div>
 
           </div>

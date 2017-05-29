@@ -46,5 +46,26 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .user-avatar {
-  
+
+}
+
+.user-details-container {
+  position: absolute;
+  height: 100%;
+  width: 340px;
+  left: 166px;
+}
+
+.user-details {
+  position: relative;
+  margin: 10px;
+  height: 100px;
+  color: $blue;
+  border-right: 1px solid $light-gray;
+}
+
+.user-details h3 {
+  margin: 0;
+  padding: 5px;
+  font-family: $open-sans;
 }
