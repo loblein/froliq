@@ -33,7 +33,7 @@ class Header extends React.Component {
 
     return (
       <div className='container-fluid'>
-        <div className='header-container'>
+        <div id='header-container'>
           <header className='clearfix'>
             <div className='logo' >
               <Link to='/'>Froliq</Link>
