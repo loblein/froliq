@@ -48,27 +48,27 @@ $open-sans: 'Open Sans', sans-serif;
 
 .user-avatar-container {
   width: 168px;
-  height: 148px;
+  height: 146px;
   position: absolute;
-  top: 10px;
+  top: 16px;
   left: 0;
-  border: 1px solid $light-gray;
+  border: 1px solid $highlight-gray;
   border-radius: 25px;
-  background-color: $off-white;
+  background-color: rgb(250, 250, 250);
   z-index: 2;
-  box-shadow: 0 0 0 10px white;
+  box-shadow: 0 0 0 16px white;
 }
 
 .dummy-avatar-container {
-  width: 168px;
-  height: 148px;
+  width: 162px;
+  height: 146px;
   position: absolute;
-  top: 10px;
-  left: 0;
+  top: 16px;
+  left: 6px;
   border: 1px solid white;
   border-radius: 25px;
   z-index: -1;
-  box-shadow: 0 0 0 16px $highlight-gray;
+  box-shadow: 0 0 0 22px $highlight-gray;
 }
 
 .user-avatar {
