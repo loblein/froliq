@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import FontAwesome from 'react-fontawesome';
 
 class Header extends React.Component {
   constructor(props) {
@@ -21,12 +22,12 @@ class Header extends React.Component {
   render() {
     const links = this.props.currentUser === null
     ? <nav>
-        <Link to='signup'>Sign Up</Link>
-        <Link to='login'>Login</Link>
+        <Link to='signup'><FontAwesome className='fa fa-user-plus' /> Sign Up</Link>
+        <Link to='login'><FontAwesome className='fa fa-sign-in' /> Login</Link>
       </nav>
     : <nav>
-        <button onClick={this.handleProfileClick}>Profile</button>
-        <button onClick={this.handleLogoutClick}>Logout</button>
+        <Link to='users/:userId'><FontAwesome className='fa fa-user' /> Profile</Link>
+        <button className='logout' onClick={this.handleLogoutClick}><FontAwesome className='fa fa-sign-out' /> Logout</button>
       </nav>
     ;
 
@@ -37,7 +38,6 @@ class Header extends React.Component {
             <div className='logo' >
               <Link to='/'>Froliq</Link>
             </div>
-            <img className='frog-logo' src={window.frogLogo}></img>
             {links}
           </header>
         </div>
