@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome';
 
 class UserHeader extends React.Component {
   constructor(props) {
@@ -10,11 +11,11 @@ class UserHeader extends React.Component {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <div className='upper-spacer' />
+          <div className='upper-spacer'></div>
 
           <div className='user-header-container'>
             <div className='user-header'>
-              <div className='dummy-avatar-container' />
+              <div className='dummy-avatar-container'></div>
               <div className='user-avatar-container'>
                 <img className='user-avatar' />
               </div>
@@ -23,7 +24,11 @@ class UserHeader extends React.Component {
                   <h3>{this.props.firstName} {this.props.lastName}</h3>
                   <h6>home base: Belfast, ME</h6>
                   <div className='user-star-rating'>
-                    <h3>* * * * *</h3>
+                      <FontAwesome className='fa fa-star' />
+                      <FontAwesome className='fa fa-star' />
+                      <FontAwesome className='fa fa-star' />
+                      <FontAwesome className='fa fa-star' />
+                      <FontAwesome className='fa fa-star' />
                   </div>
                 </div>
               </div>

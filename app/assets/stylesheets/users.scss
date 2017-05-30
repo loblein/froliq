@@ -18,6 +18,8 @@ $light-gray: rgb(200, 200, 200);
 $gray: rgb(100, 100, 100);
 $dark-gray: rgb(70, 70, 70);
 
+$deep-brown: #211d1a;
+
 $satisfy: 'Satisfy', cursive;
 $josefin: 'Josefin Sans', sans-serif;
 $open-sans: 'Open Sans', sans-serif;
@@ -112,9 +114,9 @@ $open-sans: 'Open Sans', sans-serif;
 .user-star-rating {
   position: absolute;
   bottom: 0;
-  margin: 5px;
   height: 30px;
   width: 200px;
+  line-height: 30px;
 }
 
 .user-star-rating h3 {
@@ -122,6 +124,12 @@ $open-sans: 'Open Sans', sans-serif;
   padding: 3px;
   margin: 0;
   font-size: 30px;
+}
+
+.user-star-rating .fa-star {
+  color: $blue;
+  padding: 5px;
+  font-size: 18px;
 }
 
 .user-blurb-container {
@@ -148,4 +156,113 @@ $open-sans: 'Open Sans', sans-serif;
 
 a, a:hover, a:visited, a:active {
   text-decoration: none;
+}
+
+// User Main Component //
+
+.empty-spacer {
+  margin: 0;
+  padding: 0;
+}
+
+.inspect {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.add-height {
+  min-height: 300px;
+  z-index: 0;
+}
+
+.user-main-container {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.user-main {
+  position: relative;
+  height: 400px;
+  width: 800px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.user-main nav {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  height: 310px;
+  width: 168px;
+  border-radius: 15px;
+  border: 1px solid $highlight-gray;
+  background-color: white;
+}
+
+.user-main .dummy-nav {
+  position: absolute;
+  bottom: 16px;
+  left: 4px;
+  height: 310px;
+  width: 168px;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.user-main nav ul {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.user-main nav ul li {
+  font-family: $open-sans;
+  margin: 0;
+  padding: 0;
+  height: 16.6%;
+  line-height: 50px;
+  width: 100%;
+  border-bottom: 1px solid $light-gray;
+  color: white;
+  font-size: 14px;
+  list-style: none;
+  cursor: pointer;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  font-weight: 600;
+  color: $gray;
+}
+
+ .user-main nav ul li:last-child {
+   border: none;
+ }
+
+ .user-main nav ul li:hover {
+   color: $light-blue;
+ }
+
+.user-main .content-box {
+  position: absolute;
+  height: 360px;
+  width: 580px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid $highlight-gray;
+  border-radius: 15px;
+  background-color: white;
+}
+
+// user footer //
+
+.user-footer-container {
+
+}
+
+footer.user-footer {
+  
 }
