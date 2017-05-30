@@ -1,0 +1,104 @@
+$light-green: #AEFF59;
+$green: #73b52d;
+$dark-green: #3D6810;
+
+$frog-dark-green: rgb(0, 149, 52);
+$frog-light-green: rgb(134, 192, 45);
+
+$light-blue: #729ACE;
+$blue: #3B5A82;
+$red: #823b3b;
+
+$light-gray: rgb(200, 200, 200);
+$mid-light-gray: rgb(150, 150, 150);
+$gray: rgb(100, 100, 100);
+$dark-gray: rgb(70, 70, 70);
+
+$satisfy: 'Satisfy', cursive;
+$josefin: 'Josefin Sans', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+.root-header {
+  background-color: white;
+}
+
+.root-header h2 {
+  margin: 0;
+  padding: 4px;
+}
+
+.frog-logo {
+  position: absolute;
+  height: 46px;
+  left: 142px;
+  top: 4px;
+}
+
+.header-container {
+  text-decoration: none;
+  height: 52px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  float: right;
+  display: flex;
+  justify-content: space-around;
+  height: 52px;
+  width: 190px;
+  padding: 14px;
+  margin: 0;
+}
+
+header nav a {
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  font-family: $open-sans;
+  font-weight: 600;
+  padding: 0 18px;
+  border-right: 1px solid $light-gray;
+  color: $gray;
+  text-decoration: none;
+}
+
+header nav a:last-child {
+  border: none;
+}
+
+header nav a:hover {
+  color: $light-blue !important;
+  text-decoration: none;
+}
+
+header nav a:visited, a:active {
+  color: $gray;
+  text-decoration: none;
+}
+
+
+.searchbar-label {
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  display: block;
+  text-align: left;
+}
+
+header .logo a {
+  font-size: 30px;
+  margin: 4px;
+  text-align: center;
+  width: 78px;
+  padding: 2px;
+  color: $gray;
+  font-family: 'Satisfy', cursive;
+  position: absolute;
+  left: 60px;
+  top: 2px;
+}
+
+header .logo a:hover, a:visited {
+  text-decoration: none;
+}

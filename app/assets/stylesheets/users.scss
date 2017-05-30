@@ -5,10 +5,16 @@ $light-green: #AEFF59;
 $green: #73b52d;
 $dark-green: #3D6810;
 
+$frog-dark-green: rgb(0, 149, 52);
+$frog-light-green: rgb(134, 192, 45);
+
 $light-blue: #729ACE;
 $blue: #3B5A82;
+$red: #823b3b;
 
 $light-gray: rgb(200, 200, 200);
+$gray: rgb(100, 100, 100);
+$dark-gray: rgb(70, 70, 70);
 
 $satisfy: 'Satisfy', cursive;
 $josefin: 'Josefin Sans', sans-serif;
@@ -60,7 +66,7 @@ $open-sans: 'Open Sans', sans-serif;
   position: relative;
   margin: 10px;
   height: 100px;
-  color: $blue;
+  color: $dark-gray;
   border-right: 1px solid $light-gray;
 }
 
@@ -68,4 +74,53 @@ $open-sans: 'Open Sans', sans-serif;
   margin: 0;
   padding: 5px;
   font-family: $open-sans;
+}
+
+.user-details h5 {
+  margin: 0;
+  padding: 5px;
+  font-family: $open-sans;
+}
+
+.user-details h6 {
+  margin: 0;
+  padding: 5px;
+  color: gray;
+  font-family: $open-sans;
+}
+
+.user-star-rating {
+  position: absolute;
+  bottom: 0;
+  margin: 5px;
+  height: 30px;
+  width: 200px;
+}
+
+.user-star-rating h3 {
+  color: $red;
+  padding: 3px;
+  margin: 0;
+  font-size: 30px;
+}
+
+.user-blurb-container {
+  position: absolute;
+  left: 500px;
+  height: 100%;
+  width: 320px;
+}
+
+.user-blurb h4 {
+  color: $frog-dark-green;
+  margin: 0;
+  padding: 0 0 5px 0;
+}
+
+.user-blurb {
+  margin: 10px;
+  height: 100px;
+  position: relative;
+  color: $gray;
+  font-weight: 400;
 }

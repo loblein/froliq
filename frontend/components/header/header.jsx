@@ -20,26 +20,26 @@ class Header extends React.Component {
 
   render() {
     const links = this.props.currentUser === null
-    ? <div className='header-menu'>
+    ? <nav>
         <Link to='signup'>Sign Up</Link>
         <Link to='login'>Login</Link>
-      </div>
-    : <div className='header-menu'>
+      </nav>
+    : <nav>
         <button onClick={this.handleProfileClick}>Profile</button>
         <button onClick={this.handleLogoutClick}>Logout</button>
-      </div>
+      </nav>
     ;
 
     return (
       <div className='container-fluid'>
-        <div id='header'>
-          <div className='root-header clearfix'>
+        <div className='header-container'>
+          <header className='clearfix'>
             <div className='logo' >
               <Link to='/'>Froliq</Link>
             </div>
             <img className='frog-logo' src={window.frogLogo}></img>
             {links}
-          </div>
+          </header>
         </div>
 
       </div>
