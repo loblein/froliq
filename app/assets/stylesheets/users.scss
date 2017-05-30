@@ -12,6 +12,8 @@ $light-blue: #729ACE;
 $blue: #3B5A82;
 $red: #823b3b;
 
+$off-white: rgb(240, 240, 240);
+$highlight-gray: rgb(220, 220, 220);
 $light-gray: rgb(200, 200, 200);
 $gray: rgb(100, 100, 100);
 $dark-gray: rgb(70, 70, 70);
@@ -21,15 +23,19 @@ $josefin: 'Josefin Sans', sans-serif;
 $open-sans: 'Open Sans', sans-serif;
 
 .user-header-container {
-  border-top: 1px solid $light-gray;
-  border-bottom: 1px solid $light-gray;
   height: 120px;
   width: 100%;
 }
 
 .upper-spacer {
-  height: 0;
-  background-color: white;
+  height: 6px;
+  background-color: $highlight-gray;
+  width: 100%;
+}
+
+.lower-spacer {
+  height: 6px;
+  background-color: $highlight-gray;
   width: 100%;
 }
 
@@ -41,14 +47,28 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .user-avatar-container {
-  width: 160px;
-  height: 160px;
+  width: 168px;
+  height: 148px;
   position: absolute;
-  top: -10px;
+  top: 10px;
   left: 0;
   border: 1px solid $light-gray;
   border-radius: 25px;
-  background-color: white;
+  background-color: $off-white;
+  z-index: 2;
+  box-shadow: 0 0 0 10px white;
+}
+
+.dummy-avatar-container {
+  width: 168px;
+  height: 148px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  border: 1px solid white;
+  border-radius: 25px;
+  z-index: -1;
+  box-shadow: 0 0 0 16px $highlight-gray;
 }
 
 .user-avatar {
@@ -58,8 +78,8 @@ $open-sans: 'Open Sans', sans-serif;
 .user-details-container {
   position: absolute;
   height: 100%;
-  width: 340px;
-  left: 166px;
+  width: 330px;
+  left: 176px;
 }
 
 .user-details {
@@ -98,7 +118,7 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .user-star-rating h3 {
-  color: $red;
+  color: $blue;
   padding: 3px;
   margin: 0;
   font-size: 30px;
@@ -112,7 +132,8 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .user-blurb h4 {
-  color: $frog-dark-green;
+  color: $blue;
+  font-weight: 400;
   margin: 0;
   padding: 0 0 5px 0;
 }

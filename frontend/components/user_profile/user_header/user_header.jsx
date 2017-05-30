@@ -11,8 +11,10 @@ class UserHeader extends React.Component {
       <div className='container-fluid'>
         <div className='row'>
           <div className='upper-spacer' />
+
           <div className='user-header-container'>
             <div className='user-header'>
+              <div className='dummy-avatar-container' />
               <div className='user-avatar-container'>
                 <img className='user-avatar' />
               </div>
@@ -27,13 +29,14 @@ class UserHeader extends React.Component {
               </div>
               <div className='user-blurb-container'>
                 <div className='user-blurb'>
-                  <h4>Notes</h4>
-                  Looks like you haven't updated your user settings. Update your settings before searching for better results.
+                  <h4>notes</h4>
+                  Looks like you haven't updated your user settings. Update your settings for better search results.
                 </div>
               </div>
             </div>
 
           </div>
+          <div className='lower-spacer' />
         </div>
       </div>
     )
