@@ -31,15 +31,17 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .upper-spacer {
-  height: 6px;
-  background-color: $middle-gray;
+  box-shadow: inset 2px 2px 3px $middle-gray;
+  height: 5px;
+  background-color: $light-gray;
   width: 100%;
 }
 
 .lower-spacer {
-  height: 6px;
-  background-color: $light-gray;
+  height: 5px;
+  background-color: $middle-gray;
   width: 100%;
+  box-shadow: inset 2px 2px 3px $gray;
 }
 
 .user-header {
@@ -63,15 +65,16 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .dummy-avatar-container {
-  width: 162px;
-  height: 146px;
+  width: 200px;
+  height: 178px;
   position: absolute;
-  top: 16px;
-  left: 6px;
+  top: 0;
+  left: -16px;
   border: 1px solid white;
-  border-radius: 25px;
+  background-color: white;
+  border-radius: 37px;
   z-index: -1;
-  box-shadow: 0 0 0 22px $light-gray;
+  box-shadow: 2px 2px 3px $gray;
 }
 
 .user-avatar {
