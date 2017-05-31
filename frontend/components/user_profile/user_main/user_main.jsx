@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
+import SearchContainer from '../../search/search';
 
 class UserMain extends React.Component {
   constructor(props) {
@@ -37,9 +38,19 @@ class UserMain extends React.Component {
                 </ul>
               </nav>
               <div className='dummy-nav'></div>
+              <div className='search-container'>
+                <SearchContainer />
+              </div>
               <div className='content-box'>
 
               </div>
+            </div>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='user-footer-container'>
+            <div className='user-footer'>
+
             </div>
           </div>
         </div>
