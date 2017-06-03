@@ -1,5 +1,6 @@
 import Search from './search';
-import { connect } form 'react-redux';
+import { connect } from 'react-redux';
+import { search } from '../../actions/'
 
 const mapStateToProps = (state) => {
   return {
@@ -9,7 +10,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-
+    search: location => dispatch(search(location))
   };
 };
 

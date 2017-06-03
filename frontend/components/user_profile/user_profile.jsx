@@ -25,7 +25,6 @@ class UserProfile extends React.Component {
           <HeaderContainer />
           <UserHeaderContainer />
           <UserMainContainer />
-          
         </div>
       </div>
     )
