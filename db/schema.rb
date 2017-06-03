@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529185837) do
+ActiveRecord::Schema.define(version: 20170603191806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20170529185837) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_employer_settings_on_user_id", using: :btree
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.integer  "user_id",                      null: false
+    t.string   "title",                        null: false
+    t.text     "description",                  null: false
+    t.string   "status",      default: "open", null: false
+    t.float    "rate",        default: 10.0
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["user_id"], name: "index_jobs_on_user_id", using: :btree
   end
 
   create_table "traveler_settings", force: :cascade do |t|
