@@ -1,16 +1,18 @@
 import Search from './search';
 import { connect } from 'react-redux';
-import { search } from '../../actions/'
+import { fetchJobs } from '../../actions/job_actions';
 
 const mapStateToProps = (state) => {
-  return {
 
+  return {
+    
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
+
   return {
-    search: location => dispatch(search(location))
+    search: filters => dispatch(fetchJobs(filters))
   };
 };
 

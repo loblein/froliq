@@ -4,14 +4,14 @@ import { merge } from 'lodash';
 
 class Search extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       location: ''
     }
 
     this.updateLocation = this.updateLocation.bind(this);
-    this.handleSearch = this.handleSearch.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   updateLocation(event) {
@@ -21,9 +21,10 @@ class Search extends React.Component {
     });
   }
 
-  handleSearch(event) {
+  handleSubmit(event) {
+    event.preventDefault();
     debugger;
-    const location = event.currentTarget.value;
+    const location = this.state.location;
     this.props.search(location);
   }
 
@@ -31,10 +32,12 @@ class Search extends React.Component {
     return (
       <div>
         <div className='user-search'>
-          <h5 className='where-to'>Where to?</h5>
-          <input type='text' placeholder='Boston, MA' onChange={this.updateLocation}/>
-          <FontAwesome className="fa fa-search lookingGlass"></FontAwesome>
-          <h5 className='go' onClick={this.handleSearch}>Go!</h5>
+          <form onSubmit={this.handleSubmit}>
+            <h5 className='where-to'>Where to?</h5>
+            <input type='text' placeholder='Boston, MA' onChange={this.updateLocation}></input>
+            <FontAwesome className="fa fa-search lookingGlass"></FontAwesome>
+            <input type='submit' className='go'></input>
+          </form>
         </div>
       </div>
     )

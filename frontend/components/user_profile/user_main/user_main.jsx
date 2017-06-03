@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
-import SearchContainer from '../../search/search';
+import SearchContainer from '../../search/search_container';
 
 class UserMain extends React.Component {
   constructor(props) {
