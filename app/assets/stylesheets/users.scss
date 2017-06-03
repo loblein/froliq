@@ -193,7 +193,7 @@ a, a:hover, a:visited, a:active {
 
 .user-main {
   position: relative;
-  height: 400px;
+  height: 500px;
   width: 800px;
   margin: 0 auto;
   background-color: transparent;
@@ -201,7 +201,7 @@ a, a:hover, a:visited, a:active {
 
 .user-main nav {
   position: absolute;
-  bottom: 20px;
+  top: 70px;
   left: 0;
   height: 310px;
   width: 168px;
@@ -327,10 +327,10 @@ h5.go:hover {
 
 .user-main .content-box {
   position: absolute;
-  height: 310px;
+  height: 410px;
   width: 594px;
   right: 20px;
-  bottom: 20px;
+  top: 70px;
   border: 1px solid $highlight-gray;
   border-radius: 15px;
   background-color: white;
