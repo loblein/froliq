@@ -9,7 +9,7 @@ $frog-dark-green: rgb(0, 149, 52);
 $frog-light-green: #A3B84A;
 
 $light-blue: #729ACE;
-$blue: #3B5A82;``
+$blue: #3B5A82;
 $red: #823b3b;
 
 $off-white: rgb(240, 240, 240);
@@ -50,7 +50,6 @@ $open-sans: 'Open Sans', sans-serif;
   position: relative;
   z-index: 0;
   width: 100%;
-  border: 1px solid blue;
   background-color: transparent;
 }
 
@@ -58,16 +57,15 @@ $open-sans: 'Open Sans', sans-serif;
   position: relative;
   height: 500px;
   width: 100%;
-  border: 1px solid red;
   margin: 0 auto;
   background-color: transparent;
 }
 
 .user-main nav {
-  position: absolute;
+  display: flex;
+  flex: 0 0 168px;
   height: 310px;
   margin-right: 10px;
-  width: 168px;
   border-radius: 15px;
   border: 1px solid $highlight-gray;
   background-color: white;
@@ -115,12 +113,18 @@ $open-sans: 'Open Sans', sans-serif;
    color: $light-blue;
  }
 
+ .local-nav-row {
+  display: flex;
+  justify-content: flex-start;
+ }
+
 .user-main .content-box {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  margin: 0;
+  padding: 10px;
   min-height: 410px;
   height: auto;
-  width: 600px;
+  width: 100%;
   border: 1px solid $highlight-gray;
   border-radius: 15px;
   background-color: white;
@@ -158,11 +162,11 @@ $open-sans: 'Open Sans', sans-serif;
 
 .opportunities li.job-item {
   padding: 10px;
-  margin: 0 auto;
-  margin: 10px;
+  margin-bottom: 10px;
   border: 1px solid $light-gray;
   background-color: transparent;
-  width: 570px;
+  width: 100%;
+  box-sizing:border-box;
   height: auto;
   border-radius: 20px;
   list-style: none;
@@ -189,11 +193,9 @@ li.job-item .img-container {
   height: 90px;
   width: 120px;
   margin-right: 10px;
-  padding: 0;
   border-radius: 15px;
   color: $off-white;
   background-color: $off-white;
-  border: 1px solid $light-gray;
 }
 // user footer //
 
