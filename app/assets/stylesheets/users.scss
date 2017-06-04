@@ -268,18 +268,19 @@ a, a:hover, a:visited, a:active {
 
 .search-container .user-search input {
   border: none;
+  padding: 10px;
   height: 100%;
-  text-indent: 150px;
+  text-indent: 100px;
   color: $gray;
   font-family: $open-sans;
   font-weight: bold;
-  line-height: 20px;
   background-color: transparent;
   width: 100%;
   outline: none;
 }
 
 input::placeholder {
+
   color: $light-gray;
 }
 
@@ -296,21 +297,22 @@ input::placeholder {
   color: white;
 }
 
-.user-search h5.go {
+.user-search button[type=submit] {
   position: absolute;
   right: 0;
   text-align: center;
-  top: -10px;
+  top: 0;
   height: 100%;
   width: 60px;
+  outline: none;
+  border: 1px solid $gray;
   border-radius: 0 15px 15px 0;
-  border: 1px solid $light-gray;
-  background-color: white;
-  line-height: 40px;
-  color: $gray;
+  background-color: $blue;
+  line-height: 30px;
+  color: white;
 }
 
-h5.go:hover {
+.go:hover {
   color: $light-blue;
   cursor: pointer;
 }
@@ -351,6 +353,44 @@ h5.go:hover {
 
 }
 
+ // job list //
+
+.opportunities-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.opportunities {
+  margin: 0;
+  padding: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.opportunities li.job-item {
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 25px;
+  border: 1px solid $middle-gray;
+  background-color: $off-white;
+  width: 550px;
+  height: 100px;
+  border-radius: 15px;
+  list-style: none;
+  text-indent: 0;
+}
+
+li.job-item h4 {
+  margin: 0;
+  padding: 0;
+  color: $blue;
+}
+
+li.job-item p {
+  margin: 0;
+  padding: 5px;
+}
 // user footer //
 
 .user-footer-container {

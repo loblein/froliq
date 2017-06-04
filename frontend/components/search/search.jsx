@@ -23,7 +23,7 @@ class Search extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    debugger;
+    event.currentTarget.reset();
     const location = this.state.location;
     this.props.search(location);
   }
@@ -35,8 +35,7 @@ class Search extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <h5 className='where-to'>Where to?</h5>
             <input type='text' placeholder='Boston, MA' onChange={this.updateLocation}></input>
-            <FontAwesome className="fa fa-search lookingGlass"></FontAwesome>
-            <input type='submit' className='go'></input>
+            <button type='submit' value='Go!'>Go!</button>
           </form>
         </div>
       </div>

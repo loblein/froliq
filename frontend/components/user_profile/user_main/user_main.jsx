@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 import SearchContainer from '../../search/search_container';
+import OpportunitiesContainer from './opportunities/opportunities_container';
 
 class UserMain extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class UserMain extends React.Component {
                 <SearchContainer />
               </div>
               <div className='content-box'>
-
+                <OpportunitiesContainer />
               </div>
             </div>
           </div>

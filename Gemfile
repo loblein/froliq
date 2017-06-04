@@ -40,6 +40,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
+  gem 'factory_girl_rails'
 end
 
 group :development do

@@ -15,6 +15,7 @@ class User < ApplicationRecord
 
   has_one :employer_setting
   has_one :traveler_setting
+  has_many :jobs
 
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
