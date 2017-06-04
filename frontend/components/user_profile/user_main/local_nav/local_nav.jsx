@@ -1,15 +1,21 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
+import UserSettingsContainer from '../user_settings/user_settings_container';
 
 class LocalNav extends React.Component {
   constructor(props) {
     super(props)
 
     this.handleOppsClick = this.handleOppsClick.bind(this);
+    this.handleSettingsClick = this.handleSettingsClick.bind(this);
   }
 
   handleOppsClick() {
-    this.props.populateOpportunities();
+    this.props.renderView('opportunities');
+  }
+
+  handleSettingsClick() {
+    this.props.renderView('settings');
   }
 
   render() {
@@ -31,7 +37,7 @@ class LocalNav extends React.Component {
           <li>
             <FontAwesome className='fa fa-map' /> Map
           </li>
-          <li>
+          <li onClick={this.handleSettingsClick}>
             <FontAwesome className='fa fa-wrench' /> Settings
           </li>
         </ul>

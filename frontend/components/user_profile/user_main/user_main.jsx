@@ -4,13 +4,25 @@ import FontAwesome from 'react-fontawesome';
 import SearchContainer from '../../search/search_container';
 import OpportunitiesContainer from './opportunities/opportunities_container';
 import LocalNavContainer from './local_nav/local_nav_container';
+import UserSettingsContainer from './user_settings/user_settings_container';
 
 class UserMain extends React.Component {
   constructor(props) {
     super(props)
+
   }
 
   render() {
+    const currentView = this.props.view
+    var viewableComponent;
+
+      switch (currentView) {
+        case 'opportunities':
+          viewableComponent = <OpportunitiesContainer />
+          break;
+        case 'settings':
+          viewableComponent = <UserSettingsContainer />
+      };
 
     return (
       <div className='container-fluid inspect'>
@@ -27,7 +39,7 @@ class UserMain extends React.Component {
                 <LocalNavContainer />
 
                 <div className='content-box'>
-                  <OpportunitiesContainer />
+                  {viewableComponent}
                 </div>
               </div>
             </div>

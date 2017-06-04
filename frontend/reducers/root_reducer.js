@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import SessionReducer from './session_reducer';
 import JobsReducer from './jobs_reducer';
+import ViewReducer from './view_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
-  jobs: JobsReducer
+  jobs: JobsReducer,
+  view: ViewReducer
 });
 
 export default RootReducer;

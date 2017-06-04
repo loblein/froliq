@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import LocalNav from './local_nav';
 import { fetchJobs } from '../../../../actions/job_actions';
+import { renderView } from '../../../../actions/view_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -10,7 +11,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    populateOpportunities: (filters) => dispatch(fetchJobs(filters))
+    populateOpportunities: (filters) => dispatch(fetchJobs(filters)),
+    renderView: (view) => dispatch(renderView(view))
   };
 };
 
