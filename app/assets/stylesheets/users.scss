@@ -6,10 +6,10 @@ $green: #73b52d;
 $dark-green: #3D6810;
 
 $frog-dark-green: rgb(0, 149, 52);
-$frog-light-green: rgb(134, 192, 45);
+$frog-light-green: #A3B84A;
 
 $light-blue: #729ACE;
-$blue: #3B5A82;
+$blue: #3B5A82;``
 $red: #823b3b;
 
 $off-white: rgb(240, 240, 240);
@@ -25,144 +25,6 @@ $satisfy: 'Satisfy', cursive;
 $josefin: 'Josefin Sans', sans-serif;
 $open-sans: 'Open Sans', sans-serif;
 
-.user-header-container {
-  height: 120px;
-  width: 100%;
-}
-
-.upper-spacer {
-  box-shadow: inset 0 1px 1px $gray,
-    inset 0 2px 2px $middle-gray;
-  height: 5px;
-  background-color: $light-gray;
-  width: 100%;
-}
-
-.lower-spacer {
-  height: 5px;
-  background-color: $light-gray;
-  width: 100%;
-  box-shadow: inset 0 1px 1px $gray,
-    inset 0 2px 2px $middle-gray;
-}
-
-.user-header {
-  width: 800px;
-  position: relative;
-  margin: 0 auto;
-  height: 100%;
-}
-
-.user-avatar-container {
-  width: 168px;
-  height: 146px;
-  position: absolute;
-  top: 16px;
-  left: 0;
-  border: 1px solid $highlight-gray;
-  border-radius: 25px;
-  background-color: rgb(250, 250, 250);
-  z-index: 2;
-  box-shadow: 0 0 0 16px white;
-}
-
-.dummy-avatar-container {
-  width: 200px;
-  height: 178px;
-  position: absolute;
-  top: 0;
-  left: -16px;
-  border: 1px solid white;
-  background-color: white;
-  border-radius: 37px;
-  z-index: -1;
-  box-shadow: 2px 2px 6px $middle-gray;
-}
-
-.user-avatar {
-
-}
-
-.user-details-container {
-  position: absolute;
-  height: 100%;
-  width: 330px;
-  left: 176px;
-}
-
-.user-details {
-  position: relative;
-  margin: 10px;
-  height: 100px;
-  color: $dark-gray;
-  border-right: 1px solid $light-gray;
-}
-
-.user-details h3 {
-  margin: 0;
-  padding: 5px;
-  font-family: $open-sans;
-}
-
-.user-details h5 {
-  margin: 0;
-  padding: 5px;
-  font-family: $open-sans;
-}
-
-.user-details h6 {
-  margin: 0;
-  padding: 5px;
-  color: gray;
-  font-family: $open-sans;
-}
-
-.user-star-rating {
-  position: absolute;
-  bottom: 0;
-  height: 30px;
-  width: 200px;
-  line-height: 30px;
-}
-
-.user-star-rating h3 {
-  color: $blue;
-  padding: 3px;
-  margin: 0;
-  font-size: 30px;
-}
-
-.user-star-rating .fa-star {
-  color: $blue;
-  padding: 5px;
-  font-size: 18px;
-}
-
-.user-blurb-container {
-  position: absolute;
-  left: 500px;
-  height: 100%;
-  width: 320px;
-}
-
-.user-blurb h4 {
-  color: $blue;
-  font-weight: 400;
-  margin: 0;
-  padding: 0 0 5px 0;
-}
-
-.user-blurb {
-  margin: 10px;
-  height: 100px;
-  position: relative;
-  color: $gray;
-  font-weight: 400;
-}
-
-a, a:hover, a:visited, a:active {
-  text-decoration: none;
-}
 
 // User Main Component //
 
@@ -188,22 +50,23 @@ a, a:hover, a:visited, a:active {
   position: relative;
   z-index: 0;
   width: 100%;
+  border: 1px solid blue;
   background-color: transparent;
 }
 
 .user-main {
   position: relative;
   height: 500px;
-  width: 800px;
+  width: 100%;
+  border: 1px solid red;
   margin: 0 auto;
   background-color: transparent;
 }
 
 .user-main nav {
   position: absolute;
-  top: 70px;
-  left: 0;
   height: 310px;
+  margin-right: 10px;
   width: 168px;
   border-radius: 15px;
   border: 1px solid $highlight-gray;
@@ -252,87 +115,12 @@ a, a:hover, a:visited, a:active {
    color: $light-blue;
  }
 
- .user-main .search-container {
-   position: absolute;
-   top: 14px;
-   right: 70px;
- }
-
-.search-container .user-search {
-  width: 490px;
-  border: 1px solid $light-gray;
-  border-radius: 15px;
-  background-color: white;
-  height: 40px;
-}
-
-.search-container .user-search input {
-  border: none;
-  padding: 10px;
-  height: 100%;
-  text-indent: 100px;
-  color: $gray;
-  font-family: $open-sans;
-  font-weight: bold;
-  background-color: transparent;
-  width: 100%;
-  outline: none;
-}
-
-input::placeholder {
-
-  color: $light-gray;
-}
-
-.user-search h5.where-to {
-  position: absolute;
-  left: 0;
-  text-align: center;
-  top: -10px;
-  height: 100%;
-  width: 100px;
-  border-radius: 15px 0 0 15px;
-  background-color: $blue;
-  line-height: 40px;
-  color: white;
-}
-
-.user-search button[type=submit] {
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  height: 100%;
-  width: 60px;
-  outline: none;
-  border: 1px solid $gray;
-  border-radius: 0 15px 15px 0;
-  background-color: $blue;
-  line-height: 30px;
-  color: white;
-}
-
-.go:hover {
-  color: $light-blue;
-  cursor: pointer;
-}
-
-.user-search .lookingGlass {
-  position: absolute;
-  left: 100px;
-  top: 4px;
-  color: $gray;
-  border-right: 1px solid $highlight-gray;
-  padding: 6px 10px;
-  margin: 4px;
-}
-
 .user-main .content-box {
-  position: absolute;
-  height: 410px;
-  width: 594px;
-  right: 20px;
-  top: 70px;
+  position: relative;
+  display: inline-block;
+  min-height: 410px;
+  height: auto;
+  width: 600px;
   border: 1px solid $highlight-gray;
   border-radius: 15px;
   background-color: white;
@@ -365,31 +153,47 @@ input::placeholder {
   margin: 0;
   padding: 10;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .opportunities li.job-item {
   padding: 10px;
   margin: 0 auto;
-  margin-top: 25px;
-  border: 1px solid $middle-gray;
-  background-color: $off-white;
-  width: 550px;
-  height: 100px;
-  border-radius: 15px;
+  margin: 10px;
+  border: 1px solid $light-gray;
+  background-color: transparent;
+  width: 570px;
+  height: auto;
+  border-radius: 20px;
   list-style: none;
   text-indent: 0;
 }
 
-li.job-item h4 {
-  margin: 0;
-  padding: 0;
+li.job-item h4, h5 {
   color: $blue;
+  display: inline;
+  margin-right: 5px;
+}
+
+li.job-item h5 {
+  color: $frog-light-green;
 }
 
 li.job-item p {
   margin: 0;
   padding: 5px;
+}
+
+li.job-item .img-container {
+  float: left;
+  height: 90px;
+  width: 120px;
+  margin-right: 10px;
+  padding: 0;
+  border-radius: 15px;
+  color: $off-white;
+  background-color: $off-white;
+  border: 1px solid $light-gray;
 }
 // user footer //
 
