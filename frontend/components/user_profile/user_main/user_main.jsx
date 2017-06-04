@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 import SearchContainer from '../../search/search_container';
 import OpportunitiesContainer from './opportunities/opportunities_container';
+import LocalNavContainer from './local_nav/local_nav_container';
 
 class UserMain extends React.Component {
   constructor(props) {
@@ -23,29 +24,7 @@ class UserMain extends React.Component {
                 </div>
               </div>
               <div className='local-nav-row'>
-                <nav>
-                  <ul>
-                    <li>
-                      <FontAwesome className='fa fa-rocket' /> Opportunities
-                    </li>
-                    <li>
-                      <FontAwesome className='fa fa-hourglass-half' /> Pending
-                    </li>
-                    <li>
-                      <FontAwesome className='fa fa-check' /> Completed
-                      </li>
-                    <li>
-                      <FontAwesome className='fa fa-star' /> Ratings
-                    </li>
-                    <li>
-                      <FontAwesome className='fa fa-map' /> Map
-                    </li>
-                    <li>
-                      <FontAwesome className='fa fa-wrench' /> Settings
-                    </li>
-                  </ul>
-                </nav>
-                <div className='dummy-nav'></div>
+                <LocalNavContainer />
 
                 <div className='content-box'>
                   <OpportunitiesContainer />
