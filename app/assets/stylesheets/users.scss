@@ -197,6 +197,23 @@ li.job-item .img-container {
   color: $off-white;
   background-color: $off-white;
 }
+
+// user settings //
+
+.user-settings {
+  width: 100%;
+  height: 100%;
+  color: $gray;
+}
+
+.gray-right-border {
+  border-right: 1px solid $light-gray;
+}
+
+.red-outline {
+  border: 1px solid red;
+}
+
 // user footer //
 
 .user-footer-container {
