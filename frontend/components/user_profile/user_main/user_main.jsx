@@ -25,8 +25,8 @@ class UserMain extends React.Component {
       };
 
     return (
-      <div className='container-fluid inspect'>
-        <div className='row add-height'>
+      <div className='container-fluid'>
+        <div className='row soft-background'>
           <div className='col-sm-0 col-md-1 col-lg-2'></div>
           <div className='user-main-container col-md-10 col-sm-12 col-lg-8'>
             <div className='user-main'>
@@ -46,13 +46,7 @@ class UserMain extends React.Component {
           </div>
           <div className='col-sm-0 col-md-1 col-lg-2'></div>
         </div>
-        <div className='row'>
-          <div className='user-footer-container'>
-            <div className='user-footer'>
 
-            </div>
-          </div>
-        </div>
       </div>
     )
   }
