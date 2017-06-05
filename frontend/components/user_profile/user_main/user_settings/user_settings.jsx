@@ -53,7 +53,7 @@ class UserSettings extends React.Component {
         <div className='user-settings-form-container'>
           <form className='user-info-form' onSubmit={this.handleUserInfoSubmit}>
             <div className='clearfix'>
-            <div className='form-block clearfix'>
+            <div className='form-block left'>
               <label>
                 First Name
                 <input type='text' onChange={this.updateUser('first_name')}/>
@@ -64,7 +64,7 @@ class UserSettings extends React.Component {
               </label>
             </div>
 
-            <div className='form-block'>
+            <div className='form-block right'>
               <label>
                 Email
                 <input type='text' onChange={this.updateUser('email')}/>

@@ -11,6 +11,7 @@ $light-blue: #729ACE;
 $blue: #3B5A82;
 
 $cloud-white: rgba(255, 255, 255, .9);
+$flake-white: rgb(247, 247, 247);
 $off-white: rgb(240, 240, 240);
 $highlight-gray: rgb(220, 220, 220);
 $light-gray: rgb(200, 200, 200);
@@ -64,13 +65,23 @@ $open-sans: 'Open Sans', sans-serif;
   width: 50%;
   position: relative;
   float: left;
-  background: $off-white;
+  background: $flake-white;
+  border: 2px solid white;
+  padding: 2px 0 16px 0;
+}
+
+.user-info-form .left {
+  border-radius: 15px 0 0 15px;
+}
+
+.user-info-form .right {
+  border-radius: 0 15px 15px 0;
 }
 
 .user-info-form input, textarea {
   outline: none;
   display: block;
-  border: 1px solid $middle-gray;
+  border: 1px solid $light-gray;
   border-radius: 5px;
   margin: 0 auto;
   width: 96%;
