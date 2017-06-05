@@ -19,6 +19,8 @@ $josefin: 'Josefin Sans', sans-serif;
 $open-sans: 'Open Sans', sans-serif;
 
 .user-header-container {
+  display: block;
+  position: relative;
   height: 120px;
   width: 100%;
 }
@@ -40,7 +42,7 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .user-header {
-  width: 800px;
+  width: 100%;
   position: relative;
   margin: 0 auto;
   height: 100%;
@@ -77,10 +79,11 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .user-details-container {
-  position: absolute;
+  float: left;
   height: 100%;
-  width: 330px;
-  left: 176px;
+  width: 260px;
+  margin-left: 200px;
+  white-space: nowrap;
 }
 
 .user-details {
@@ -132,7 +135,7 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .user-blurb-container {
-  position: absolute;
+  float: left;
   left: 500px;
   height: 100%;
   width: 320px;
