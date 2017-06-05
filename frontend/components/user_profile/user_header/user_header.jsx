@@ -14,11 +14,10 @@ class UserHeader extends React.Component {
           <div className='upper-spacer'></div>
         </div>
         <div className='row'>
-          <div className='col-sm-0 col-md-1 col-lg-2'></div>
+          <div className='col-md-1 col-lg-2'></div>
 
           <div className='user-header-container col-sm-12 col-md-10 col-lg-8'>
             <div className='user-header'>
-              <div className='dummy-avatar-container'></div>
               <div className='user-avatar-container'>
                 <img className='user-avatar' />
               </div>
@@ -44,7 +43,7 @@ class UserHeader extends React.Component {
             </div>
           </div>
 
-          <div className='col-sm-0 col-md-1 col-lg-2'></div>
+          <div className='col-md-1 col-lg-2'></div>
           </div>
           <div className='row'>
           <div className='lower-spacer'></div>
