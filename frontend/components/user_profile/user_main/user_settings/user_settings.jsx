@@ -38,10 +38,6 @@ class UserSettings extends React.Component {
     this.props.updateInfo({user});
   }
 
-  componentDidUpdate() {
-    debugger;
-  }
-
   renderErrors(error, i) {
     return (
       <li className='error' key={i}>
@@ -52,7 +48,7 @@ class UserSettings extends React.Component {
 
   render() {
     const errors = this.props.errors || [];
-    debugger;
+
     return (
         <div className='user-settings-form-container'>
           <form className='user-info-form' onSubmit={this.handleUserInfoSubmit}>
