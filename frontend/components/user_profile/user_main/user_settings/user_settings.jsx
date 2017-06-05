@@ -20,6 +20,7 @@ class UserSettings extends React.Component {
       roles: []
     }
 
+    this.renderErrors = this.renderErrors.bind(this);
     this.updateUser = this.updateUser.bind(this);
     this.handleUserInfoSubmit = this.handleUserInfoSubmit.bind(this);
   };
@@ -37,7 +38,21 @@ class UserSettings extends React.Component {
     this.props.updateInfo({user});
   }
 
+  componentDidUpdate() {
+    debugger;
+  }
+
+  renderErrors(error, i) {
+    return (
+      <li className='error' key={i}>
+          {error}
+      </li>
+    )
+  }
+
   render() {
+    const errors = this.props.errors || [];
+    debugger;
     return (
         <div className='user-settings-form-container'>
           <form className='user-info-form' onSubmit={this.handleUserInfoSubmit}>
@@ -64,6 +79,9 @@ class UserSettings extends React.Component {
               </label>
             </div>
             </div>
+            <ul className='errors'>
+              {errors.map(this.renderErrors)}
+            </ul>
             <div className='update-button-container'>
               <input className='update-button' type='submit' value='Update User Info'/>
             </div>
