@@ -26,18 +26,18 @@ class UserMain extends React.Component {
 
     return (
       <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-sm-0 col-md-1 col-lg-2 search-gutter'></div>
+        <div className='row off-white'>
+          <div className='col-md-1 col-lg-2 search-gutter'></div>
           <div className='searchbox-row col-sm-12 col-md-10 col-lg-8'>
             <div className='avatar-shadow'></div>
             <div className='search-container'>
               <SearchContainer />
             </div>
           </div>
-          <div className='col-sm-0 col-md-1 col-lg-2 search-gutter'></div>
+          <div className='col-md-1 col-lg-2 search-gutter'></div>
         </div>
         <div className='row soft-background'>
-          <div className='col-sm-0 col-md-1 col-lg-2'></div>
+          <div className='col-md-1 col-lg-2'></div>
           <div className='user-main-container col-md-10 col-sm-12 col-lg-8'>
             <div className='user-main'>
 

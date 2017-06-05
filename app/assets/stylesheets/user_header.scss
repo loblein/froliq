@@ -23,6 +23,7 @@ $open-sans: 'Open Sans', sans-serif;
   position: relative;
   height: 120px;
   width: 100%;
+  background-color: white;
 }
 
 .upper-spacer {
@@ -43,6 +44,7 @@ $open-sans: 'Open Sans', sans-serif;
 
 .user-header {
   width: 100%;
+  min-width: 800px;
   position: relative;
   margin: 0 auto;
   height: 100%;
