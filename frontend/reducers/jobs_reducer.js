@@ -7,9 +7,6 @@ const JobsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_JOBS:
       return _.merge({}, state, action.jobs);
-    case RECEIVE_ERRORS:
-      const errors = action.errors;
-      return _.merge({}, errors);
     default:
       return state;
   };
