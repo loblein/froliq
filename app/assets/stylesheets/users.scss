@@ -13,10 +13,13 @@ $blue: #3B5A82;
 $dark-blue: #203550;
 $red: #823b3b;
 
+$highlight: rgb(250, 250, 250);
 $off-white: rgb(240, 240, 240);
+$flake-white: rgb(230, 230, 230);
 $highlight-gray: rgb(220, 220, 220);
 $light-gray: rgb(200, 200, 200);
 $middle-gray: rgb(150, 150, 150);
+$shadow-gray: rgb(125, 125, 125);
 $gray: rgb(100, 100, 100);
 $dark-gray: rgb(70, 70, 70);
 
@@ -50,7 +53,6 @@ $open-sans: 'Open Sans', sans-serif;
   width: 100%;
   display: block;
   position: relative;
-  z-index: 0;
   width: 100%;
   background-color: transparent;
 }
@@ -64,28 +66,22 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
 .user-main nav {
-  display: flex;
+  margin-top: 30px;
   flex: 0 0 168px;
   height: 310px;
-  margin-right: 10px;
-  border-radius: 15px;
-  border: 1px solid $highlight-gray;
-  background-color: white;
-}
-
-.user-main .dummy-nav {
-  position: absolute;
-  bottom: 16px;
-  left: 4px;
-  height: 310px;
-  width: 168px;
+  margin-right: 20px;
   border-radius: 25px;
-  z-index: -1;
+  box-shadow: inset 0 0 2px $shadow-gray,
+    0 0 10px 2px $highlight,
+    0 0 10px 5px $flake-white;
+  border: 1px solid white;
+  background-color: $highlight;
 }
 
 .user-main nav ul {
   padding: 0;
   width: 100%;
+  height: 100%;
   text-align: center;
 }
 
@@ -93,10 +89,10 @@ $open-sans: 'Open Sans', sans-serif;
   font-family: $open-sans;
   margin: 0;
   padding: 0;
-  height: 16.6%;
+  height: 16.7%;
   line-height: 50px;
   width: 100%;
-  border-bottom: 1px solid $light-gray;
+  box-shadow: inset 1px 1px 1px $light-gray;
   color: white;
   font-size: 14px;
   list-style: none;
@@ -108,11 +104,19 @@ $open-sans: 'Open Sans', sans-serif;
 }
 
  .user-main nav ul li:last-child {
-   border: none;
+   border-radius: 0 0 25px 25px;
+ }
+
+ .user-main nav ul li:first-child {
+   border-radius: 25px 25px 0 0;
  }
 
  .user-main nav ul li:hover {
    color: $light-blue;
+ }
+
+ .user-main nav ul li:first-child:hover {
+
  }
 
  .local-nav-row {
@@ -122,15 +126,18 @@ $open-sans: 'Open Sans', sans-serif;
 
 .user-main .content-box {
   display: flex;
-  margin: 0 0 130px 0;
+  margin: 0 50px 130px 0;
   padding: 10px;
-  min-height: 410px;
+  min-height: 380px;
   height: auto;
-  width: 100%;
+  width: 90%;
   min-width: 360px;
-  border: 1px solid $highlight-gray;
-  border-radius: 15px;
-  background-color: white;
+  box-shadow: inset 0 0 2px $shadow-gray,
+    0 0 10px 2px $highlight,
+    0 0 10px 5px $flake-white;
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: $highlight;
 }
 
 .user-footer-container {
