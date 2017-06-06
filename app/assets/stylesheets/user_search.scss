@@ -3,6 +3,7 @@ $frog-light-green: #A3B84A;
 
 $light-blue: #729ACE;
 $blue: #3B5A82;
+$dark-blue: #1a2c44;
 $red: #823b3b;
 
 $off-white: rgb(240, 240, 240);
@@ -28,8 +29,8 @@ $open-sans: 'Open Sans', sans-serif;
 .search-container {
   position: absolute;
   top: 8px;
-  left: 100px;
-  width: 80%;
+  left: 140px;
+  width: 75%;
   background-color: transparent;
 }
 
@@ -60,7 +61,7 @@ $open-sans: 'Open Sans', sans-serif;
 
 .avatar-shadow {
   position: absolute;
-  left: 0px;
+  left: 3px;
   top: -5px;
   width: 196px;
   height: 56px;
@@ -80,11 +81,12 @@ input::placeholder {
  padding-right: 20px;
  top: -10px;
  height: 100%;
- width: 200px;
+ width: 160px;
  border-radius: 15px 0 0 15px;
  background-color: $blue;
  line-height: 40px;
  color: white;
+ box-shadow: inset 100px 30px 30px -50px $dark-blue;
 }
 
 .user-search button[type=submit] {
