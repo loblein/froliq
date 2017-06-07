@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates_inclusion_of :employer, in: [true, false]
   validates :email, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :ensure_biography
 
   attr_reader :password
 
@@ -39,6 +39,11 @@ class User < ApplicationRecord
 
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
+  end
+
+  def ensure_biography
+    self.biography ||= Biography.new
+    self.save!
   end
 
 end

@@ -65,8 +65,7 @@ class Roles extends React.Component {
           <input type='checkbox'
             id={role}
             style={{
-              backgroundColor: this.renderColor(role),
-              color: this.renderColor(role)
+              backgroundColor: this.renderColor(role)
               }}
             onChange={this.toggleRole}>
           </input>

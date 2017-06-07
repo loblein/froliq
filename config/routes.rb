@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :update, :show] do
       resource :traveler_settings, only: [:create, :update]
       resource :employer_settings, only: [:create, :update]
+      resource :biography, only: [:create, :update, :show]
     end
   end
 
