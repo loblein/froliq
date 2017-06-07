@@ -7,17 +7,12 @@ class AccountSettings extends React.Component {
 
     this.state = {
       user: {
-        first_name: '',
-        last_name: '',
-        email: '',
+        first_name: this.props.currentUser.first_name || '',
+        last_name: this.props.currentUser.last_name || '',
+        email: this.props.currentUser.email || '',
         password: '',
         id: this.props.currentUser.id
-      },
-      userSettings: {
-        bio: '',
-        home_base: ''
-      },
-      roles: []
+      }
     }
 
     this.renderErrors = this.renderErrors.bind(this);
@@ -34,8 +29,12 @@ class AccountSettings extends React.Component {
   handleUserInfoSubmit(event) {
     event.preventDefault();
     const user = this.state.user;
-    event.currentTarget.reset();
+    this.refs.firstName.value = '';
+    this.refs.lastName.value = '';
+    this.refs.email.value = '';
+    this.refs.password.value = '';
     this.props.updateUser({user});
+    this.state.user.password = '';
   }
 
   renderErrors(error, i) {
@@ -56,22 +55,22 @@ class AccountSettings extends React.Component {
           <div className='form-block'>
             <label>
               First Name
-              <input type='text' onChange={this.updateUser('first_name')}/>
+              <input type='text' ref='firstName' placeholder={this.state.user.first_name} onChange={this.updateUser('first_name')}/>
             </label>
             <label>
               Last Name
-              <input type='text' onChange={this.updateUser('last_name')}/>
+              <input type='text' ref='lastName' placeholder={this.state.user.last_name} onChange={this.updateUser('last_name')}/>
             </label>
           </div>
 
           <div className='form-block'>
             <label>
               Email
-              <input type='text' onChange={this.updateUser('email')}/>
+              <input type='text' ref='email' placeholder={this.state.user.email} onChange={this.updateUser('email')}/>
             </label>
             <label>
               Password
-              <input type='password' onChange={this.updateUser('password')}/>
+              <input type='password' ref='password' onChange={this.updateUser('password')}/>
             </label>
           </div>
 

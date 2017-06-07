@@ -24,7 +24,7 @@ class UserHeader extends React.Component {
               <div className='user-details-container'>
                 <div className='user-details'>
                   <h3>{this.props.firstName} {this.props.lastName}</h3>
-                  <h6>home base: Belfast, ME</h6>
+                  <h6>{`Home Base: ${this.props.homeTown}` || ''}</h6>
                   <div className='user-star-rating'>
                       <FontAwesome className='fa fa-star' />
                       <FontAwesome className='fa fa-star' />

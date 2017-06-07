@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 const mapStateToProps = (state) => {
   return {
     firstName: state.session.currentUser.first_name,
-    lastName: state.session.currentUser.last_name
+    lastName: state.session.currentUser.last_name,
+    homeTown: state.session.currentUser.biography.home_town
   };
 };
 
