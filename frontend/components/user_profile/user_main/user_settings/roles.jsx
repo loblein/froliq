@@ -3,27 +3,30 @@ import ROLES from './roles_constants';
 import FontAwesome from 'react-fontawesome';
 
 class Roles extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
-    this.state = {
-      dishwasher: false,
-      waiter: false,
-      cook: false,
-      laborer: false,
-      assistant: false,
-      caretaker: false,
-      farmer: false,
-      landscaper: false,
-      artistDesigner: false,
-      transportation: false,
-      carpenter: false,
-      creative: false,
-      miscellaneous: false
-    };
+    this.state = this.props.roles;
+
+    // {
+    //   dishwasher: false,
+    //   waiter: false,
+    //   cook: false,
+    //   laborer: false,
+    //   assistant: false,
+    //   caretaker: false,
+    //   farmer: false,
+    //   landscaper: false,
+    //   artistDesigner: false,
+    //   transportation: false,
+    //   carpenter: false,
+    //   creative: false,
+    //   miscellaneous: false
+    // };
 
     this.toggleRole = this.toggleRole.bind(this);
     this.populateRoles = this.populateRoles.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   };
 
   toggleRole(event) {
@@ -34,10 +37,6 @@ class Roles extends React.Component {
       :
       this.setState({ [`${target}`]: false });
   };
-
-  componentDidUpdate() {
-
-  }
 
   renderColor(role) {
     const target = role.toLowerCase();
@@ -76,11 +75,17 @@ class Roles extends React.Component {
     return roles;
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    const role_selector = this.state;
+    this.props.setRoles({role_selector});
+  }
+
   render() {
 
 
     return (
-      <form className='roles-form'>
+      <form className='roles-form' onSubmit={this.handleSubmit}>
         <div className='clearfix'>
           <div className='form-block-full'>
             <ul className='role-list'>

@@ -4,4 +4,5 @@ json.extract! user,
   :first_name,
   :last_name,
   :employer,
-  :biography
+  :biography,
+  :role_selector

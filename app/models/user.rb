@@ -9,12 +9,13 @@ class User < ApplicationRecord
   validates_inclusion_of :employer, in: [true, false]
   validates :email, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
-  after_initialize :ensure_session_token, :ensure_biography
+  after_initialize :ensure_session_token, :ensure_biography, :ensure_role_selector
 
   attr_reader :password
 
   has_one :employer_setting
   has_one :biography
+  has_one :role_selector
   has_many :jobs
 
   def password=(password)
@@ -43,6 +44,11 @@ class User < ApplicationRecord
 
   def ensure_biography
     self.biography ||= Biography.new
+    self.save!
+  end
+
+  def ensure_role_selector
+    self.role_selector ||= RoleSelector.new
     self.save!
   end
 
