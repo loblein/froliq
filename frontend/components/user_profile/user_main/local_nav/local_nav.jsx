@@ -1,6 +1,5 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import UserSettingsContainer from '../user_settings/user_settings_container';
 
 class LocalNav extends React.Component {
   constructor(props) {

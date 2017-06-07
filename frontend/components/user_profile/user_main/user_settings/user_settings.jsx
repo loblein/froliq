@@ -1,91 +1,16 @@
 import React from 'react';
-import { merge } from 'lodash';
+import BiographyContainer from './biography_container';
+import AccountSettingsContainer from './account_settings_container';
+import RolesContainer from './roles_container';
 
-class UserSettings extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      user: {
-        first_name: '',
-        last_name: '',
-        email: '',
-        password: '',
-        id: this.props.currentUser.id
-      },
-      userSettings: {
-        bio: '',
-        home_base: ''
-      },
-      roles: []
-    }
-
-    this.renderErrors = this.renderErrors.bind(this);
-    this.updateUser = this.updateUser.bind(this);
-    this.handleUserInfoSubmit = this.handleUserInfoSubmit.bind(this);
-  };
-
-  updateUser(field) {
-    return event => this.setState({
-      user: merge({}, this.state.user, {[field]: event.currentTarget.value})
-    });
-  }
-
-  handleUserInfoSubmit(event) {
-    event.preventDefault();
-    const user = this.state.user;
-    event.currentTarget.reset();
-    this.props.updateInfo({user});
-  }
-
-  renderErrors(error, i) {
-    return (
-      <li className='error' key={i}>
-          {error}
-      </li>
-    )
-  }
-
-  render() {
-    const errors = this.props.errors || [];
-
-    return (
-        <div className='user-settings-form-container'>
-          <form className='user-info-form' onSubmit={this.handleUserInfoSubmit}>
-            <div className='clearfix'>
-            <div className='form-block left'>
-              <label>
-                First Name
-                <input type='text' onChange={this.updateUser('first_name')}/>
-              </label>
-              <label>
-                Last Name
-                <input type='text' onChange={this.updateUser('last_name')}/>
-              </label>
-            </div>
-
-            <div className='form-block right'>
-              <label>
-                Email
-                <input type='text' onChange={this.updateUser('email')}/>
-              </label>
-              <label>
-                Password
-                <input type='password' onChange={this.updateUser('password')}/>
-              </label>
-            </div>
-            </div>
-            <ul className='errors'>
-              {errors.map(this.renderErrors)}
-            </ul>
-            <div className='update-button-container'>
-              <input className='update-button' type='submit' value='Update User Info'/>
-            </div>
-          </form>
-
-        </div>
-    );
-  };
-};
+const UserSettings = () => {
+  return (
+    <div className='user-settings-form-container'>
+      <AccountSettingsContainer />
+      <BiographyContainer />
+      <RolesContainer />
+    </div>
+  )
+}
 
 export default UserSettings;

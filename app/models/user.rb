@@ -14,7 +14,7 @@ class User < ApplicationRecord
   attr_reader :password
 
   has_one :employer_setting
-  has_one :traveler_setting
+  has_one :biography
   has_many :jobs
 
   def password=(password)

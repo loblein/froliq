@@ -23,8 +23,6 @@ class Opportunities extends React.Component {
         <p>
           Description: {job.description}
         </p>
-
-
       </li>
     ));
 

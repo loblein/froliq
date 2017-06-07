@@ -1,0 +1,29 @@
+// Place all the styles related to the biography controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import '../../variables';
+
+.bio-full {
+  outline: none;
+  display: block;
+  height: 110px;
+  margin: 0 auto;
+  width: 98%;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid $light-gray;
+}
+
+
+label.biography {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+p.note {
+  margin: 0;
+  padding: 10px;
+}

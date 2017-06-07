@@ -1,0 +1,102 @@
+@import '../../variables';
+
+.user-settings-form-container {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+.user-settings-form {
+  color: $dark-gray;
+  border-radius: 10px;
+}
+
+.form-block {
+  width: 50%;
+  min-height: 110px;
+  position: relative;
+  float: left;
+  background: $flake-white;
+  border: 2px solid white;
+  box-shadow: inset 0 0 10px 1px $highlight;
+  padding: 2px 0 16px 0;
+}
+
+.form-block-full {
+  width: 100%;
+  min-height: 110px;
+  position: relative;
+  float: left;
+  background: $flake-white;
+  border: 2px solid white;
+  box-shadow: inset 0 0 10px 1px $highlight;
+  padding: 2px 0 16px 0;
+}
+
+.form-block .left {
+  border-radius: 15px 0 0 15px;
+}
+
+.form-block .right {
+  border-radius: 0 15px 15px 0;
+}
+
+.user-settings-form input {
+  outline: none;
+  display: block;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 96%;
+  max-width: 300px;
+  padding: 8px;
+}
+
+.user-settings-form label {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  display: block;
+  font-size: 12px;
+  text-indent: 6px;
+}
+
+// update button //
+
+.update-button-container {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-bottom: 1px solid $light-gray;
+}
+
+.update-button-container .update-button {
+  width: auto;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  color: $gray;
+  border: none;
+  background-color: transparent;
+  line-height: 16px;
+}
+
+.update-button-container .update-button:hover {
+  color: $light-blue;
+}
+
+// errors //
+
+.errors {
+  padding: 10px;
+  width: 100%;
+  color: #9F4540;
+  margin: 0;
+}
+
+.errors .error {
+  text-indent: 6px;
+  list-style: none;
+  font-size: 12px;
+}

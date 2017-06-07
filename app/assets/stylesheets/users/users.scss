@@ -1,35 +1,8 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$light-green: #AEFF59;
-$green: #73b52d;
-$dark-green: #3D6810;
 
-$frog-dark-green: rgb(0, 149, 52);
-$frog-light-green: #A3B84A;
-
-$light-blue: #729ACE;
-$blue: #3B5A82;
-$dark-blue: #203550;
-$red: #823b3b;
-
-$highlight: rgb(251, 251, 251);
-$off-white: rgb(240, 240, 240);
-$flake-white: rgb(230, 230, 230);
-$highlight-gray: rgb(220, 220, 220);
-$light-gray: rgb(200, 200, 200);
-$middle-gray: rgb(150, 150, 150);
-$shadow-gray: rgb(125, 125, 125);
-$gray: rgb(100, 100, 100);
-$dark-gray: rgb(70, 70, 70);
-
-$deep-brown: #211d1a;
-$deeper-brown: #221f1d;
-
-$satisfy: 'Satisfy', cursive;
-$josefin: 'Josefin Sans', sans-serif;
-$open-sans: 'Open Sans', sans-serif;
-
+@import '../variables';
 
 // User Main Component //
 
@@ -200,13 +173,6 @@ li.job-item .img-container {
   border-radius: 15px;
   color: $off-white;
   background-color: $off-white;
-}
-
-// user settings //
-
-
-.red-outline {
-  border: 1px solid red;
 }
 
 // user footer //

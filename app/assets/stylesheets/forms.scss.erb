@@ -2,27 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$light-green: #AEFF59;
-$green: #73b52d;
-$dark-green: #3D6810;
-
-$highlight-blue: #a1bce0;
-$light-blue: #729ACE;
-$blue: #3B5A82;
-
-$cloud-white: rgba(255, 255, 255, .9);
-$highlight: rgb(251, 251, 251);
-$flake-white: rgb(247, 247, 247);
-$off-white: rgb(240, 240, 240);
-$highlight-gray: rgb(220, 220, 220);
-$light-gray: rgb(200, 200, 200);
-$middle-gray: rgb(150, 150, 150);
-$gray: rgb(100, 100, 100);
-$dark-gray: rgb(70, 70, 70);
-
-$satisfy: 'Satisfy', cursive;
-$josefin: 'Josefin Sans', sans-serif;
-$open-sans: 'Open Sans', sans-serif;
+@import './variables';
 
 .background-reset {
   background-color: #efefef;
@@ -46,59 +26,6 @@ $open-sans: 'Open Sans', sans-serif;
   background-color: $cloud-white;
   border-radius: 25px;
   padding: 10px;
-}
-
-// user settings form //
-
-.user-settings-form-container {
-  height: 100%;
-  width: 100%;
-  padding: 10px;
-}
-
-.user-info-form {
-  color: $dark-gray;
-  border-radius: 10px;
-  height: 100%;
-}
-
-.form-block {
-  width: 50%;
-  position: relative;
-  float: left;
-  background: $flake-white;
-  border: 2px solid white;
-  box-shadow: inset 0 0 10px 1px $highlight;
-  padding: 2px 0 16px 0;
-}
-
-.user-info-form .left {
-  border-radius: 15px 0 0 15px;
-}
-
-.user-info-form .right {
-  border-radius: 0 15px 15px 0;
-}
-
-.user-info-form input, textarea {
-  outline: none;
-  display: block;
-  border: 1px solid $light-gray;
-  border-radius: 5px;
-  margin: 0 auto;
-  width: 96%;
-  max-width: 300px;
-  padding: 8px;
-}
-
-.user-info-form label {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 10px;
-  display: block;
-  font-size: 12px;
-  text-indent: 6px;
 }
 
 .sub-form-content {
@@ -171,21 +98,6 @@ $open-sans: 'Open Sans', sans-serif;
   font-family: 'Satisfy', cursive;
 }
 
-// errors //
-
-.errors {
-  padding: 10px;
-  width: 100%;
-  color: #9F4540;
-  margin: 0;
-}
-
-.errors .error {
-  text-indent: 6px;
-  list-style: none;
-  font-size: 12px;
-}
-
 .standard-form .center-button {
   width: 100%;
   padding: 10px;
@@ -200,35 +112,4 @@ $open-sans: 'Open Sans', sans-serif;
   background-color: $blue;
   border: 1px solid $gray;
   color: white;
-}
-
-.update-button-container {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 30px;
-  border-bottom: 1px solid $light-gray;
-
-}
-
-.update-button-container .update-button {
-  width: auto;
-  position: absolute;
-  right: 10px;
-  bottom: 0;
-  height: 32px;
-  color: $gray;
-  border: none;
-  background-color: transparent;
-  line-height: 16px;
-}
-
-.update-button-container .update-button:hover {
-  color: $light-blue;
-}
-
-
-
-.red-outline {
-  border: 1px solid red;
 }

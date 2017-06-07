@@ -14,25 +14,7 @@
  *= require_self
  */
 
- $frog-dark-green: rgb(0, 149, 52);
- $frog-light-green: #A3B84A;
-
- $light-blue: #729ACE;
- $blue: #3B5A82;
- $red: #823b3b;
-
- $off-white: rgb(240, 240, 240);
- $highlight-gray: rgb(220, 220, 220);
- $light-gray: rgb(200, 200, 200);
- $middle-gray: rgb(150, 150, 150);
- $gray: rgb(100, 100, 100);
- $dark-gray: rgb(70, 70, 70);
-
- $deep-brown: #211d1a;
-
- $satisfy: 'Satisfy', cursive;
- $josefin: 'Josefin Sans', sans-serif;
- $open-sans: 'Open Sans', sans-serif;
+ @import './variables';
 
  html, body {
    border: 0;
@@ -53,6 +35,10 @@
 
  .off-white {
    background-color: $off-white;
+ }
+
+ .red-outline {
+   border: 1px solid red;
  }
 
  div {
