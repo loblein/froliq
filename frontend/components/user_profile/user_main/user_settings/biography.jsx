@@ -5,8 +5,8 @@ class Biography extends React.Component {
     super(props)
 
     this.state = {
-      home_town: '',
-      personal_info: ''
+      home_town: this.props.biography.home_town || '',
+      personal_info: this.props.biography.personal_info || ''
     };
 
     this.handleHomeTown = this.handleHomeTown.bind(this);
@@ -31,6 +31,8 @@ class Biography extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const biography = this.state;
+    this.refs.homeTown.value = '';
+    this.refs.personalInfo.value = '';
     this.props.updateBio({biography});
   }
 
@@ -48,14 +50,14 @@ class Biography extends React.Component {
             <div className='right'>
               <label>
                 Home Town
-                <input type='text' placeholder={this.props.biography.home_town} onChange={this.handleHomeTown}></input>
+                <input type='text' ref='homeTown' placeholder={this.state.home_town} onChange={this.handleHomeTown}></input>
               </label>
             </div>
           </div>
           <div className='form-block-full'>
             <label className='biography'>
               Biography
-              <textarea className='bio-full' placeholder={this.props.biography.personal_info} onChange={this.handlePersonalInfo}></textarea>
+              <textarea className='bio-full' ref='personalInfo' placeholder={this.state.personal_info} onChange={this.handlePersonalInfo}></textarea>
             </label>
           </div>
 
