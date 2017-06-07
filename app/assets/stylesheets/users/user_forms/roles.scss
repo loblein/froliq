@@ -29,6 +29,7 @@ ul.role-list {
   border: 1px solid $light-gray;
   border-radius: 10px;
   color: white;
+  cursor: pointer;
 }
 
 .role-item label {
@@ -37,4 +38,5 @@ ul.role-list {
   left: 0;
   right: 0;
   margin: auto;
+  cursor: pointer;
 }

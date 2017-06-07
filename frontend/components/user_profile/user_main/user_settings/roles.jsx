@@ -89,6 +89,9 @@ class Roles extends React.Component {
             </ul>
           </div>
         </div>
+        <ul className='errors'>
+
+        </ul>
         <div className='update-button-container'>
           <input type='submit' className='update-button' value='Update Roles'/>
         </div>
