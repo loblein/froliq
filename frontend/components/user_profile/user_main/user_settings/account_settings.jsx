@@ -1,5 +1,6 @@
 import React from 'react';
 import { merge } from 'lodash';
+import FontAwesome from 'react-fontawesome';
 
 class AccountSettings extends React.Component {
   constructor(props) {
@@ -75,12 +76,17 @@ class AccountSettings extends React.Component {
           </div>
 
         </div>
+        <div className='update-button-container'>
+          <div className='update-button'>
+            <input className='update' type='submit' value='Update Account Info' />
+            <FontAwesome className='fa fa-long-arrow-right update-arrow' />
+          </div>
+        </div>
         <ul className='errors'>
           {errors.map(this.renderErrors)}
         </ul>
-        <div className='update-button-container'>
-          <input className='update-button' type='submit' value='Update User Info'/>
-        </div>
+        <div className='clearfix'></div>
+        <div className='horizontal_rule' />
       </form>
     );
   };

@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome';
 
 class Biography extends React.Component {
   constructor(props) {
@@ -62,12 +63,17 @@ class Biography extends React.Component {
           </div>
 
         </div>
+        <div className='update-button-container'>
+          <div className='update-button'>
+            <input className='update' type='submit' value='Update Personal Info' />
+            <FontAwesome className='fa fa-long-arrow-right update-arrow' />
+          </div>
+        </div>
         <ul className='errors'>
 
         </ul>
-        <div className='update-button-container'>
-          <input type='submit' className='update-button' value='Update Personal Info'/>
-        </div>
+        <div className='clearfix'></div>
+        <div className='horizontal_rule' />
       </form>
     )
   }
