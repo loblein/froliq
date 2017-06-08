@@ -13,7 +13,6 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  has_one :employer_setting
   has_one :biography
   has_one :role_selector
   has_many :jobs

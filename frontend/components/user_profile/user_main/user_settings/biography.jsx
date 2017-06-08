@@ -41,7 +41,7 @@ class Biography extends React.Component {
     return (
       <form className='user-settings-form' onSubmit={this.handleSubmit}>
         <div className='clearfix'>
-
+          <h3>Personal Info</h3>
           <div className='form-block'>
             <div className='left'>
               <p className='note'>Include your home town and a brief bio (one or two paragraphs) to improve the look of your profile.</p>

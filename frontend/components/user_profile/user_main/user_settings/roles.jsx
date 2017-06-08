@@ -87,6 +87,13 @@ class Roles extends React.Component {
     return (
       <form className='roles-form' onSubmit={this.handleSubmit}>
         <div className='clearfix'>
+          <h3>Role Selector</h3>
+          <div className='form-block-full'>
+            <p className='note'>
+              Here you can select all or a few of the opportunities you would like to look for when searching a new location.
+              Results will be automatically filtered to reflect your current roles.
+            </p>
+          </div>
           <div className='form-block-full'>
             <ul className='role-list'>
               {this.populateRoles()}

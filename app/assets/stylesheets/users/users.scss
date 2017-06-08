@@ -38,9 +38,9 @@
   height: 310px;
   margin-right: 20px;
   border-radius: 25px;
-  box-shadow: inset 0 0 2px $shadow-gray,
+  box-shadow: inset 0 0 2px 1px $middle-gray,
     0 0 10px 2px $highlight,
-    0 0 10px 5px $flake-white;
+    0 0 2px 2px $flake-white;
   border: 1px solid white;
   background-color: $highlight;
 }
@@ -99,9 +99,9 @@
   height: auto;
   width: 90%;
   min-width: 360px;
-  box-shadow: inset 0 0 2px $shadow-gray,
+  box-shadow: inset 0 0 2px 1px $middle-gray,
     0 0 10px 2px $highlight,
-    0 0 10px 5px $flake-white;
+    0 0 2px 2px $flake-white;
   border: 1px solid white;
   border-radius: 25px;
   background-color: $highlight;

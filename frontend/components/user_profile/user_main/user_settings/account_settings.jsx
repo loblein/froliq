@@ -52,7 +52,7 @@ class AccountSettings extends React.Component {
     return (
       <form className='user-settings-form' onSubmit={this.handleUserInfoSubmit}>
         <div className='clearfix'>
-
+          <h3>Account Settings</h3>
           <div className='form-block'>
             <label>
               First Name

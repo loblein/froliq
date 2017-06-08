@@ -6,6 +6,7 @@ class Api::RoleSelectorsController < ApplicationController
 
   def update
     @role_selector = RoleSelector.find_by user_id: current_user.id
+    @user = @role_selector.user
 
     if @role_selector.update_attributes(role_selector_params)
       render '/api/users/show'

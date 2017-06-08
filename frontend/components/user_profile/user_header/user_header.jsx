@@ -5,9 +5,13 @@ class UserHeader extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      homeTown: this.props.homeTown
+    }
   }
 
   render() {
+    const homeBase = <h6>{this.state.homeTown}</h6>
     return (
       <div className='container-fluid'>
         <div className='row'>
@@ -24,7 +28,7 @@ class UserHeader extends React.Component {
               <div className='user-details-container'>
                 <div className='user-details'>
                   <h3>{this.props.firstName} {this.props.lastName}</h3>
-                  <h6>{`Home Base: ${this.props.homeTown}` || ''}</h6>
+                    { homeBase }
                   <div className='user-star-rating'>
                       <FontAwesome className='fa fa-star' />
                       <FontAwesome className='fa fa-star' />
