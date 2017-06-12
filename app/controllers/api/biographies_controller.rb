@@ -5,9 +5,9 @@ class Api::BiographiesController < ApplicationController
   end
 
   def update
-    @biography = Biography.find_by user_id: current_user.id
-    @user = @biography.user
-    
+    @user = current_user
+    @biography = @user.biography
+
     if @biography.update_attributes(biography_params)
       render '/api/users/show'
     else

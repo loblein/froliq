@@ -1,7 +1,7 @@
 import { receiveCurrentUser, receiveErrors } from '../actions/session_actions';
-import { receiveBio, receiveBioErrors } from '../actions/user_actions';
 
 export const update = user => {
+  debugger;
   return $.ajax({
     method: 'PATCH',
     url: `api/users/${user.user.id}`,
@@ -10,6 +10,7 @@ export const update = user => {
 };
 
 export const updateBio = bio => {
+  debugger;
   return $.ajax({
     method: 'PATCH',
     url: 'api/users/:user_id/biography',
