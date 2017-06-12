@@ -3,7 +3,7 @@ import UserMain from './user_main';
 
 const mapStateToProps = (state) => {
   return {
-    view: state.view.view
+    currentWindow: state.view.currentWindow
   };
 };
 

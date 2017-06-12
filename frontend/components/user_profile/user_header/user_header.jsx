@@ -1,5 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
+import { values, compact } from 'lodash';
 
 class UserHeader extends React.Component {
   constructor(props) {
@@ -7,8 +8,19 @@ class UserHeader extends React.Component {
 
     this.state = {
       homeTown: this.props.homeTown
+    };
+
+    this.renderNotes = this.renderNotes.bind(this);
+  };
+
+  renderNotes() {
+    const values = _.values(this.props.roleSelector);
+    if (_.compact(values).length === 0) {
+      return ("Looks like you haven't updated your user settings. Update your roles for better search results.");
+    } else {
+      return ("You're all caught up. Search and explore new locations!");
     }
-  }
+  };
 
   render() {
     const homeBase = <h6>{this.state.homeTown}</h6>
@@ -28,7 +40,7 @@ class UserHeader extends React.Component {
               <div className='user-details-container'>
                 <div className='user-details'>
                   <h3>{this.props.firstName} {this.props.lastName}</h3>
-                    { homeBase }
+                    <h6>{ this.props.homeTown }</h6>
                   <div className='user-star-rating'>
                       <FontAwesome className='fa fa-star' />
                       <FontAwesome className='fa fa-star' />
@@ -41,7 +53,7 @@ class UserHeader extends React.Component {
               <div className='user-blurb-container'>
                 <div className='user-blurb'>
                   <h4>notes</h4>
-                  Looks like you haven't updated your user settings. Update your settings for better search results.
+                  { this.renderNotes() }
                 </div>
               </div>
             </div>

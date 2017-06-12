@@ -2,7 +2,7 @@ import { RENDER_VIEW } from '../actions/view_actions';
 import { merge } from 'lodash';
 
 const initialState = {
-  view: 'opportunities'
+  currentWindow: 'opportunities'
 }
 
 const ViewReducer = (state = initialState, action) => {
@@ -10,7 +10,7 @@ const ViewReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case RENDER_VIEW:
-      return Object.assign({}, state, {view: action.view});
+      return Object.assign({}, state, {currentWindow: action.view});
     default:
       return state;
   };

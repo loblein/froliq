@@ -13,10 +13,10 @@ class UserMain extends React.Component {
   }
 
   render() {
-    const currentView = this.props.view
+    const currentWindow = this.props.currentWindow;
     var viewableComponent;
 
-      switch (currentView) {
+      switch (currentWindow) {
         case 'opportunities':
           viewableComponent = <OpportunitiesContainer />
           break;

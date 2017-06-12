@@ -1,4 +1,3 @@
-# json.partial! 'api/users/user', user: @user
 
   json.email @user.email
   json.first_name @user.first_name

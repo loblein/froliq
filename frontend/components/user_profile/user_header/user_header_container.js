@@ -5,7 +5,8 @@ const mapStateToProps = (state) => {
   return {
     firstName: state.session.currentUser.first_name,
     lastName: state.session.currentUser.last_name,
-    homeTown: state.session.currentUser.biography.home_town
+    homeTown: state.session.currentUser.biography.home_town,
+    roleSelector: state.session.currentUser.role_selector
   };
 };
 
