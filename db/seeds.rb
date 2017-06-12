@@ -12,7 +12,7 @@ Job.create!(
   title: 'Farmer Needed',
   description: 'Come plant me some pertaters. Fancy an iced tea?',
   rate: 10.00,
-  user_id: 19,
+  user_id: 60,
   status: 'open'
 )
 
@@ -20,7 +20,7 @@ Job.create!(
   title: 'Dishwasher Needed',
   description: 'Help! My staff sucks! I need you to come clean this restaurant kitchen ASAP.',
   rate: 16.00,
-  user_id: 19,
+  user_id: 61,
   status: 'open'
 )
 
@@ -28,7 +28,7 @@ Job.create!(
   title: 'Lawn and Garden',
   description: 'My weeds be outa control! Looking for someone to do some weedin in a rush.',
   rate: 12.00,
-  user_id: 19,
+  user_id: 62,
   status: 'open'
 )
 # 99.times do |n|

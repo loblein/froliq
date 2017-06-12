@@ -1,0 +1,65 @@
+@import './variables';
+
+ .hero-search {
+   text-align: center;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 560px;
+   transform: translate(-50%, -50%);
+   color: white;
+ }
+
+.hero-search input {
+  outline: none;
+  text-indent: 50px;
+  width: 400px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid $fog-white;
+  transition: background 0.3s;
+  color: #434741;
+  background-color: $cloud-white;
+}
+
+.hero-search h5.where-to {
+ position: absolute;
+ left: 0;
+ text-align: right;
+ padding: 0 25px 0 10px;
+ top: -10px;
+ height: 100%;
+ width: 120px;
+ border: 1px solid white;
+ border-right: none;
+ border-radius: 15px 0 0 15px;
+ background-color: $blue;
+ line-height: 40px;
+ color: white;
+}
+
+.hero-search input::placeholder {
+
+ color: $light-gray;
+}
+
+.hero-search button[type=submit] {
+ position: absolute;
+ right: 0;
+ text-align: center;
+ top: 0;
+ height: 100%;
+ width: 100px;
+ outline: none;
+ border: 1px solid white;
+ border-left: none;
+ border-radius: 0 15px 15px 0;
+ background-color: $blue;
+ line-height: 30px;
+ color: white;
+}
+
+.hero-search input:focus {
+  background-color: white;
+  outline: none;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import HeaderContainer from '../header/header_container';
 import { Link } from 'react-router';
+import SearchContainer from '../search/search_container';
 
 class Hero extends React.Component {
   constructor(props) {
@@ -15,14 +16,7 @@ class Hero extends React.Component {
         <div className='hero-image'>
 
           <div className='hero-text'>
-            <label className='searchbar-label'>Where to?
-
-              <div className='search'>
-                <input type='text' placeholder='Boston, MA' />
-                  <FontAwesome className="fa fa-search lookingGlass"></FontAwesome>
-              </div>
-
-            </label>
+            <SearchContainer location='hero' />
           </div>
           <div className='container'>
             <div className='hero-lower-third'>

@@ -16,7 +16,8 @@ class Api::JobsController < ApplicationController
   end
 
   def index
-    @jobs = Job.all
+    debugger
+    @jobs = Job.in_range(params[:location])
   end
 
   def update

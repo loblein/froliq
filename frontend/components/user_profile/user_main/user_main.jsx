@@ -31,7 +31,7 @@ class UserMain extends React.Component {
           <div className='searchbox-row col-sm-12 col-md-10 col-lg-8'>
             <div className='avatar-shadow'></div>
             <div className='search-container'>
-              <SearchContainer />
+              <SearchContainer location='user' />
             </div>
           </div>
           <div className='col-md-1 col-lg-2 search-gutter'></div>

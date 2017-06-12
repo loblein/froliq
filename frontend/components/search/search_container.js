@@ -6,6 +6,7 @@ import { receiveFilter } from '../../actions/filter_actions';
 const mapStateToProps = (state) => {
 
   return {
+    loggedIn: state.session.currentUser !== null,
     filter: state.filter
   };
 };

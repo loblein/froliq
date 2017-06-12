@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import { merge } from 'lodash';
+import { withRouter } from 'react-router';
 
 class Search extends React.Component {
   constructor(props) {
@@ -25,14 +25,29 @@ class Search extends React.Component {
     event.preventDefault();
     event.currentTarget.reset();
     const location = this.state.location;
+
+    // set location in state
     this.props.receiveFilter(location);
-    this.props.search(location);
-  }
+
+    // redirect to user profile
+    if (this.props.location === 'hero') {
+      this.props.router.push('/users/:user_id');
+    }
+
+    this.props.search(this.props.filter);
+  };
 
   render() {
+    var wrapperClass;
+    if (this.props.location == 'user') {
+      wrapperClass = 'user-search';
+    } else {
+      wrapperClass = 'hero-search';
+    };
+
     return (
       <div>
-        <div className='user-search'>
+        <div className={ wrapperClass }>
           <form onSubmit={this.handleSubmit}>
             <h5 className='where-to'>Where to?</h5>
             <input type='text' placeholder='Boston, MA' onChange={this.updateLocation}></input>
@@ -44,4 +59,4 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+export default withRouter(Search);
