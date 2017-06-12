@@ -1,0 +1,9 @@
+export const RECEIVE_FILTER = 'RECEIVE_FILTER';
+
+export const receiveFilter = filter => {
+
+  return {
+    type: RECEIVE_FILTER,
+    filter
+  }
+};

@@ -25,6 +25,7 @@ class Search extends React.Component {
     event.preventDefault();
     event.currentTarget.reset();
     const location = this.state.location;
+    this.props.receiveFilter(location);
     this.props.search(location);
   }
 
