@@ -24,3 +24,9 @@
     json.creative @user.role_selector.creative
     json.miscellaneous @user.role_selector.miscellaneous
   end
+
+  json.employer_detail do
+    json.business_name @user.employer_detail.business_name
+    json.location @user.employer_detail.location
+    json.backround_info @user.employer_detail.background_info
+  end

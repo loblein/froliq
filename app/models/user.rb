@@ -9,13 +9,17 @@ class User < ApplicationRecord
   validates_inclusion_of :employer, in: [true, false]
   validates :email, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
-  after_initialize :ensure_session_token, :ensure_biography, :ensure_role_selector
+  after_initialize :ensure_session_token,
+    :ensure_biography,
+    :ensure_role_selector,
+    :ensure_employer_detail
 
   attr_reader :password
 
   has_one :biography
   has_one :role_selector
   has_many :jobs
+  has_one :employer_detail
 
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
@@ -48,6 +52,11 @@ class User < ApplicationRecord
 
   def ensure_role_selector
     self.role_selector ||= RoleSelector.new
+    self.save!
+  end
+
+  def ensure_employer_detail
+    self.employer_detail ||= EmployerDetail.new
     self.save!
   end
 

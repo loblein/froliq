@@ -17,3 +17,12 @@ export const updateBio = bio => {
     data: bio
   });
 };
+
+export const updateEmployerDetails = details => {
+
+  return $.ajax({
+    method: 'PATCH',
+    url: 'api/users/:user_id/employer_detail',
+    data: details
+  })
+}

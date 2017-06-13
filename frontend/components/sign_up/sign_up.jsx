@@ -158,28 +158,40 @@ class SignUp extends React.Component {
               <a onClick={this.handleBackClick}>Go Back</a>
             </div>
 
-            <div className='employer-form-container' style={{display: this.state.employerForm}}>
+            <div className='standard-form-container' style={{display: this.state.employerForm}}>
 
-                <form className='traveler-form'>
+                <form className='standard-form traveler-form' onSubmit={this.handleSubmit}>
                   <h3>New Employer</h3>
                   <label>
                     First Name
-                    <input></input>
+                    <input
+                      type='text'
+                      value={this.state.user.first_name}
+                      onChange={this.update('first_name')} />
                   </label>
 
                   <label>
                     Last Name
-                    <input></input>
+                    <input
+                      type='text'
+                      value={this.state.user.last_name}
+                      onChange={this.update('last_name')} />
                   </label>
 
                   <label>
                     Email
-                    <input></input>
+                    <input
+                      type='text'
+                      value={this.state.user.email}
+                      onChange={this.update('email')} />
                   </label>
 
                   <label>
                     Password
-                    <input></input>
+                    <input
+                      type='password'
+                      value={this.state.user.password}
+                      onChange={this.update('password')} />
                   </label>
                   <div className='center-button'>
                     <input type='submit' className='submit-button' text='submit' />

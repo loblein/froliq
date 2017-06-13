@@ -1,5 +1,4 @@
-class RoleSelector < ApplicationRecord
+class EmployerDetail < ApplicationRecord
 
   belongs_to :user, dependent: :destroy
-
 end

@@ -6,10 +6,10 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :jobs, only: [:create, :update, :index, :destroy, :show]
     resources :users, only: [:create, :update, :show] do
-      resource :traveler_settings, only: [:create, :update]
-      resource :employer_settings, only: [:create, :update]
-      resource :biography, only: [:create, :update, :show]
-      resource :role_selector, only: [:create, :update, :show]
+      resource :employer_detail, only: [:create, :update]
+      resource :biography, only: [:create, :update]
+      resource :role_selector, only: [:create, :update]
+      resource :employer_detail, only: [:create, :update]
     end
   end
 

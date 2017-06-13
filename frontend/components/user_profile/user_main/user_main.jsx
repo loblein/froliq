@@ -4,7 +4,7 @@ import FontAwesome from 'react-fontawesome';
 import SearchContainer from '../../search/search_container';
 import OpportunitiesContainer from './opportunities/opportunities_container';
 import LocalNavContainer from './local_nav/local_nav_container';
-import UserSettings from './user_settings/user_settings';
+import UserSettingsContainer from './user_settings/user_settings_container';
 
 class UserMain extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class UserMain extends React.Component {
           viewableComponent = <OpportunitiesContainer />
           break;
         case 'settings':
-          viewableComponent = <UserSettings />
+          viewableComponent = <UserSettingsContainer />
       };
 
     return (

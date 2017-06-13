@@ -1,0 +1,2 @@
+module EmployerDetailHelper
+end
