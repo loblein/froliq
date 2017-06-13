@@ -14,7 +14,7 @@ class UserSettings extends React.Component {
     var view2, view3;
     if (this.props.currentUser.employer === true) {
       view2 = <EmployerDetailsContainer />;
-      view3 = <RolesContainer />;
+      view3 = <div />;
     } else {
       view2 = <BiographyContainer />;
       view3 = <RolesContainer />;
