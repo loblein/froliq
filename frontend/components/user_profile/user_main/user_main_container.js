@@ -3,7 +3,8 @@ import UserMain from './user_main';
 
 const mapStateToProps = (state) => {
   return {
-    currentWindow: state.view.currentWindow
+    currentWindow: state.view.currentWindow,
+    employer: state.session.currentUser.employer
   };
 };
 

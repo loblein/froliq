@@ -35,7 +35,7 @@ class UserHeader extends React.Component {
           <div className='user-header-container col-sm-12 col-md-10 col-lg-8'>
             <div className='user-header'>
               <div className='user-avatar-container'>
-                <img className='user-avatar' />
+                <div className='user-avatar' />
               </div>
               <div className='user-details-container'>
                 <div className='user-details'>

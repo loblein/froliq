@@ -1,0 +1,39 @@
+@import '../variables';
+
+.create-job-container {
+  position: absolute;
+  top: 8px;
+  left: 140px;
+  width: 70%;
+  background-color: transparent;
+}
+
+.create-job-bar {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 80%;
+  border-radius: 15px;
+  background-color: $transparent-blue;
+}
+
+.create-job-bar button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  min-width: 150px;
+  background-color: $blue;
+  height: 100%;
+  color: $fog-white;
+  border-left: 1px solid $fog-white;
+  border-right: 1px solid $fog-white;
+}
+
+.create-job-bar button:first-child {
+  margin-left: 50px;
+  border-right: none;
+}
+
+.create-job-bar button:hover {
+  color: white;
+}

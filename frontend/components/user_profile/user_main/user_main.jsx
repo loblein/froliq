@@ -24,15 +24,28 @@ class UserMain extends React.Component {
           viewableComponent = <UserSettingsContainer />
       };
 
+    var searchOrCreate;
+      if (this.props.employer) {
+        searchOrCreate = <div className='create-job-container'>
+          <div className='create-job-bar'>
+            <button className='create-job-button' value='Create New Listing'>Create New Listing</button>
+            <button className='edit-existing-job-button' value='Edit Existing Listing'>Edit Current Listing</button>
+          </div>
+        </div>;
+      } else {
+        searchOrCreate = <div className='search-container'>
+          <SearchContainer location='user' />
+        </div>;
+      };
+
+
     return (
       <div className='container-fluid'>
         <div className='row off-white'>
           <div className='col-md-1 col-lg-2 search-gutter'></div>
           <div className='searchbox-row col-sm-12 col-md-10 col-lg-8'>
             <div className='avatar-shadow'></div>
-            <div className='search-container'>
-              <SearchContainer location='user' />
-            </div>
+            { searchOrCreate }
           </div>
           <div className='col-md-1 col-lg-2 search-gutter'></div>
         </div>

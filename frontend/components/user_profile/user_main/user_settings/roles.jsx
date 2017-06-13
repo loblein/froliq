@@ -8,22 +8,6 @@ class Roles extends React.Component {
 
     this.state = this.props.roles;
 
-    // {
-    //   dishwasher: false,
-    //   waiter: false,
-    //   cook: false,
-    //   laborer: false,
-    //   assistant: false,
-    //   caretaker: false,
-    //   farmer: false,
-    //   landscaper: false,
-    //   artistDesigner: false,
-    //   transportation: false,
-    //   carpenter: false,
-    //   creative: false,
-    //   miscellaneous: false
-    // };
-
     this.toggleRole = this.toggleRole.bind(this);
     this.populateRoles = this.populateRoles.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
