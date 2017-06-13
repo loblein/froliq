@@ -2,7 +2,7 @@ import React from 'react';
 import BiographyContainer from './biography_container';
 import AccountSettingsContainer from './account_settings_container';
 import RolesContainer from './roles_container';
-import BackgroundInfoContainer from './background_info_container';
+import EmployerDetailsContainer from './employer_details_container';
 
 class UserSettings extends React.Component {
   constructor() {
@@ -13,7 +13,7 @@ class UserSettings extends React.Component {
   render() {
     var view2, view3;
     if (this.props.currentUser.employer === true) {
-      view2 = <BackgroundInfoContainer />;
+      view2 = <EmployerDetailsContainer />;
       view3 = <RolesContainer />;
     } else {
       view2 = <BiographyContainer />;

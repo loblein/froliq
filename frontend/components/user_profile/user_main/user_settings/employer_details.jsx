@@ -1,14 +1,14 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
 
-class BackgroundInfo extends React.Component {
+class EmployerDetails extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       business_name: this.props.employerDetail.business_name || '',
       location: this.props.employerDetail.location || '',
-      business_details: this.props.employerDetail.business_details || ''
+      background_info: this.props.employerDetail.background_info || ''
     };
 
     this.handleBusinessName = this.handleBusinessName.bind(this);
@@ -32,9 +32,9 @@ class BackgroundInfo extends React.Component {
   };
 
   handleBusinessDetails(event) {
-    const businessDetails = event.currentTarget.value;
+    const backgroundInfo = event.currentTarget.value;
     this.setState({
-      business_details: businessDetails
+      background_info: backgroundInfo
     });
   };
 
@@ -80,10 +80,10 @@ class BackgroundInfo extends React.Component {
           </div>
           <div className='form-block-full'>
             <label className='biography'>
-              Business Details
+              Business Details / Background Info
               <textarea className='bio-full'
                 ref='businessDetails'
-                placeholder={this.state.business_details}
+                placeholder={this.state.background_info}
                 onChange={this.handleBusinessDetails}></textarea>
             </label>
           </div>
@@ -104,4 +104,4 @@ class BackgroundInfo extends React.Component {
   };
 };
 
-export default BackgroundInfo;
+export default EmployerDetails;

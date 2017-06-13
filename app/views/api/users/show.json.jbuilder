@@ -28,5 +28,5 @@
   json.employer_detail do
     json.business_name @user.employer_detail.business_name
     json.location @user.employer_detail.location
-    json.backround_info @user.employer_detail.background_info
+    json.background_info @user.employer_detail.background_info
   end

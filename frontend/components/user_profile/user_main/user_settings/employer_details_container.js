@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import BackgroundInfo from './background_info';
+import EmployerDetails from './employer_details';
 import { updateEmployerDetails } from '../../../../actions/employer_detail_actions';
 
 const mapStateToProps = (state) => {
@@ -14,4 +14,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BackgroundInfo);
+export default connect(mapStateToProps, mapDispatchToProps)(EmployerDetails);
