@@ -79,9 +79,9 @@ class EmployerDetails extends React.Component {
             </div>
           </div>
           <div className='form-block-full'>
-            <label className='biography'>
+            <label className='full-width'>
               Business Details / Background Info
-              <textarea className='bio-full'
+              <textarea className='full-textarea'
                 ref='businessDetails'
                 placeholder={this.state.background_info}
                 onChange={this.handleBusinessDetails}></textarea>

@@ -1,7 +1,7 @@
 class Api::RoleSelectorsController < ApplicationController
 
   def create
-
+    @role_selector = RoleSelector.new(role_selector_params)
   end
 
   def update
@@ -30,7 +30,9 @@ class Api::RoleSelectorsController < ApplicationController
     :transportation,
     :carpenter,
     :creative,
-    :miscellaneous
+    :miscellaneous,
+    :job_id,
+    :user_id
     )
   end
 

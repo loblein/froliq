@@ -56,9 +56,9 @@ class Biography extends React.Component {
             </div>
           </div>
           <div className='form-block-full'>
-            <label className='biography'>
+            <label className='full-width'>
               Biography
-              <textarea className='bio-full' ref='personalInfo' placeholder={this.state.personal_info} onChange={this.handlePersonalInfo}></textarea>
+              <textarea className='full-textarea' ref='personalInfo' placeholder={this.state.personal_info} onChange={this.handlePersonalInfo}></textarea>
             </label>
           </div>
 

@@ -26,9 +26,9 @@ class UserMain extends React.Component {
         case 'opportunities':
           viewableComponent = <OpportunitiesContainer />
           break;
-        // case 'newListing':
-        //   viewableComponent = <NewListingContainer />
-        //   break;
+        case 'newListing':
+          viewableComponent = <NewListingContainer />
+          break;
         case 'settings':
           viewableComponent = <UserSettingsContainer />
       };
@@ -37,8 +37,15 @@ class UserMain extends React.Component {
       if (this.props.employer) {
         searchOrCreate = <div className='create-job-container'>
           <div className='create-job-bar'>
-            <button className='create-job-button' value='Create New Listing' onClick={this.setListingView}>Create New Listing</button>
-            <button className='edit-existing-job-button' value='Edit Existing Listing'>Edit Current Listing</button>
+            <button
+              className='create-job-button'
+              value='Create New Listing'
+              onClick={this.setListingView}>Create New Listing
+            </button>
+            <button
+              className='edit-existing-job-button'
+              value='Edit Existing Listing'>View Current Listings
+            </button>
           </div>
         </div>;
       } else {

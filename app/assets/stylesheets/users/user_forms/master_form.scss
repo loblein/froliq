@@ -17,7 +17,27 @@
   color: $blue;
 }
 
-//
+label.full-width {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// textarea
+
+textarea.full-textarea {
+  outline: none;
+  display: block;
+  height: 110px;
+  margin: 0 auto;
+  width: 98%;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid $light-gray;
+}
+
+///
 
 .user-settings-form {
   color: $dark-gray;
@@ -58,7 +78,7 @@ p.note {
   border-radius: 0 15px 15px 0;
 }
 
-.user-settings-form input {
+.form-block input {
   outline: none;
   display: block;
   border: 1px solid $light-gray;
@@ -69,7 +89,7 @@ p.note {
   padding: 8px;
 }
 
-.user-settings-form label {
+.form-block label {
   width: 100%;
   margin: 0 auto;
   padding: 10px;
@@ -78,6 +98,14 @@ p.note {
   text-indent: 6px;
 }
 
+.form-block-full label.full-width {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  display: block;
+  font-size: 12px;
+  text-indent: 6px;
+}
 // update button //
 
 .update-button-container {
@@ -123,8 +151,17 @@ p.note {
 
 // placeholder //
 
-.user-settings-form-container input::placeholder, textarea::placeholder {
-  color: $middle-gray;
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $middle-gray !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $middle-gray !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $middle-gray !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $middle-gray !important;
 }
 
 // errors //

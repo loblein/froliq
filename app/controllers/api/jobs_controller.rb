@@ -4,9 +4,9 @@ class Api::JobsController < ApplicationController
     @job = Job.new(job_params)
 
     if @job.save
-
+      render '/api/jobs/show'
     else
-
+      render json: @job.errors.full_messages, status: 422
     end
 
   end
@@ -30,7 +30,7 @@ class Api::JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :rate)
+    params.require(:job).permit(:title, :description, :rate, :status, :user_id)
   end
 
 end
