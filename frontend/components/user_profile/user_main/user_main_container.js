@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import UserMain from './user_main';
+import { renderView } from '../../../actions/view_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -10,7 +11,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (state) => {
   return {
-
+    renderView: view => dispatch(renderView(view))
   };
 };
 

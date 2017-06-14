@@ -5,11 +5,17 @@ import SearchContainer from '../../search/search_container';
 import OpportunitiesContainer from './opportunities/opportunities_container';
 import LocalNavContainer from './local_nav/local_nav_container';
 import UserSettingsContainer from './user_settings/user_settings_container';
+import NewListingContainer from './listings/new_listing_container';
 
 class UserMain extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
+    this.setListingView = this.setListingView.bind(this);
+  }
+
+  setListingView() {
+    this.props.renderView('newListing');
   }
 
   render() {
@@ -20,6 +26,9 @@ class UserMain extends React.Component {
         case 'opportunities':
           viewableComponent = <OpportunitiesContainer />
           break;
+        // case 'newListing':
+        //   viewableComponent = <NewListingContainer />
+        //   break;
         case 'settings':
           viewableComponent = <UserSettingsContainer />
       };
@@ -28,7 +37,7 @@ class UserMain extends React.Component {
       if (this.props.employer) {
         searchOrCreate = <div className='create-job-container'>
           <div className='create-job-bar'>
-            <button className='create-job-button' value='Create New Listing'>Create New Listing</button>
+            <button className='create-job-button' value='Create New Listing' onClick={this.setListingView}>Create New Listing</button>
             <button className='edit-existing-job-button' value='Edit Existing Listing'>Edit Current Listing</button>
           </div>
         </div>;
