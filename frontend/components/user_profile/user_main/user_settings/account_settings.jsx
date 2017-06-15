@@ -11,8 +11,7 @@ class AccountSettings extends React.Component {
         first_name: this.props.currentUser.first_name || '',
         last_name: this.props.currentUser.last_name || '',
         email: this.props.currentUser.email || '',
-        password: '',
-        id: this.props.currentUser.id
+        password: ''
       }
     }
 
