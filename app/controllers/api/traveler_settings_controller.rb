@@ -2,9 +2,9 @@ class Api::TravelerSettingsController < ApplicationController
 
   def create
     @settings = TravelerSettings.new(settings_params)
-    
+
     if @settings.save
-      render('api/users/show')
+      render '/api/users/show'
     else
       render json: @settings.errors.full_messages
     end

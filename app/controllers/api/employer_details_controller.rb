@@ -4,7 +4,7 @@ class Api::EmployerDetailsController < ApplicationController
     @employer_detail = EmployerDetail.new(employer_detail_params)
 
     if @employer_detail.save
-      render('api/users/show')
+      render '/api/users/show'
     else
       render json: @employer_detail.errors.full_messages, status: 422
     end
@@ -15,7 +15,7 @@ class Api::EmployerDetailsController < ApplicationController
     @employer_detail = @user.employer_detail
 
     if @employer_detail.update_attributes(employer_detail_params)
-      render('api/users/show')
+      render '/api/users/show'
     else
       render json: @employer_detail.errors.full_messages, status: 422
     end

@@ -4,7 +4,7 @@ class Api::CategorySelectorsController < ApplicationController
     @category_selector = CategorySelector.new(category_selector_params)
 
     if @category_selector.save
-      render 'api/category_selectors/show'
+      render '/api/category_selectors/show'
     else
       render json: @category_selector.errors.full_messages, status: 422
     end

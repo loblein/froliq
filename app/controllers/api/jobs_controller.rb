@@ -2,7 +2,7 @@ class Api::JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
-    
+
     if @job.save
       render '/api/jobs/show'
     else
@@ -16,7 +16,7 @@ class Api::JobsController < ApplicationController
   end
 
   def index
-    @jobs = Job.in_range(params[:location])
+    @jobs = Job.all
   end
 
   def update
