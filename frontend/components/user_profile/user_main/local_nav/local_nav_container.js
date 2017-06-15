@@ -5,7 +5,7 @@ import { renderView } from '../../../../actions/view_actions';
 
 const mapStateToProps = (state) => {
   return {
-
+    currentUser: state.session.currentUser
   };
 };
 

@@ -39,12 +39,16 @@ class UserMain extends React.Component {
           <div className='create-job-bar'>
             <button
               className='create-job-button'
-              value='Create New Listing'
-              onClick={this.setListingView}>Create New Listing
+              value='New Listing'
+              onClick={this.setListingView}>New Listing
             </button>
             <button
               className='edit-existing-job-button'
-              value='Edit Existing Listing'>View Current Listings
+              value='Edit Listing'>Edit Listing
+            </button>
+            <button
+              className='view-all-listings-button'
+              value='View Listings'>View Listings
             </button>
           </div>
         </div>;
