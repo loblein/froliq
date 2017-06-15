@@ -2,6 +2,7 @@ class Api::JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
+    @job.user_id = current_user.id
 
     if @job.save
       render '/api/jobs/show'
@@ -30,7 +31,7 @@ class Api::JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :rate, :status, :user_id)
+    params.require(:job).permit(:title, :description, :rate, :status, :location)
   end
 
 end

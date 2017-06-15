@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   handleChange(event) {
@@ -35,7 +36,17 @@ class SessionForm extends React.Component {
     this.props.processForm({user});
   }
 
+  renderErrors(error, i) {
+    return (
+      <li className='error' key={i}>
+          {error}
+      </li>
+    )
+  }
+
   render() {
+    const errors = this.props.errors;
+
     return (
       <div className='container-fluid'>
 
@@ -69,14 +80,18 @@ class SessionForm extends React.Component {
                       value={this.state.password}
                       onChange={this.handleChange} />
                   </label>
-
+                  <div className='clearfix' />
+                  <div className='signup-login-errors-container clearfix'>
+                    <ul className='errors'>
+                      {errors.map(this.renderErrors)}
+                    </ul>
+                  </div>
                   <div className='center-button'>
                     <input
                       className='submit-button'
                       type='submit'
                       text='submit'/>
                   </div>
-
                 </form>
 
             </div>

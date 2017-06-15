@@ -27,6 +27,7 @@ class SignUp extends React.Component {
     this.handleBackClick = this.handleBackClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidUpdate() {
@@ -68,6 +69,14 @@ class SignUp extends React.Component {
     this.props.processForm({user});
   }
 
+  renderErrors(error, i) {
+    return (
+      <li className='error' key={i}>
+          {error}
+      </li>
+    )
+  }
+
   update(field) {
     return event => this.setState({
       user: merge({}, this.state.user, {[field]: event.currentTarget.value})
@@ -75,6 +84,7 @@ class SignUp extends React.Component {
   }
 
   render() {
+    const errors = this.props.errors;
 
     return (
       <div className='container-fluid'>
@@ -143,6 +153,12 @@ class SignUp extends React.Component {
                       value={this.state.user.password}
                       onChange={this.update('password')} />
                   </label>
+                  
+                  <div className='signup-login-errors-container'>
+                    <ul className='errors'>
+                      {errors.map(this.renderErrors)}
+                    </ul>
+                  </div>
 
                   <div className='center-button'>
                     <input
@@ -193,6 +209,13 @@ class SignUp extends React.Component {
                       value={this.state.user.password}
                       onChange={this.update('password')} />
                   </label>
+
+                  <div className='signup-login-errors-container'>
+                    <ul className='errors'>
+                      {errors.map(this.renderErrors)}
+                    </ul>
+                  </div>
+
                   <div className='center-button'>
                     <input type='submit' className='submit-button' text='submit' />
                   </div>

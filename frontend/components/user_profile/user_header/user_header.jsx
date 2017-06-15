@@ -11,9 +11,29 @@ class UserHeader extends React.Component {
     };
 
     this.renderNotes = this.renderNotes.bind(this);
+    this.renderEmployerMessages = this.renderEmployerMessages.bind(this);
+    this.renderTravelerMessages = this.renderTravelerMessages.bind(this);
   };
 
   renderNotes() {
+    if (this.props.employer) {
+      return this.renderEmployerMessages();
+    } else {
+      return this.renderTravelerMessages();
+    }
+  };
+
+  renderEmployerMessages() {
+    const location = this.props.location;
+    if (!location.replace(/\s/g, '').length) {
+      return "Looks like you haven't updated your settings. Remember to include background info before creating a listing."
+    } else {
+      return "You're all caught up. Create a new listing or review and update your profile."
+    }
+  };
+
+  renderTravelerMessages() {
+    // Are all roles set to false?
     const values = _.values(this.props.roleSelector);
     if (_.compact(values).length === 0) {
       return ("Looks like you haven't updated your user settings. Update your roles for better search results.");

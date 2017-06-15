@@ -117,13 +117,14 @@ class NewListing extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const status = 'open';
-    const user_id = this.props.currentUser.id;
+    // const status = 'open';
+    // const user_id = this.props.currentUser.id;
     const description = this.state.description;
     const rate = this.state.rate;
     const title = this.state.title;
+    const location = this.props.currentUser.employer_detail.location;
 
-    const job = {title, rate, description, user_id, status};
+    const job = {title, rate, description, location};
     this.props.createListing({job})
       .then(response => this.updateListingWithCategories(response));
   }
