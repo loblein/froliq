@@ -13,7 +13,7 @@ const CategorySelectorReducer = (state = _initialState, action) => {
     case RECEIVE_CATEGORY_SELECTOR:
       return merge({}, _initialState, {categories: action.categorySelector});
     case RECEIVE_CATEGORY_SELECTOR_ERRORS:
-      return merge({}, state, action.errors);
+      return merge({}, state, {errors: action.errors});
     default:
       return state;
   };

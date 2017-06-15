@@ -46,7 +46,7 @@ export const receiveListing = listing => {
 }
 
 export const receiveListingErrors = errors => {
-
+  
   return {
     type: RECEIVE_LISTING_ERRORS,
     errors

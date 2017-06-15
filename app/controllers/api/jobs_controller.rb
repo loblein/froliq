@@ -2,7 +2,7 @@ class Api::JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
-
+    
     if @job.save
       render '/api/jobs/show'
     else

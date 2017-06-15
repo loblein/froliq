@@ -11,9 +11,9 @@ const ListingReducer = (state = _initialState, action) => {
 
   switch (action.type) {
     case RECEIVE_LISTING:
-      return merge({}, _initialState, action.listing);
+      return merge({}, _initialState, {listing: action.listing});
     case RECEIVE_LISTING_ERRORS:
-      return merge({}, state, action.errors);
+      return merge({}, state, {errors: action.errors});
     default:
       return state;
   };

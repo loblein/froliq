@@ -36,6 +36,7 @@ class NewListing extends React.Component {
     this.handleDescription = this.handleDescription.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateListingWithCategories = this.updateListingWithCategories.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   };
 
   toggleRole(event) {
@@ -127,20 +128,33 @@ class NewListing extends React.Component {
       .then(response => this.updateListingWithCategories(response));
   }
 
-  render() {
+  renderErrors(error, i) {
+    return (
+      <li className='error' key={i}>
+          {error}
+      </li>
+    )
+  }
 
+  render() {
+    const listingErrors = this.props.listingErrors;
     return(
       <div className='listing-container'>
         <form className='listing' onSubmit={this.handleSubmit}>
           <h3>New Listing</h3>
           <div className='form-block-full'>
-            <p>Include a title, brief description, and your offered rate. Remember to select the appropriate category or categories for your posting</p>
+            <p>Include a title, brief description, and your offered rate.
+              Remember to select the appropriate category or categories for your posting</p>
           </div>
           <div className='form-block'>
             <div className='left'>
               <label>
                 Title
-                <input type='text' placeholder='Dishwasher Needed' onChange={this.handleTitle}></input>
+                <input
+                  type='text'
+                  placeholder='Dishwasher Needed'
+                  onChange={this.handleTitle}>
+                </input>
               </label>
             </div>
           </div>
@@ -167,13 +181,16 @@ class NewListing extends React.Component {
               {this.populateRoles()}
             </ul>
           </div>
+          <div className='clearfix'></div>
           <div className='update-button-container'>
             <div className='update-button'>
               <input className='update' type='submit' value='Post Listing' />
               <FontAwesome className='fa fa-long-arrow-right update-arrow' />
             </div>
           </div>
-          <ul className='errors'></ul>
+          <ul className='errors'>
+            { listingErrors.map(this.renderErrors) }
+          </ul>
           <div className='clearfix'></div>
           <div className='horizontal_rule' />
         </form>

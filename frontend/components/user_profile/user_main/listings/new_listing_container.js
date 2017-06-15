@@ -6,7 +6,8 @@ import { setCategories } from '../../../../actions/category_selector_actions';
 const mapStateToProps = (state) => {
   return {
     currentUser: state.session.currentUser,
-    listing: state.listing
+    listing: state.listing,
+    listingErrors: state.listing.errors
   };
 };
 
