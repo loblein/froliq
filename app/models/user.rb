@@ -47,17 +47,14 @@ class User < ApplicationRecord
 
   def ensure_biography
     self.biography ||= Biography.new
-    self.save!
   end
 
   def ensure_role_selector
     self.role_selector ||= RoleSelector.new
-    self.save!
   end
 
   def ensure_employer_detail
     self.employer_detail ||= EmployerDetail.new
-    self.save!
   end
 
 end

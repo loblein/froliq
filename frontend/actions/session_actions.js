@@ -11,10 +11,12 @@ export const login = user => dispatch => {
 
 export const logout = () => dispatch => {
   return APIUtil.logout()
-    .then(user => dispatch(receiveCurrentUser(null)))
+    .then(user => dispatch(receiveCurrentUser(null)),
+      error => dispatch(receiveErrors(error.responseJSON)))
 };
 
 export const signup = (user) => dispatch => {
+  
   return APIUtil.signup(user)
     .then(user => dispatch(receiveCurrentUser(user)),
     error => dispatch(receiveErrors(error.responseJSON)))

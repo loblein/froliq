@@ -18,13 +18,6 @@ export const createListing = listing => dispatch => {
       error => dispatch(receiveListingErrors(error.responseJSON)))
 };
 
-// export const setRoleSelector = roleSelector => dispatch => {
-//
-//   return APIUtil.setRoles(roleSelector)
-//     .then(listing => dispatch(receiveListing(listing)))
-//
-// };
-
 // Worker-facing //
 
 export const receiveJobs = jobs => {
@@ -46,7 +39,7 @@ export const receiveListing = listing => {
 }
 
 export const receiveListingErrors = errors => {
-  
+
   return {
     type: RECEIVE_LISTING_ERRORS,
     errors

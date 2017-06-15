@@ -1,6 +1,7 @@
 import { receiveCurrentUser, receiveErrors } from '../actions/session_actions';
 
 export const signup = (user) => {
+  
   return $.ajax({
     method: 'POST',
     url: '/api/users',
@@ -9,6 +10,7 @@ export const signup = (user) => {
 };
 
 export const login = (user) => {
+  
   return $.ajax({
     method: 'POST',
     url: '/api/session',
