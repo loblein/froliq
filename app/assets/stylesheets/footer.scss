@@ -74,21 +74,7 @@
 
 // user footer //
 
-.user-footer-container {
-  margin-top: 20px;
-  position: relative;
-  background-color: $deep-brown;
-  width: 100%;
-  height: 200px;
-}
-
-.user-footer {
-  margin: 0 auto;
-  background-color: transparent;
-  width: 400px;
+.fixed-to-bottom {
   position: fixed;
   bottom: 0;
-  width: 100%;
-  height: 50px;
-  background-color: $deeper-brown;
 }

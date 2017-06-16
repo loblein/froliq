@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import SignupFooter from './signup-footer';
-import { logout } from '../../actions/session_actions';
+import UserFooter from './user_footer';
+import { logout } from '../../../actions/session_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -14,4 +14,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignupFooter);
+export default connect(mapStateToProps, mapDispatchToProps)(UserFooter);

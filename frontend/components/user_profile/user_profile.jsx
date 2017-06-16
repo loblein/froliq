@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import HeaderContainer from '../header/header_container';
 import UserHeaderContainer from './user_header/user_header_container';
 import UserMainContainer from './user_main/user_main_container';
-import UserFooter from './user_footer/footer';
+import UserFooterContainer from './user_footer/user_footer_container';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class UserProfile extends React.Component {
           <UserMainContainer />
         </div>
         <div className='row'>
-          <UserFooter />
+          <UserFooterContainer />
         </div>
       </div>
     )
