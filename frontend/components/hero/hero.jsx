@@ -43,7 +43,7 @@ class Hero extends React.Component {
           </div>
         </div>
       </div>
-      
+
     )
   }
 }

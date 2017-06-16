@@ -25,7 +25,7 @@ class UserHeader extends React.Component {
 
   renderEmployerMessages() {
     const location = this.props.location;
-    if (!location.replace(/\s/g, '').length) {
+    if (!location || !location.replace(/\s/g, '').length) {
       return "Looks like you haven't updated your settings. Remember to include background info before creating a listing."
     } else {
       return "You're all caught up. Create a new listing or review and update your profile."

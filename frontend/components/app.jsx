@@ -8,7 +8,6 @@ const App = (props) => (
   <div>
     <HeaderContainer />
     <HeroContainer />
-    <div className='lower-spacer-main-page'></div>
     <Pitch />
     <Footer />
   </div>

@@ -14,7 +14,7 @@ const Pitch = () => {
           <section className='pitch-item clearfix'>
             <img src={window.girlIphone}></img>
             <h3>Explore</h3>
-            <p>Travel locally or take a road-trip through the countryside to see places you've never seen. Find freedom while meeting new people, or discover a new place to live.</p>
+            <p>Take a road-trip through the countryside to see places you've never seen. Find freedom while meeting new people, or discover a new place to live.</p>
           </section>
           <section className='pitch-item clearfix'>
             <img src={window.workImg} className='float-r'></img>
