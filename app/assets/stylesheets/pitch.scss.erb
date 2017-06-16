@@ -1,0 +1,96 @@
+@import './variables';
+
+.pitch {
+  background-color: $off-white;
+  padding: 0;
+  margin: 0;
+}
+
+
+.pitch .pitch-column {
+  border-left: 2px solid $deepest-brown;
+  border-right: 2px solid $deepest-brown;
+  margin: 0;
+  padding: 0;
+}
+
+.pitch .super-header {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 0;
+  background-color: white;
+  border-top: 1px solid $transparent-green;
+  border-bottom: 1px solid $transparent-green;
+}
+
+.pitch .super-header h2 {
+  margin: 0;
+  color: $green;
+  font-family: $satisfy;
+  padding: 5px;
+  text-align: center;
+}
+
+.pitch section {
+  border-radius: 36px;
+  border: 1px solid $light-gray;
+  padding: 10px;
+  background-color: white;
+  margin: 15px;
+}
+
+.pitch section img {
+  float: left;
+  padding-right: 10px;
+}
+
+.pitch section h3 {
+  text-align: center;
+  min-width: 220px;
+  margin-right: 200px;
+  margin-left: 220px;
+  font-family: 'Satisfy', cursive;
+}
+
+.pitch header {
+  margin: 0 auto;
+  height: 200px;
+}
+
+.pitch header .traveler-header {
+  background-image: url(<%= asset_path 'frog_icon.png' %>);
+  background-size: cover;
+  height: 100%;
+  width: 200px;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 100%;
+  border: 1px solid $green;
+}
+
+.pitch header .employer-header {
+  background-image: url(<%= asset_path 'lily_icon.png' %>);
+  background-size: cover;
+  height: 100%;
+  width: 200px;
+  margin-bottom: 0;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 100%;
+  border: 1px solid $green;
+}
+
+.pitch section p {
+  padding: 4px;
+}
+
+.pitch section .pitch-item {
+  margin: 0 auto;
+}
+
+.text-center {
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}

@@ -13,6 +13,7 @@ class Hero extends React.Component {
   render() {
     return(
       <div className='hero'>
+        <div className='upper-spacer'></div>
         <div className='hero-image'>
 
           <div className='hero-text'>
@@ -42,6 +43,7 @@ class Hero extends React.Component {
           </div>
         </div>
       </div>
+      
     )
   }
 }
