@@ -12,7 +12,6 @@ class Opportunities extends React.Component {
     const jobList = jobs.map((job, idx) => (
       <li className='job-item clearfix' key={idx}>
         <div className='img-container'>
-          this should be image
         </div>
         <h4>
           {job.title}

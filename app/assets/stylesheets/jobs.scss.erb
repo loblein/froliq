@@ -1,0 +1,59 @@
+// Place all the styles related to the jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import './variables';
+
+// job list //
+
+.opportunities-container {
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+.opportunities {
+ margin: 0;
+ padding: 10;
+ width: 100%;
+ height: auto;
+}
+
+.opportunities li.job-item {
+ padding: 10px;
+ margin-bottom: 10px;
+ border: 1px solid $light-gray;
+ background-color: transparent;
+ width: 100%;
+ box-sizing:border-box;
+ height: auto;
+ border-radius: 20px;
+ list-style: none;
+ text-indent: 0;
+}
+
+li.job-item h4, h5 {
+ color: $blue;
+ display: inline;
+ margin-right: 5px;
+}
+
+li.job-item h5 {
+ color: #8ead45;
+}
+
+li.job-item p {
+ margin: 0;
+ padding: 5px;
+}
+
+li.job-item .img-container {
+ float: left;
+ height: 90px;
+ width: 120px;
+ margin-right: 10px;
+ border-radius: 15px;
+ color: $off-white;
+ background-image: url(<%= asset_path 'lily.png' %>);
+ background-size: cover;
+}

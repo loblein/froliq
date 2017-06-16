@@ -120,60 +120,6 @@
   margin: 0 auto;
   background-color: transparent;
   width: 400px;
-
-}
-
- // job list //
-
-.opportunities-container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.opportunities {
-  margin: 0;
-  padding: 10;
-  width: 100%;
-  height: auto;
-}
-
-.opportunities li.job-item {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid $light-gray;
-  background-color: transparent;
-  width: 100%;
-  box-sizing:border-box;
-  height: auto;
-  border-radius: 20px;
-  list-style: none;
-  text-indent: 0;
-}
-
-li.job-item h4, h5 {
-  color: $blue;
-  display: inline;
-  margin-right: 5px;
-}
-
-li.job-item h5 {
-  color: $frog-light-green;
-}
-
-li.job-item p {
-  margin: 0;
-  padding: 5px;
-}
-
-li.job-item .img-container {
-  float: left;
-  height: 90px;
-  width: 120px;
-  margin-right: 10px;
-  border-radius: 15px;
-  color: $off-white;
-  background-color: $off-white;
 }
 
 // user footer //
