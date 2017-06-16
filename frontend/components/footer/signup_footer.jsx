@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 
-class Footer extends React.Component {
+class SignupFooter extends React.Component {
   constructor(props) {
     super(props);
 
@@ -40,4 +40,4 @@ class Footer extends React.Component {
   };
 };
 
-export default withRouter(Footer);
+export default withRouter(SignupFooter);

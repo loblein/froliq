@@ -5,7 +5,7 @@ const Pitch = () => {
   return (
     <div className='pitch container-fluid'>
       <div className='row'>
-        <div className='col-md-6 pitch-column'>
+        <div className='col-lg-6 pitch-column'>
           <div className='super-header'><h2>Travelers</h2></div>
           <header>
             <div className='traveler-header'>
@@ -28,7 +28,7 @@ const Pitch = () => {
           </section>
         </div>
 
-        <div className='col-md-6 pitch-column'>
+        <div className='col-lg-6 pitch-column'>
           <div className='super-header'><h2>Employers</h2></div>
           <header>
             <div className='employer-header'>

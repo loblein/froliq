@@ -6,17 +6,12 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleProfileClick = this.handleProfileClick.bind(this);
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
   }
 
   handleLogoutClick() {
     this.props.logout();
     this.props.router.push('/');
-  }
-
-  handleProfileClick() {
-    this.props.router.push('/users/:userId');
   }
 
   render() {

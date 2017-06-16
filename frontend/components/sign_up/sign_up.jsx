@@ -90,7 +90,6 @@ class SignUp extends React.Component {
       <div className='container-fluid'>
         <div className='row'>
           <HeaderContainer />
-
         </div>
 
         <div className='row'>
@@ -153,7 +152,7 @@ class SignUp extends React.Component {
                       value={this.state.user.password}
                       onChange={this.update('password')} />
                   </label>
-                  
+
                   <div className='signup-login-errors-container'>
                     <ul className='errors'>
                       {errors.map(this.renderErrors)}

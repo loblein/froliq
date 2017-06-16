@@ -2,14 +2,14 @@ import React from 'react';
 import HeaderContainer from './header/header_container'
 import HeroContainer from './hero/hero_container';
 import Pitch from './pitch/pitch';
-import Footer from './footer/footer';
+import FooterContainer from './footer/footer_container';
 
 const App = (props) => (
   <div>
     <HeaderContainer />
     <HeroContainer />
     <Pitch />
-    <Footer />
+    <FooterContainer />
   </div>
 );
 
