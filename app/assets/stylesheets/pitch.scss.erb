@@ -34,7 +34,7 @@
   border: 1px solid $light-gray;
   padding: 10px;
   background-color: white;
-  margin: 15px;
+  margin: 25px;
 }
 
 .pitch section img {
@@ -52,22 +52,27 @@
 .pitch header {
   margin: 0 auto;
   height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .pitch header .traveler-header {
   background-image: url(<%= asset_path 'frog.png' %>);
   background-size: cover;
+  background-color: $cloud-white;
   height: 100%;
   width: 200px;
   margin: 0 auto;
   padding: 0;
   border-radius: 100%;
   border: 1px solid $green;
+  box-shadow: 0 0 30px 5px white;
 }
 
 .pitch header .employer-header {
   background-image: url(<%= asset_path 'lily.png' %>);
   background-size: cover;
+  background-color: $cloud-white;
   height: 100%;
   width: 200px;
   margin-bottom: 0;
@@ -75,6 +80,7 @@
   padding: 0;
   border-radius: 100%;
   border: 1px solid $green;
+  box-shadow: 0 0 30px 5px white;
 }
 
 .pitch section p {

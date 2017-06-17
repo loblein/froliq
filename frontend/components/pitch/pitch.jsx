@@ -6,11 +6,11 @@ const Pitch = () => {
     <div className='pitch container-fluid'>
       <div className='row'>
         <div className='col-lg-6 pitch-column'>
-          <div className='super-header'><h2>Travelers</h2></div>
           <header>
             <div className='traveler-header'>
             </div>
           </header>
+          <div className='super-header'><h2>Travelers</h2></div>
           <section className='pitch-item clearfix'>
             <img src={window.girlIphone}></img>
             <h3>Explore</h3>
@@ -29,11 +29,11 @@ const Pitch = () => {
         </div>
 
         <div className='col-lg-6 pitch-column'>
-          <div className='super-header'><h2>Employers</h2></div>
           <header>
             <div className='employer-header'>
             </div>
           </header>
+          <div className='super-header'><h2>Employers</h2></div>
           <section className='pitch-item clearfix'>
             <img src={window.girlLaptop}></img>
             <h3>Create</h3>
