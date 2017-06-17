@@ -6,7 +6,8 @@ import { renderView } from '../../actions/view_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.session.currentUser,
-    filter: state.filter
+    filter: state.filter,
+    employer: state.session.currentUser.employer
   };
 };
 

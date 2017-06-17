@@ -9,6 +9,7 @@ class UserProfile extends React.Component {
   constructor(props) {
     super(props);
 
+    this.fetchJobs = this.fetchJobs.bind(this);
   }
 
   componentDidUpdate() {
@@ -17,11 +18,20 @@ class UserProfile extends React.Component {
     }
   }
 
-  componentDidMount() {
+  fetchJobs() {
     if (this.props.filter.location) {
       this.props.fetchJobs(this.props.filter.location)
-        .then(this.props.renderView('opportunities'))
+      .then(this.props.renderView('opportunities'))
     };
+  }
+
+  componentDidMount() {
+    this.props.employer ?
+      this.props.renderView('newListing')
+      :
+      this.fetchJobs()
+    ;
+
   }
 
   render() {
