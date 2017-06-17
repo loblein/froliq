@@ -1,14 +1,23 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import HeaderContainer from '../header/header_container';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 import SearchContainer from '../search/search_container';
 
 class Hero extends React.Component {
   constructor(props) {
     super(props)
 
+    this.handleClick = this.handleClick.bind(this);
   }
+
+  handleClick() {
+    if (this.props.loggedIn) {
+      this.props.router.push('/users/:userId');
+    } else {
+      this.props.router.push('/login');
+    }
+  };
 
   render() {
     return(
@@ -20,21 +29,21 @@ class Hero extends React.Component {
             <SearchContainer location='hero' />
           </div>
           <div className='container'>
-            <div className='hero-lower-third'>
+            <div className='hero-lower-third' >
               <div className='hero-lower-third-item'>
-                <Link to='login'><img src={window.travelImg} /></Link>
+                <img src={window.travelImg} onClick={this.handleClick}/>
                 <h4>
                   Travel
                 </h4>
               </div>
               <div className='hero-lower-third-item'>
-                <Link to='login'><img src={window.fishingBoat}></img></Link>
+                <img src={window.fishingBoat} onClick={this.handleClick}/>
                 <h4>
                   Work
                 </h4>
               </div>
               <div className='hero-lower-third-item'>
-                <Link to='login'><img src={window.beachParty}></img></Link>
+                <img src={window.beachParty} onClick={this.handleClick}/>
                 <h4>
                   Play
                 </h4>
@@ -49,4 +58,4 @@ class Hero extends React.Component {
   }
 }
 
-export default Hero;
+export default withRouter(Hero);

@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import Hero from './hero';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   return {
-
+    loggedIn: state.session.currentUser !== null
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    
+
   }
 }
 
