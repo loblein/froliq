@@ -99,13 +99,13 @@ class SignUp extends React.Component {
               <div className='bi-fold-container'>
                 <div className='bi-fold-item'>
                   <h3>I am a</h3>
-                  <FontAwesome id='traveler-button' className="fa fa-arrow-up fa-5x" onClick={this.handleTravelerClick}></FontAwesome>
+                  <div className='frog-button' onClick={this.handleTravelerClick}></div>
                   <h3>traveler</h3>
                 </div>
 
                 <div className='bi-fold-item'>
                   <h3>I am an</h3>
-                    <FontAwesome id='employer-button' className="fa fa-arrow-down fa-5x" onClick={this.handleEmployerClick}></FontAwesome>
+                    <div className='lily-button' onClick={this.handleEmployerClick}></div>
                   <h3>employer</h3>
                 </div>
               </div>

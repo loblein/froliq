@@ -43,8 +43,25 @@
   background-color: rgb(250, 250, 250);
   z-index: 2;
   box-shadow: 0 0 0 16px white;
-  background-size: cover;
-  background-image: url(<%= asset_path 'frog_sitting.png' %>);
+
+}
+
+.user-avatar-container .traveler {
+  background-size: contain;
+  background-image: url(<%= asset_path 'frog.png' %>);
+  background-position: center center;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.user-avatar-container .employer {
+  background-size: contain;
+  background-image: url(<%= asset_path 'lily.png' %>);
+  background-position: center center;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
 }
 
 .user-details-container {

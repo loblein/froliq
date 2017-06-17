@@ -21,8 +21,8 @@
 }
 
 .bi-fold-item {
-  height: 210px;
-  width: 160px;
+  height: 230px;
+  width: 190px;
   text-align: center;
   background-color: rgba(255, 255, 255, .9);
   border: 1px solid white;
@@ -43,10 +43,14 @@
   margin: 17px 0 17px 0;
 }
 
-.fa-arrow-up {
+.frog-button {
   cursor: pointer;
+  height: 100px;
   color: $light-gray;
   background-color: white;
+  background-image: url(<%= asset_path 'frog.png' %>);
+  background-size: cover;
+  background-position: center center;
   border-radius: 10px;
   width: 140px;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
@@ -61,14 +65,18 @@
   color: $blue;
 }
 
-.fa-arrow-down {
+.lily-button {
   cursor: pointer;
+  height: 100px;
   color: $light-gray;
-  margin: 0 auto;
   background-color: white;
+  background-image: url(<%= asset_path 'lily.png' %>);
+  background-size: cover;
+  background-position: center center;
   border-radius: 10px;
   width: 140px;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
 .sign-up-log-in .text-white {

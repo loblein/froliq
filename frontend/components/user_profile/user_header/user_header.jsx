@@ -23,6 +23,11 @@ class UserHeader extends React.Component {
     }
   };
 
+  renderIcon() {
+    return (this.props.employer) ?
+      'employer' : 'traveler' ;
+  }
+
   renderEmployerMessages() {
     const location = this.props.location;
     if (!location || !location.replace(/\s/g, '').length) {
@@ -55,7 +60,7 @@ class UserHeader extends React.Component {
           <div className='user-header-container col-sm-12 col-md-10 col-lg-8'>
             <div className='user-header'>
               <div className='user-avatar-container'>
-                <div className='user-avatar' />
+                <div className={this.renderIcon()} />
               </div>
               <div className='user-details-container'>
                 <div className='user-details'>
