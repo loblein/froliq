@@ -12,7 +12,7 @@ const Root = ({ store }) => {
   const _redirectIfNotLoggedIn = (nextState, replace) => {
     if (store.getState().session.currentUser === null) {
       replace('/');
-    }
+    };
   };
 
   return(

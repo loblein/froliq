@@ -3,7 +3,8 @@ import Opportunities from './opportunities';
 
 const mapStateToProps = (state) => {
   return {
-    jobs: state.jobs
+    jobs: state.jobs,
+    filter: state.filter
   };
 };
 

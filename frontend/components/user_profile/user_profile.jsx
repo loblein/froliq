@@ -17,6 +17,13 @@ class UserProfile extends React.Component {
     }
   }
 
+  componentDidMount() {
+    if (this.props.filter.location) {
+      this.props.fetchJobs(this.props.filter.location)
+        .then(this.props.renderView('opportunities'))
+    };
+  }
+
   render() {
 
     return (

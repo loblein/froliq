@@ -30,9 +30,8 @@
  top: -10px;
  height: 100%;
  width: 120px;
- border: 1px solid white;
  border-right: none;
- border-radius: 15px 0 0 15px;
+ border-radius: 10px 0 0 10px;
  background-color: $blue;
  line-height: 40px;
  color: white;
@@ -51,9 +50,8 @@
  height: 100%;
  width: 100px;
  outline: none;
- border: 1px solid white;
- border-left: none;
- border-radius: 0 15px 15px 0;
+ border: none;
+ border-radius: 0 10px 10px 0;
  background-color: $blue;
  line-height: 30px;
  color: white;

@@ -29,12 +29,17 @@ class Search extends React.Component {
     // set location in state
     this.props.receiveFilter(location);
 
-    // redirect to user profile
-    if (this.props.location === 'hero') {
+    // render appropriate window
+    if (this.props.location === 'hero' && this.props.loggedIn) {
+      this.props.search(this.props.filter);
       this.props.router.push('/users/:user_id');
-    }
+    } else if (!this.props.loggedIn) {
+      this.props.router.push('/login');
+    } else {
+      this.props.search(this.props.filter);
+      this.props.renderView('opportunities');
+    };
 
-    this.props.search(this.props.filter);
   };
 
   render() {
