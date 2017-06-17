@@ -2,6 +2,9 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 import HeaderContainer from '../header/header_container';
 
+import Pitch from '../pitch/pitch';
+import FooterContainer from '../footer/footer_container';
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -48,59 +51,65 @@ class SessionForm extends React.Component {
     const errors = this.props.errors;
 
     return (
-      <div className='container-fluid'>
+      <div>
+        <div className='container-fluid'>
 
-        <div className='row'>
-          <HeaderContainer />
-        </div>
+          <div className='row'>
+            <HeaderContainer />
+          </div>
 
-        <div className='row'>
-          <div className='sign-up-log-in'>
+          <div className='row'>
+            <div className='sign-up-log-in'>
 
-            <div className='standard-form-container'>
+              <div className='standard-form-container'>
 
-                <form className='standard-form session-form'
-                  onSubmit={this.handleSubmit}>
-                  <h3>Welcome Back!</h3>
+                  <form className='standard-form session-form'
+                    onSubmit={this.handleSubmit}>
+                    <h3>Welcome Back!</h3>
 
-                  <label>
-                    Email:
-                    <input
-                      type='text'
-                      name='email'
-                      value={this.state.email}
-                      onChange={this.handleChange} />
-                  </label>
+                    <label>
+                      Email:
+                      <input
+                        type='text'
+                        name='email'
+                        value={this.state.email}
+                        onChange={this.handleChange} />
+                    </label>
 
-                  <label>
-                    Password:
-                    <input
-                      type='password'
-                      name='password'
-                      value={this.state.password}
-                      onChange={this.handleChange} />
-                  </label>
-                  <div className='clearfix' />
-                  <div className='signup-login-errors-container clearfix'>
-                    <ul className='errors'>
-                      {errors.map(this.renderErrors)}
-                    </ul>
-                  </div>
-                  <div className='center-button'>
-                    <input
-                      className='submit-button'
-                      type='submit'
-                      text='submit'/>
-                  </div>
-                </form>
+                    <label>
+                      Password:
+                      <input
+                        type='password'
+                        name='password'
+                        value={this.state.password}
+                        onChange={this.handleChange} />
+                    </label>
+                    <div className='clearfix' />
+                    <div className='signup-login-errors-container clearfix'>
+                      <ul className='errors'>
+                        {errors.map(this.renderErrors)}
+                      </ul>
+                    </div>
+                    <div className='center-button'>
+                      <input
+                        className='submit-button'
+                        type='submit'
+                        text='submit'/>
+                    </div>
+                  </form>
 
-            </div>
-            <div className='sub-form-content'>
-              Don't have an account? <Link to='signup'>Sign Up</Link>
+              </div>
+              <div className='sub-form-content'>
+                Don't have an account? <Link to='signup'>Sign Up</Link>
+              </div>
             </div>
           </div>
-        </div>
 
+          <div className='row'>
+            <Pitch />
+          </div>
+        </div>
+        <div><FooterContainer /></div>
       </div>
     )
   }
