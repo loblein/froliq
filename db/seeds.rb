@@ -39,7 +39,7 @@ User.create!(
   id: 4,
   first_name: 'Mai',
   last_name: 'Thai',
-  email: 'mai@thai.com'
+  email: 'mai@thai.com',
   password: 'password',
   employer: true
 )
@@ -57,7 +57,7 @@ User.create!(
   id: 6,
   first_name: 'Jim',
   last_name: 'Jeffries',
-  email: 'jim@jeffries.com'
+  email: 'jim@jeffries.com',
   password: 'password',
   employer: true
 )
