@@ -1,6 +1,7 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import { withRouter } from 'react-router';
+import { sample } from 'lodash';
 
 class Search extends React.Component {
   constructor(props) {
@@ -42,6 +43,28 @@ class Search extends React.Component {
 
   };
 
+  grabPlaceholder() {
+    const cities = [
+      'Las Vegas, NV',
+      'Washington, D.C.',
+      'Boston, MA',
+      'Atlanta, GA',
+      'Portland, OR',
+      'Denver, CO',
+      'San Francisco, CA',
+      'Chicago, IL',
+      'Seatle, WA',
+      'Sedona, AR',
+      'San Diego, CA',
+      'Honolulu, HI',
+      'New Orleans, LA',
+      'Charleston, NC',
+      'Cape Cod, MA'
+    ];
+
+    return sample(cities);
+  }
+
   render() {
     var wrapperClass;
     if (this.props.location == 'user') {
@@ -55,7 +78,7 @@ class Search extends React.Component {
         <div className={ wrapperClass }>
           <form onSubmit={this.handleSubmit}>
             <h5 className='where-to'>Where to?</h5>
-            <input type='text' placeholder='Boston, MA' onChange={this.updateLocation}></input>
+            <input type='text' placeholder={this.grabPlaceholder()} onChange={this.updateLocation}></input>
             <button type='submit' value='Go!'>Go!</button>
           </form>
         </div>
