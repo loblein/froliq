@@ -14,7 +14,6 @@
 
 .pitch .super-header {
   width: 100%;
-  margin-bottom: 15px;
   padding: 0;
   background: white;
   border-top: 1px solid $transparent-green;
@@ -29,20 +28,30 @@
   text-align: center;
 }
 
-.pitch section {
+.pitch-item-container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+}
+
+.pitch-column .pitch-item {
   border-radius: 36px;
+  width: 100%;
   border: 1px solid $light-gray;
   padding: 10px;
   background-color: white;
-  margin: 25px;
+  margin: 5px 5px 20px 5px;
+  max-width: 800px;
 }
 
-.pitch section img {
+.pitch-column .pitch-item img {
   float: left;
   padding-right: 10px;
 }
 
-.pitch section h3 {
+.pitch-column .pitch-item h3 {
   text-align: center;
   min-width: 220px;
   margin: 5px 200px 5px 220px;
@@ -83,12 +92,8 @@
   box-shadow: 0 0 30px 5px white;
 }
 
-.pitch section p {
+.pitch p {
   padding: 4px;
-}
-
-.pitch section .pitch-item {
-  margin: 0 auto;
 }
 
 .text-center {
