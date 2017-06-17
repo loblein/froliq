@@ -77,7 +77,6 @@ EmployerDetail.create!(
   location: 'Belfast, ME'
 )
 
-
 Job.create!(
   title: 'Farmer Needed',
   description: 'Come plant me some pertaters. Fancy an iced tea?',
