@@ -35,17 +35,17 @@ const Pitch = () => {
             </div>
           </header>
           <section className='pitch-item clearfix'>
-            <img src={window.girlIphone}></img>
+            <img src={window.girlLaptop}></img>
             <h3>Create</h3>
             <p>Make a free profile and customize your information to drive new prospective employees to your business.</p>
           </section>
           <section className='pitch-item clearfix'>
-            <img src={window.workImg} className='float-r'></img>
+            <img src={window.cafeGirl} className='float-r'></img>
             <h3>Find Great People</h3>
             <p>Review profiles and find new hires from around the country. Name your rate and find help when you need it.</p>
           </section>
           <section className='pitch-item clearfix'>
-            <img src={window.playImg}></img>
+            <img src={window.meeting}></img>
             <h3>Never be Understaffed</h3>
             <p>Skip the hassle of long-term hires and adapt to changing seasons. Rate and review applicants with ease.</p>
           </section>
