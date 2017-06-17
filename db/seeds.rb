@@ -50,7 +50,7 @@ User.create!(
   last_name: 'Bunnies',
   email: 'benny@bunnies.com',
   password: 'password',
-  employer: true,
+  employer: true
 )
 
 User.create!(
@@ -78,29 +78,29 @@ EmployerDetail.create!(
 )
 
 
-# Job.create!(
-#   title: 'Farmer Needed',
-#   description: 'Come plant me some pertaters. Fancy an iced tea?',
-#   rate: 10,
-#   user_id: 4,
-#   status: 'open',
-#   location: 'Portland, OR'
-# )
-#
-# Job.create!(
-#   title: 'Dishwasher Needed',
-#   description: 'Help! My staff sucks! I need you to come clean this restaurant kitchen ASAP.',
-#   rate: 16,
-#   user_id: 5,
-#   status: 'open',
-#   location: 'New York, NY'
-# )
-#
-# Job.create!(
-#   title: 'Lawn and Garden',
-#   description: 'My weeds be outa control! Looking for someone to do some weedin in a rush.',
-#   rate: 12,
-#   user_id: 6,
-#   status: 'open',
-#   location: 'Belfast, ME'
-# )
+Job.create!(
+  title: 'Farmer Needed',
+  description: 'Come plant me some pertaters. Fancy an iced tea?',
+  rate: 10,
+  user_id: 4,
+  status: 'open',
+  location: 'Portland, OR'
+)
+
+Job.create!(
+  title: 'Dishwasher Needed',
+  description: 'Help! My staff sucks! I need you to come clean this restaurant kitchen ASAP.',
+  rate: 16,
+  user_id: 5,
+  status: 'open',
+  location: 'New York, NY'
+)
+
+Job.create!(
+  title: 'Lawn and Garden',
+  description: 'My weeds be outa control! Looking for someone to do some weedin in a rush.',
+  rate: 12,
+  user_id: 6,
+  status: 'open',
+  location: 'Belfast, ME'
+)
