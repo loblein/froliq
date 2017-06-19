@@ -5,6 +5,7 @@ import ViewReducer from './view_reducer';
 import FilterReducer from './filter_reducer';
 import ListingReducer from './listing_reducer';
 import CategorySelectorReducer from './category_selector_reducer';
+import ExpanderReducer from './expander_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
@@ -12,7 +13,8 @@ const RootReducer = combineReducers({
   view: ViewReducer,
   filter: FilterReducer,
   listing: ListingReducer,
-  categorySelector: CategorySelectorReducer
+  categorySelector: CategorySelectorReducer,
+  expander: ExpanderReducer
 });
 
 export default RootReducer;

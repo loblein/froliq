@@ -9,14 +9,21 @@ class Hero extends React.Component {
     super(props)
 
     this.handleClick = this.handleClick.bind(this);
+    this.toggleShow = this.toggleShow.bind(this);
   }
 
-  handleClick() {
-    if (this.props.loggedIn) {
-      this.props.router.push('/users/:userId');
+  toggleShow(target) {
+    if (target === this.props.visibleComponent && this.props.expanderVisible === true) {
+      this.props.showExpander(false);
     } else {
-      this.props.router.push('/login');
+      this.props.showExpander(true);
     }
+  };
+
+  handleClick(event) {
+    const target = event.currentTarget.name;
+    this.toggleShow(target);
+    this.props.setComponent(target);
   };
 
   render() {
@@ -31,19 +38,19 @@ class Hero extends React.Component {
           <div className='container'>
             <div className='hero-lower-third' >
               <div className='hero-lower-third-item'>
-                <img src={window.travelImg} onClick={this.handleClick}/>
+                <img src={window.travelImg} name='travel' onClick={this.handleClick}/>
                 <h4>
                   Travel
                 </h4>
               </div>
               <div className='hero-lower-third-item'>
-                <img src={window.fishingBoat} onClick={this.handleClick}/>
+                <img src={window.fishingBoat} name='work' onClick={this.handleClick}/>
                 <h4>
                   Work
                 </h4>
               </div>
               <div className='hero-lower-third-item'>
-                <img src={window.beachParty} onClick={this.handleClick}/>
+                <img src={window.beachParty} name='play' onClick={this.handleClick}/>
                 <h4>
                   Play
                 </h4>

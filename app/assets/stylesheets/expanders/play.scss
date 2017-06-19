@@ -1,0 +1,13 @@
+@import '../variables';
+
+.play {
+  height: 100px;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.play.show {
+  border: 1px solid blue;
+  height: 100px;
+  width: 100%;
+}

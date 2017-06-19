@@ -1,0 +1,56 @@
+@import '../variables';
+
+.expander {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 0;
+  display: block;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.expander.show {
+  border-bottom: 1px solid $light-gray;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+}
+
+.travel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.travel-item {
+  background-color: $cloud-white;
+  height: 400px;
+  padding: 10px;
+  width: 700px;
+  border-radius: 25px;
+  border: 1px solid $light-gray;
+  box-shadow: 0 0 40px 10px $highlight-gray;
+}
+
+.travel-item h3 {
+  text-align: center;
+  min-width: 220px;
+  margin: 5px 200px 5px 220px;
+  font-family: 'Satisfy', cursive;
+  padding: 0;
+}
+
+.travel-item p {
+  padding: 4px;
+}
+
+.travel-item img {
+  float: left;
+  padding-right: 10px;
+}
