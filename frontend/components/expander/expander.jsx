@@ -1,7 +1,7 @@
 import React from 'react';
 import Travel from './travel';
 import Work from './work';
-import Play from './play';
+import PlayContainer from './play_container';
 
 class Expander extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class Expander extends React.Component {
       case 'work':
         return <Work />;
       case 'play':
-        return <Play />;
+        return <PlayContainer />;
     };
   };
 
