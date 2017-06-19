@@ -20,13 +20,8 @@ class Expander extends React.Component {
     };
   };
 
-  toggleExpander() {
-
-  };
-
   render() {
     var componentClasses = ['expander'];
-
     if (this.props.show) {
       componentClasses.push('show');
     };

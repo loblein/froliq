@@ -20,7 +20,7 @@
   height: 400px;
 }
 
-.travel {
+.expander-element {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
   align-items: center;
 }
 
-.travel-item {
+.expander-item {
   background-color: $cloud-white;
   height: 400px;
   padding: 10px;
@@ -38,19 +38,71 @@
   box-shadow: 0 0 40px 10px $highlight-gray;
 }
 
-.travel-item h3 {
+.expander h3 {
   text-align: center;
+  color: $blue;
   min-width: 220px;
-  margin: 5px 200px 5px 220px;
   font-family: 'Satisfy', cursive;
-  padding: 0;
+  padding: 0 20px 5px 10px;
 }
 
-.travel-item p {
-  padding: 4px;
+.expander p {
+  padding: 5px;
+  margin: 0;
 }
 
-.travel-item img {
+.expander .text-block {
+  padding: 10px;
+  background-color: $off-white;
+  border: 5px solid white;
+  border-radius: 15px;
+}
+
+.expander-item img.work {
   float: left;
-  padding-right: 10px;
+  margin: 5px 15px 10px 0;
+  width: 400px;
+  border-radius: 15px;
+}
+
+.expander-item img.travel {
+  float: left;
+  margin: 10px 15px 15px 5px;
+  width: auto;
+  height: 230px;
+  border-radius: 15px;
+}
+
+.expander-item img.play {
+  float: left;
+  margin: 10px 15px 15px 5px;
+  width: auto;
+  height: 250px;
+  border-radius: 15px;
+  border: none;
+}
+
+.create-account-container {
+  width: 100%;
+  text-align: center;
+}
+
+.create-account {
+  outline: none;
+  border: 1px solid $blue;
+  border-radius: 15px;
+  font-family: $satisfy;
+  background-color: white;
+  font-size: 20px;
+  color: white;
+  color: $blue;
+  width: 300px;
+  height: 40px;
+  padding-top: 5px;
+}
+
+.create-account:hover {
+  background-color: $blue;
+  color: white;
+  border: 1px solid white;
 }

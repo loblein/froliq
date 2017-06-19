@@ -3,18 +3,28 @@ import React from 'react';
 const Travel = () => {
 
   return (
-    <div className='travel'>
-      <div className='travel-item'>
-        <img src={window.girlIphone}></img>
+    <div className='expander-element'>
+      <div className='expander-item'>
+        <img className='travel' src={window.roadMap}></img>
         <h3>Travel</h3>
-        <p className='clearfix'>
-          Froliq is designed to give individuals the ability to travel freely.
-          It was created for people
-          who may not know where they'd like to settle, but probably can't
-          afford to travel without first finding a job.
-          It's a catch-22 if you don't yet know where you'd like to live. With
-          Froliq, simply create a profile and search for new locations worth exploring.
-        </p>
+          <p>
+            <strong>SIGN IN </strong> and create a customized profile including your current location.
+          </p>
+          <p>
+            <strong>LOCATE</strong> a nearby destination or dream big and search across the country.
+          </p>
+          <p>
+            <strong>EXPERIENCE</strong> your perfect getaway or your next hometown.
+          </p>
+          <div className='clearfix' />
+        <div className='text-block'>
+          <p>
+            <strong>Froliq</strong> gives individuals the ability to travel freely.
+            It was created for those who may not know where they'd like to settle,
+            and may not have the means to travel before finding a job. With Froliq,
+            simply create a profile and search for new locations to explore.
+          </p>
+        </div>
       </div>
     </div>
   );
