@@ -6,10 +6,24 @@ class Play extends React.Component {
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
+    this.renderButtonText = this.renderButtonText.bind(this);
   }
 
   handleClick() {
-    this.props.router.push('/signup');
+    if (this.props.signedIn) {
+      debugger;
+      this.props.logout();
+    } else {
+      this.props.router.push('/signup');
+    }
+  };
+
+  renderButtonText() {
+    if (this.props.signedIn) {
+      return 'Sign Out';
+    } else {
+      return 'Create an Account';
+    }
   };
 
   render() {
@@ -30,7 +44,7 @@ class Play extends React.Component {
           <div className='clearfix' />
           <div className='text-block'>
             <div className='create-account-container'>
-              <button className='create-account' onClick={this.handleClick}>Create an Account</button>
+              <button className='create-account' onClick={this.handleClick}>{this.renderButtonText()}</button>
             </div>
           </div>
         </div>
