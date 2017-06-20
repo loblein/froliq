@@ -79,7 +79,7 @@ class Search extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <h5 className='where-to'>Where to?</h5>
             <input type='text' placeholder={this.grabPlaceholder()} onChange={this.updateLocation}></input>
-            <button type='submit' value='Go!'>Go!</button>
+            <button type='submit' value='Go!'><FontAwesome className='fa fa-long-arrow-right' /> Go!</button>
           </form>
         </div>
       </div>
