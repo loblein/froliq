@@ -38,7 +38,7 @@ class Hero extends React.Component {
           <div className='container'>
             <div className='hero-lower-third' >
               <div className='hero-lower-third-item'>
-                <img src={window.travelImg} name='travel' onClick={this.handleClick}/>
+                <img src={window.girlAtCliff} name='travel' onClick={this.handleClick}/>
                 <h4>
                   Travel
                 </h4>
@@ -50,7 +50,7 @@ class Hero extends React.Component {
                 </h4>
               </div>
               <div className='hero-lower-third-item'>
-                <img src={window.beachParty} name='play' onClick={this.handleClick}/>
+                <img src={window.peopleOnBeach} name='play' onClick={this.handleClick}/>
                 <h4>
                   Play
                 </h4>

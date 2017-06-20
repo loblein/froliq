@@ -18,12 +18,12 @@ const Pitch = () => {
               <p>Take a road-trip through the countryside to see places you've never seen. Find freedom while meeting new people, or discover a new place to live.</p>
             </div>
             <div className='pitch-item clearfix'>
-              <img src={window.workImg} className='float-r'></img>
+              <img src={window.makingCoffee} className='float-r'></img>
               <h3>Fund Your Travels</h3>
               <p>Find work while traveling. Whether a recent graduate or just needing a change of pace, now you can travel without the stress of draining your savings.</p>
             </div>
             <div className='pitch-item clearfix'>
-              <img src={window.playImg}></img>
+              <img src={window.haveAdventure}></img>
               <h3>Have an Adventure</h3>
               <p>Choose from unique job opportunities and make new friends. Hang out with coworkers and plan your next adventure. Froliq and be free.</p>
             </div>
