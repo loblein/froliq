@@ -7,12 +7,36 @@ class Opportunities extends React.Component {
 
     this.renderJobList = this.renderJobList.bind(this);
     this.renderJobsHeader = this.renderJobsHeader.bind(this);
+    this.toggleExpand = this.toggleExpand.bind(this);
   };
+
+  clearExpanded(array) {
+    for (var i = 0; i < array.length; i++) {
+      array[i].className = 'job-item clearfix';
+    };
+  };
+
+  toggleExpand(event) {
+    const listItems = event.currentTarget.parentElement.children;
+
+    if (event.currentTarget.className === 'job-item clearfix') {
+      this.clearExpanded(listItems);
+      event.currentTarget.className += ' expand';
+    } else {
+      this.clearExpanded(listItems);
+    }
+
+    this.renderJobDetails(event);
+  };
+
+  renderJobDetails(event) {
+
+  }
 
   renderJobList() {
     const jobs = values(this.props.jobs);
     const jobList = jobs.map((job, idx) => (
-      <li className='job-item clearfix' key={idx}>
+      <li className='job-item clearfix' key={idx} onClick={this.toggleExpand}>
         <div className='img-container'>
         </div>
         <h4>
@@ -22,11 +46,9 @@ class Opportunities extends React.Component {
           ${job.rate}.00
         </h5>
         <p>
-          Description: {job.description}
+          {job.description}
         </p>
-        <p>
-          Location: {job.location}
-        </p>
+
       </li>
     ));
     return jobList;

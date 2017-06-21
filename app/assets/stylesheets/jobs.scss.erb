@@ -26,10 +26,17 @@
  background-color: transparent;
  width: 100%;
  box-sizing:border-box;
- height: auto;
+ height: 110px;
  border-radius: 20px;
  list-style: none;
  text-indent: 0;
+ cursor: pointer;
+ transition: height 300ms, border 300ms;
+}
+
+.opportunities li.job-item.expand {
+  height: 280px;
+  border: 1px solid $green;
 }
 
 li.job-item h4, h5 {
