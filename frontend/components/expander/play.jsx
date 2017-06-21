@@ -11,7 +11,6 @@ class Play extends React.Component {
 
   handleClick() {
     if (this.props.signedIn) {
-      debugger;
       this.props.logout();
     } else {
       this.props.router.push('/signup');
