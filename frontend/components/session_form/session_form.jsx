@@ -23,13 +23,9 @@ class SessionForm extends React.Component {
     this.setState({[field]: event.target.value});
   }
 
-  componentDidUpdate() {
-    this.redirectIfLoggedIn();
-  }
-
-  redirectIfLoggedIn() {
-    if (this.props.loggedIn) {
-      this.props.router.push('/users/:userId');
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn) {
+      this.props.router.push('/users/:user_id');
     }
   }
 

@@ -31,13 +31,7 @@ class SignUp extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
-  }
-
-  componentDidUpdate() {
-    if (this.props.loggedIn) {
-      this.props.router.replace('/users/:userId');
-    }
-  }
+  };
 
   handleTravelerClick(event) {
     this.setState((previousState) => _.merge({}, previousState, {
@@ -46,7 +40,7 @@ class SignUp extends React.Component {
       backButton: 'block',
       user: {employer: false}
     }));
-  }
+  };
 
   handleEmployerClick(event) {
     this.setState((previousState) => _.merge({}, previousState, {
@@ -55,7 +49,7 @@ class SignUp extends React.Component {
       backButton: 'block',
       user: {employer: true}
     }));
-  }
+  };
 
   handleBackClick() {
     this.setState((previousState) => _.merge({}, previousState, {
@@ -64,13 +58,19 @@ class SignUp extends React.Component {
       travelerForm: 'none',
       backButton: 'none'
     }));
+  };
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn) {
+      this.props.router.push('/users/:user_id');
+    }
   }
 
   handleSubmit(event) {
     event.preventDefault;
     const user = this.state.user;
     this.props.processForm({user});
-  }
+  };
 
   renderErrors(error, i) {
     return (
@@ -78,13 +78,13 @@ class SignUp extends React.Component {
           {error}
       </li>
     )
-  }
+  };
 
   update(field) {
     return event => this.setState({
       user: merge({}, this.state.user, {[field]: event.currentTarget.value})
     });
-  }
+  };
 
   render() {
     const errors = this.props.errors;

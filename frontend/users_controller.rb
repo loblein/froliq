@@ -5,7 +5,7 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login(@user)
-      render '/api/users/show'
+      render 'api/users/show'
     else
       render json: @user.errors.full_messages, status: 422
     end
@@ -15,7 +15,7 @@ class Api::UsersController < ApplicationController
     @user = current_user
 
     if @user.update_attributes(user_params)
-      render '/api/users/show'
+      render 'api/users/show'
     else
       render json: @user.errors.full_messages, status: 422
     end
