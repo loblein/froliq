@@ -35,7 +35,7 @@ class SignUp extends React.Component {
 
   componentDidUpdate() {
     if (this.props.loggedIn) {
-      this.props.router.push('/users/:userId');
+      this.props.router.replace('/users/:userId');
     }
   }
 
