@@ -19,7 +19,7 @@
  height: auto;
 }
 
-.opportunities li.job-item {
+.job-item {
  padding: 10px;
  margin-bottom: 10px;
  border: 1px solid $light-gray;
@@ -32,29 +32,30 @@
  text-indent: 0;
  cursor: pointer;
  transition: height 300ms, border 300ms;
+ overflow: hidden;
 }
 
-.opportunities li.job-item.expand {
-  height: 280px;
+.job-item.expand {
+  height: 320px;
   border: 1px solid $green;
 }
 
-li.job-item h4, h5 {
+.job-item h4, h5 {
  color: $blue;
  display: inline;
  margin-right: 5px;
 }
 
-li.job-item h5 {
+.job-item h5 {
  color: #8ead45;
 }
 
-li.job-item p {
+.job-item p {
  margin: 0;
  padding: 5px;
 }
 
-li.job-item .img-container {
+.job-item .img-container {
  float: left;
  height: 90px;
  width: 120px;
@@ -65,4 +66,57 @@ li.job-item .img-container {
  background-image: url(<%= asset_path 'lily.png' %>);
  background-size: cover;
  background-position: center center;
+}
+
+.job-item .headline {
+  height: 110px;
+  display: block;
+}
+
+.job-item .item-details {
+  background-color: $highlight;
+  border-radius: 10px;
+  height: 120px;
+  padding: 10px;
+}
+
+.job-item .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+}
+
+.job-item button.apply {
+  font-family: $open-sans;
+  font-size: 16px;
+  width: 270px;
+  height: 40px;
+  color: white;
+  background-color: $blue;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.job-item .item-details h4, h5 {
+  font-weight: bold;
+  color: $gray;
+}
+
+.job-item .item-details p {
+  color: $gray;
+  padding: 10px 0;
+}
+
+.job-item .employer-star-rating {
+  display: inline;
+}
+
+.job-item .employer-star-rating .fa-star {
+  color: $blue;
+  padding: 5px;
+  font-size: 18px;
 }

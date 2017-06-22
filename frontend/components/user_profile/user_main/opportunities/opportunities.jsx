@@ -1,5 +1,6 @@
 import React from 'react';
 import { values } from 'lodash';
+import OpportunityItem from './opportunity_item';
 
 class Opportunities extends React.Component {
   constructor(props) {
@@ -26,30 +27,14 @@ class Opportunities extends React.Component {
       this.clearExpanded(listItems);
     }
 
-    this.renderJobDetails(event);
   };
 
-  renderJobDetails(event) {
-
-  }
 
   renderJobList() {
     const jobs = values(this.props.jobs);
     const jobList = jobs.map((job, idx) => (
-      <li className='job-item clearfix' key={idx} onClick={this.toggleExpand}>
-        <div className='img-container'>
-        </div>
-        <h4>
-          {job.title}
-        </h4>
-        <h5>
-          ${job.rate}.00
-        </h5>
-        <p>
-          {job.description}
-        </p>
-
-      </li>
+      <OpportunityItem className='job-item clearfix' key={idx} onClick={this.toggleExpand} job={job}>
+      </OpportunityItem>
     ));
     return jobList;
   };
