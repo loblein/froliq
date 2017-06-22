@@ -6,6 +6,7 @@ import FooterContainer from './footer/footer_container';
 import ExpanderContainer from './expander/expander_container';
 
 const App = (props) => (
+
   <div>
     <HeaderContainer />
     <HeroContainer />

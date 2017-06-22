@@ -31,20 +31,22 @@ class UserProfile extends React.Component {
       :
       this.fetchJobs()
     ;
-
   }
+
 
   render() {
 
     return (
-      <div className='container-fluid'>
-        <div className='row'>
-          <HeaderContainer />
-          <UserHeaderContainer />
-          <UserMainContainer />
-        </div>
-        <div className='row'>
-          <UserFooterContainer />
+      <div>
+        <div className='container-fluid'>
+          <div className='row'>
+            <HeaderContainer />
+            <UserHeaderContainer />
+            <UserMainContainer />
+          </div>
+          <div className='row'>
+            <UserFooterContainer />
+          </div>
         </div>
       </div>
     )

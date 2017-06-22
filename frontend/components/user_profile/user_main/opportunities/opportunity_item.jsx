@@ -5,10 +5,12 @@ class OpportunityItem extends React.Component {
   constructor(props) {
     super(props);
 
+    this.handleClick = this.handleClick.bind(this);
   };
 
-  handleClick() {
-
+  handleClick(event) {
+    this.props.populateFloatbox(this.props.job);
+    this.props.displayFloatbox();
   }
 
   render() {

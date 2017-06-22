@@ -6,6 +6,7 @@ import FilterReducer from './filter_reducer';
 import ListingReducer from './listing_reducer';
 import CategorySelectorReducer from './category_selector_reducer';
 import ExpanderReducer from './expander_reducer';
+import FloatboxReducer from './floatbox_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
@@ -14,7 +15,8 @@ const RootReducer = combineReducers({
   filter: FilterReducer,
   listing: ListingReducer,
   categorySelector: CategorySelectorReducer,
-  expander: ExpanderReducer
+  expander: ExpanderReducer,
+  floatbox: FloatboxReducer
 });
 
 export default RootReducer;
