@@ -8,7 +8,7 @@
   width: 95%;
   background-color: white;
   border-radius: 25px;
-  box-shadow: 0 0 50px $shadow-gray;
+  box-shadow: 0 0 40px $middle-gray;
   transform: translate(-50%, -50%);
 }
 
@@ -24,6 +24,7 @@
   width: 80%;
   height: 90px;
   margin: 0 auto;
+  background-color: transparent;
   border-top: 1px solid $green;
   border-bottom: 1px solid $green;
   margin-bottom: 15px;
