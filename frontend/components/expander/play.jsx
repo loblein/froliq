@@ -29,7 +29,7 @@ class Play extends React.Component {
     return (
       <div className='expander-element'>
         <div className='expander-item'>
-          <img className='play' src={window.coworkerFriends}></img>
+          <img src={window.coworkerFriends}></img>
           <h3>Play</h3>
           <p>
             <strong>MEET</strong> local people and make new friends from all backgrounds.

@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.pending {
+  width: 100%;
+}
+
+.pending h3 {
+  width: 100%;
+  text-align: center;
+  font-family: $satisfy;
+  color: $green;
+}

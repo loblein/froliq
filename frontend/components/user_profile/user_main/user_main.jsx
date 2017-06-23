@@ -3,6 +3,10 @@ import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 import SearchContainer from '../../search/search_container';
 import OpportunitiesContainer from './opportunities/opportunities_container';
+import PendingContainer from './pending/pending_container';
+import CompletedContainer from './completed/completed_container';
+import MapContainer from './map/map_container';
+import RatingsContainer from './ratings/ratings_container';
 import LocalNavContainer from './local_nav/local_nav_container';
 import UserSettingsContainer from './user_settings/user_settings_container';
 import NewListingContainer from './listings/new_listing_container';
@@ -26,11 +30,24 @@ class UserMain extends React.Component {
         case 'opportunities':
           viewableComponent = <OpportunitiesContainer />
           break;
+        case 'pending':
+          viewableComponent = <PendingContainer />
+          break;
+        case 'completed':
+          viewableComponent = <CompletedContainer />
+          break;
+        case 'ratings':
+          viewableComponent = <RatingsContainer />
+          break;
+        case 'map':
+          viewableComponent = <MapContainer />
+          break;
         case 'newListing':
           viewableComponent = <NewListingContainer />
           break;
         case 'settings':
           viewableComponent = <UserSettingsContainer />
+          break;
       };
 
     var searchOrCreate;

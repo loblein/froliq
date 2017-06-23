@@ -5,7 +5,7 @@ const Work = () => {
   return (
     <div className='expander-element'>
       <div className='expander-item'>
-        <img className='work' src={window.garageCafe}></img>
+        <img src={window.garageCafe}></img>
         <h3>Work</h3>
         <p>
           <strong>PERSONALIZE</strong> your profile and choose from a list of roles to match your skills or interests.

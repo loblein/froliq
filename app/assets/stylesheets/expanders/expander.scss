@@ -14,6 +14,10 @@
   overflow: hidden;
 }
 
+.expander p {
+  font-family: $open-sans;
+}
+
 .expander.show {
   border-bottom: 1px solid $light-gray;
   margin: 0;
@@ -57,30 +61,15 @@
   background-color: $off-white;
   border: 5px solid white;
   border-radius: 15px;
+  min-height: 100px;
 }
 
-.expander-item img.work {
-  float: left;
-  margin: 5px 15px 10px 0;
-  height: 240px;
-  border-radius: 15px;
-}
-
-.expander-item img.travel {
+.expander-item img {
   float: left;
   margin: 10px 15px 15px 5px;
-  width: auto;
-  height: 240px;
+  width: 360px;
+  height: auto;
   border-radius: 15px;
-}
-
-.expander-item img.play {
-  float: left;
-  margin: 10px 15px 15px 5px;
-  width: auto;
-  height: 240px;
-  border-radius: 15px;
-  border: none;
 }
 
 .create-account-container {
@@ -95,10 +84,10 @@
   font-family: $satisfy;
   background-color: white;
   font-size: 20px;
-  color: white;
   color: $blue;
   width: 300px;
   height: 40px;
+  margin-top: 15px;
   padding-top: 5px;
 }
 

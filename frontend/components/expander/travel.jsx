@@ -5,7 +5,7 @@ const Travel = () => {
   return (
     <div className='expander-element'>
       <div className='expander-item'>
-        <img className='travel' src={window.roadMap}></img>
+        <img src={window.roadMap}></img>
         <h3>Travel</h3>
           <p>
             <strong>SIGN IN </strong> and create a customized profile including your current location.
