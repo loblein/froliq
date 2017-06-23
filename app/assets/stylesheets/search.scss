@@ -3,18 +3,18 @@
  .hero-search {
    text-align: center;
    position: absolute;
-   top: 50%;
+   top: 55%;
    left: 50%;
    width: 560px;
    transform: translate(-50%, -50%);
    color: white;
-   border-radius: 12px;
+   border-radius: 16px;
    box-shadow: 1px 1px 10px $deeper-brown-transparent;
  }
 
 .hero-search input {
   outline: none;
-  text-indent: 70px;
+  text-indent: 50px;
   width: 450px;
   border-radius: 10px;
   padding: 10px;
@@ -28,12 +28,12 @@
  position: absolute;
  left: 0;
  text-align: right;
- padding: 0 25px 0 10px;
+ padding: 0 15px 0 5px;
  top: -10px;
  height: 100%;
- width: 120px;
+ width: 100px;
  border-right: none;
- border-radius: 12px 0 0 12px;
+ border-radius: 16px 0 0 16px;
  background-color: $calm-blue;
  line-height: 40px;
  color: $cloud-white;
@@ -41,7 +41,6 @@
 }
 
 .hero-search input::placeholder {
-
  color: $light-gray;
 }
 
@@ -51,10 +50,10 @@
  text-align: center;
  top: 0;
  height: 100%;
- width: 70px;
+ width: 100px;
  outline: none;
  border: none;
- border-radius: 0 12px 12px 0;
+ border-radius: 0 16px 16px 0;
  background-color: $calm-blue;
  line-height: 30px;
  color: $cloud-white;

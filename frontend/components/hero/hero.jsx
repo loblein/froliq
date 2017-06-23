@@ -8,23 +8,7 @@ class Hero extends React.Component {
   constructor(props) {
     super(props)
 
-    this.handleClick = this.handleClick.bind(this);
-    this.toggleShow = this.toggleShow.bind(this);
   }
-
-  toggleShow(target) {
-    if (target === this.props.visibleComponent && this.props.expanderVisible === true) {
-      this.props.showExpander(false);
-    } else {
-      this.props.showExpander(true);
-    }
-  };
-
-  handleClick(event) {
-    const target = event.currentTarget.name;
-    this.toggleShow(target);
-    this.props.setComponent(target);
-  };
 
   render() {
     return(
@@ -32,30 +16,20 @@ class Hero extends React.Component {
         <div className='upper-hero-spacer'></div>
         <div className='hero-image'>
 
-          <div className='hero-text'>
+          <div>
             <SearchContainer location='hero' />
           </div>
+
           <div className='container'>
-            <div className='hero-lower-third' >
-              <div className='hero-lower-third-item'>
-                <img src={window.girlAtCliff} name='travel' onClick={this.handleClick}/>
-                <h4>
-                  Travel
-                </h4>
-              </div>
-              <div className='hero-lower-third-item'>
-                <img src={window.fishingBoat} name='work' onClick={this.handleClick}/>
-                <h4>
-                  Work
-                </h4>
-              </div>
-              <div className='hero-lower-third-item'>
-                <img src={window.peopleOnBeach} name='play' onClick={this.handleClick}/>
-                <h4>
-                  Play
-                </h4>
-              </div>
+            <div className='identity'>
+              <h1>Froliq</h1>
             </div>
+            <div className='slogan'>
+              <img src={window.frogIcon} />
+              <h2>Travel.</h2><h2>Work.</h2><h2>Play.</h2>
+              <img src={window.lilyIcon} />
+            </div>
+          
           </div>
         </div>
         <div className='lower-hero-spacer'></div>

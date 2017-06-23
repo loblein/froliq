@@ -32,7 +32,6 @@ class Header extends React.Component {
           <header className='clearfix'>
             <div className='logo' >
               <Link to='/'>Froliq</Link>
-              <div className='jumping-frog' />
             </div>
             {links}
           </header>
