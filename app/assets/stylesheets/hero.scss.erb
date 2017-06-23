@@ -44,21 +44,15 @@
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  top: 88%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 220px;
-  width: 710px;
-}
-
-.hero-lower-third-item {
-  position: relative;
-}
-
-.hero-lower-third img {
-  border-radius: 29px;
-  cursor: pointer;
-  box-shadow: 1px 1px 20px $deepest-brown-transparent;
+  background-image: url(<%= asset_path 'frog_jump_to_lily.png' %>);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120px;
+  width: 550px;
+  opacity: 0.8;
 }
 
 .identity {
@@ -82,16 +76,14 @@
 }
 
 .slogan {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 68%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 80px;
-    width: 400px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .slogan img {
@@ -102,8 +94,7 @@
 
 .slogan h2 {
   font-family: $satisfy;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 300;
+  color: white;
   padding: 15px;
-  font-size: 24px;
+  font-size: 25px;
 }

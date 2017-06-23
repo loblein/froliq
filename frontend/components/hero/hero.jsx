@@ -24,12 +24,11 @@ class Hero extends React.Component {
             <div className='identity'>
               <h1>Froliq</h1>
             </div>
-            <div className='slogan'>
-              <img src={window.frogIcon} />
-              <h2>Travel.</h2><h2>Work.</h2><h2>Play.</h2>
-              <img src={window.lilyIcon} />
+            <div className='hero-lower-third'>
+              <div className='slogan'>
+                <h2>Travel.</h2><h2>Work.</h2><h2>Play.</h2>
+              </div>
             </div>
-          
           </div>
         </div>
         <div className='lower-hero-spacer'></div>
