@@ -67,7 +67,7 @@ class SignUp extends React.Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault;
+    event.preventDefault();
     const user = this.state.user;
     this.props.processForm({user});
   };
