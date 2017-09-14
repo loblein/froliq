@@ -1,6 +1,6 @@
 [Heroku link][heroku]
 
-[heroku]: http://froliq.herokuapp.com
+[heroku]: https://froliq.herokuapp.com
 
 ## Minimum Viable Product
 

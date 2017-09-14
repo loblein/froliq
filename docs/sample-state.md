@@ -17,7 +17,7 @@
   jobList: {
     1: {
       title: 'Dishwasher',
-      imgUrl: 'http://www.example.com/img/1',
+      imgUrl: 'https://www.example.com/img/1',
       startDate: '06/07/17',
       endDate: '06/14/17',
       description: "We're looking for a dishwasher to fill in for 1 week at our Italian restaurant in the Old Port, Portland, ME.",
